@@ -1,0 +1,400 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{paper-en}
+\usepackage{hyperref}
+
+
+
+
+%\usepackage[notref,notcite,color]{showkeys}
+
+
+
+\def\thetitle{Convex cones of metrics}
+\def\theauthors{Nina Lebedeva, Anton Petrunin, and Vladimir Zolotov}
+
+\hypersetup{colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={\thetitle},
+pdfauthor={\theauthors}
+}
+
+
+
+
+
+
+
+
+%\usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
+%\overfullrule=100mm
+%\usepackage[none]{hyphenat}
+\begin{document}
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
+
+\title{\thetitle}
+\author{\theauthors}
+\date{}
+\maketitle
+
+\begin{abstract}
+We study the effect on metric spaces imposed by quadratic inequalities on the six distances between points in every quadruple.
+\end{abstract}
+
+\paragraph{Quadratic inequality.}\label{par:quadratic-inq}
+Suppose $a_{i,j}$ are components of a symmetric $n{\times}n$ matrix.
+We are interested in length spaces $X$ that
+satisfy the inequalities of the following type
+\[\sum_{i,j}a_{i,j}\cdot|x_i-x_j|_X^2\ge 0\]
+for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in $X$.
+
+The inequality of this type will be called \emph{quadratic}.
+
+As we will see, $n=4$ is the first interesting case.
+In particular, nonnegative and nonpositive curvature in the sense of Alexandrov can be described by inequalities of that type.
+Namely they are described by the so-called inequalities of negative type $(3,1)$ and $(2,2)$ respectively.
+Therefore, it worth to investigate the whole class of these inequalies.
+We will collect observations about these inequalities and their effect on the length spaces, including globalization theorems.
+
+The paper is divided ...
+
+\paragraph{Associated form.}\label{Associated form}
+Let $\bm{x}=(x_1,\dots,x_n)$ be a point array in a metric space, and let $V\z=\RR^{n-1}$.
+Choose once for all a nondegenerate simplex $\triangle$ in $V$,
+we may assume that its vertices $v_i$ for $i<n$ form a standard basis, and $v_n=0$.
+Consider quadratic form $\rho_{\bm{x}}$ on $V$ that satisfies the following equalities
+\[\rho_{\bm{x}}(v_i-v_j)=|x_i-x_j|^2_X\] 
+for all $i$ and $j$.
+
+The quadratic form $\rho_{\bm{x}}$ will bne called the \emph{associated form} of $\bm{x}=(x_1,\z\dots,x_n)$;
+it is uniquely defined and remembers all $|x_i-x_j|^2_X$
+(we assume that the simplex $\triangle$ in $V$ is known).
+
+The space of quadratic forms over $V$ will be denoted by $W$;
+it is the symmetric square of $V^*$, and can be written as $W=S^2(V^*)$.
+The quadratic inequalities described above define linear inequalities on $W$,
+and the class of spaces that we are going to consider can be described the following way.
+
+Let $K\subset W$ be a convex cone.
+Denote by $\mathcal{M}_K$ the class of all length spaces $X$ such that
+$\rho_{\bm{x}}\in K$ for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in $X$.
+
+Suppose $X,Y\in  \mathcal{M}_K$ and $a\ge 0$.
+Since $K$ is convex,  $X\times Y$ and $a\cdot X$ are in $\mathcal{M}_K$;
+here $X\times Y$ denotes $\ell_2$-product of metric spaces, and 
+$a\cdot X$ denotes the rescaled copy of of $X$ with factor $a$. 
+
+The last observation can be used in the opposite direction as well.
+It gives that all forms $\rho_{\bm{x}}$ for point arrays in $\mathcal{M}_K$-spaces form a convex cone, say $K'$.
+
+Evidently $K'\subset K$.
+This inclusion might be strict.
+First reason comes form the triangle inequality, which is equivalent to $\rho_{\bm{x}}(w)\ge 0$ for any vector $w$ in a 2-face of $\triangle$.
+These inequalities must hold for any form in $K'$.
+Furthermore, if $\rho_{\bm{x}}\in K'$, then $\rho_{\bm{y}}\in K'$ for any $n$-point array $\bm{y}$ made from the points of $\bm{x}$; in particular $\bm{y}$ might be a permutation of points in $\bm{x}$.
+
+These two conditions work for all metrics (not necessary intrinsic),
+and one cannot get more for general metric spaces.
+The next observation already use length-metricness.
+
+\begin{thm}{Observation}
+If $K$ is closed convex cone in $W$.
+Then $K'$ is closed.
+Moreover, $\mathcal{M}_K$ closed under ultralimits. 
+\end{thm}
+
+\parit{Proof.}
+The last statement is evident, and it implies the first statement.
+
+Indeed, for any sequence of spaces $X_n$ in $\mathcal{M}_K$, its ultralimit $X_\omega$ also belongs to $\mathcal{M}_K$.
+Therefore, given a sequence of point arrays $\bm{x}_n$ in $X_n$,
+its limit $\bm{x}_\omega$ in $X_\omega$ has limit distances between corresponding points.
+Hence the result.
+\qeds
+
+\begin{thm}{Proposition}
+Suppose $K$ is a closed convex cone in $W$ and $K=K'$.
+If $K$ is nontrival, then $\mathcal{M}_K$ contains all Euclidean spaces.
+\end{thm}
+
+\parit{Proof.}
+We can assume that $K\ne \{0\}$, otherwise there is nothing to prove.
+In particular, $\mathcal{M}_K$ contains a space, say $X$ with distinct points.
+Consider its ultracompletion $X^\omega\supset X$;
+since $K$ is closed, $X^\omega\in \mathcal{M}_K$.
+
+The space $X^\omega$ is geodesic.
+Since $X^\omega$ contains pair of distinct point, it must contain a nontrivial geodesic.
+It follows that $\mathcal{M}_K$ contains a line segment.
+Rescaling the seqment and passing to the ultralimit, we get $\RR\in \mathcal{M}_K$;
+passing to the products of $\RR$, we get the result. 
+\qeds
+
+Let us denote by $Q$ the cone of nonnegative quadratic forms in $W$.
+Its dual cone $Q^*\subset W^*=S^2(V)$ is the space of generated by tensor squares of vectors in $V$. 
+
+\begin{thm}{Corollary}
+Suppose $K$ is a closed convex cone in $W$ and $K=K'$.
+Then either $K\supset Q$ or $K$ is the trivial cone $K=\{0\}$.
+\end{thm}
+
+\parit{Proof.}
+Since $\RR\in \mathcal{M}_K$, we get that $\ell^2\in K$ for any linear function $\ell\:V\to\RR$.
+By the spectral theorem, any form in $Q$ can be written as a sum of squares of linear functions, hence the result.
+\qeds
+
+\paragraph{Rank-one inequalities.}
+Recall that $\rho_{\bm{x}}$ denotes the associated quadratic form for a given point array $\bm{x}=(x_1,\dots,x_n)$.
+
+\begin{thm}{Observation}
+A given point array $\bm{x}=(x_1,\dots,x_n)$ is isometric to an array in a Euclidean space if and only if $\rho_{\bm{x}}(v)\ge 0$ for any vector $v$.
+\end{thm}
+
+An inequality of type $\rho_{\bm{x}}(v)\ge 0$ for a fixed vector $v\in V$ will be called rank-one inequality.
+
+It is a partial case of quadratic inequality.
+In the notations of §\ref{par:quadratic-inq}, it means that $a_{i,j}=-\lambda_i\cdot\lambda_j$ for a real array $(\lambda_1,\dots \lambda_n)$ such that 
+$\lambda_1+\dots+\lambda_n=0$.
+These inequalities are also known as inequalities of \emph{negative type}.
+If in the array $(\lambda_1,\dots \lambda_n)$ contains $i$ positive and $j$ negative numbers,
+then we say that this is an inequality of \emph{negative type} $(i,j)$.
+Since changing the sign of all $\lambda_i$ does not change the inequality, we can always assume that $i\ge j$.
+
+\paragraph{Four-point arrays.}\label{Four-point arrays}
+Now suppose $n=4$.
+In this case, we have two interesting types of the rank-one inequalities: $(2,2)$ and $(3,1)$.
+The case $(1,1)$ is trivial and 
+the case $(2,1)$ follows from the triangle inequality.
+In fact the triangle inequality is equivalent to all inequalities of negative type $(2,1)$.
+
+Consider a rank-one inequality $\rho_{\bm{x}}(v)\ge 0$; we may assume that $v$ is a unit vector.
+Furthermore, we may assume that it lies in a closed hemisphere bounded by an equator in direction of one of the the facets of $\triangle$.
+The equators divide the hemisphere into triangles and quadrangles.
+The inequality $\rho_{\bm{x}}(v)\ge 0$ has negative type $(2,2)$ or $(3,1)$
+if and only if $v$ lies in the interior of a triangle or a quadrangle, respectfully.
+
+\begin{wrapfigure}{o}{36mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-20}
+\vskip-0mm
+\end{wrapfigure}
+
+A vector on an equator corresponds to a inequality of negative type $(2,1)$, which follows from the triangle inequality.
+The picture shows the hemisphere.
+The label on edges show which triangle inequality becomes equality if $\rho_{\bm{x}}$ vanish at some vector on this edge;
+for example, label $123$ means that
+\[|x_1-x_2|+|x_2-x_3|=|x_1-x_3|.\]
+If $\rho_{\bm{x}}$ vanish on the intersection of equators, then two points in the array have to coincide;
+the label shows which pair.
+For example if it is marked by $12$, then $x_1=x_2$.
+
+\begin{thm}{Proposition}
+Let $X$ be a 4-point metric space.
+
+If $X$ satisfies all inequalities of negative type $(3, 1)$, then it admits an isometric embedding into the product $r\cdot \mathbb{S}^1\times\RR^3$ for some $r>0$.
+
+If $X$ satisfies all inequalities of negative type $(2, 2)$, then it admits an isometric embedding into the product $T\times\RR^3$, where $T$ denotes the tripod;
+that is, three half-lines glued along the base points.
+\end{thm}
+
+Inequalities of negative type $(3, 1)$ hold in Alexandrov spaces with nonnegative curvature; it follows from the so-called Lang--Schroeder--Sturm inequality \cite{lang-schroeder, sturm}.
+Similarly, inequalities of negative type $(2, 2)$ hold in Alexandrov spaces with nonpositive curvature; it follows from \cite[9.5]{AKP-2024}.
+Since the tripod $T$ has nonpositive curvature, and $\mathbb{S}^1$ has nonnegative curvature in the sense of Alexandrov, we get the following.
+
+\begin{thm}{Corollary}
+A 4-point metric space $X$ is isometric to subset in a length space with nonpositive (nonnegative) curvature in the sense of Alexandrov if and only if all inequalities of negative type $(3, 1)$ (respectively, type $(2, 2)$) hold in $X$.
+\end{thm}
+
+More general five-point versions of this corollary were already proved by Tetsu Toyoda \cite{toyoda} and the first two authors \cite{lebedeva-petrunin-2024}.
+
+
+\parit{Proof.}
+Let us enumerate points in $X$ and let $\rho$ be the associated form on $\RR^3$.
+If $\rho\ge 0$, then $X$ is isometric to a 4-point subset in the Euclidean 3-space,
+and there is nothing to prove.
+
+Consider a minimal form $\tilde\rho\le \rho$ such that all $(2,1)$ inequalities hold for $\tilde\rho$.
+In particular, there is a (semi)metric on $X$ with the associated form $\tilde\rho$; denote by
+$\tilde X$ the corresponding metric space.
+If $X$ satisfies all inequalities of negative type $(3, 1)$ or $(2,2)$, then so does $\tilde X$.
+
+Observe that $X$ embeds into $\tilde X\times \RR^3$.
+Hence it is sufficient to show that $\tilde X$ embeds into $T$ or $r\cdot \mathbb{S}^1$ for some $r>0$.
+
+Let $N\subset \mathbb{S}^2$ be a set where $\tilde\rho$ is negative and let $\bar N$ be its closure.
+From above, $N$ is nonempty.
+
+Since all $(2,1)$-inequalities hold for $\tilde\rho$,
+it must be nonnegative in on 4 equators $e_1,e_2,e_3,e_4$ in the directions of faces of $\triangle$.
+Since $\tilde\rho$ is minimal, $\bar N$ has to touch $e_i$ at least at 3 directions (up to sign). 
+Otherwise there is a linear function, say $\ell$, that vanish at all common points of $\bar N$ and $e_i$ for all $i$.
+In this case, consider the form $\tilde\rho-\eps\cdot \ell^2$ for small $\eps>0$.
+Note that all $(2,1)$-inequalities still hold for this form;
+therefore, $\tilde\rho$ is not minimal --- a contradiction.
+
+It means that $\bar N$ lies in a quadrangle or triangle respectively and touches its sides at three points or more.
+
+In the case of triangle $\bar N$ touches all of its sides.
+The diagram shows that after relabeling, we can assume that 
+\begin{align*}
+|x_1-x_2|&=|x_1-x_4|+|x_4-x_2|,
+\\
+|x_2-x_3|&=|x_2-x_4|+|x_4-x_3|,
+\\
+|x_3-x_1|&=|x_3-x_4|+|x_4-x_1|.
+\end{align*}
+In this case the array is embeddable in $T$.
+
+In the case of quadrangle, $\bar N$ touches at least three of its sides (but might touch all four).
+The diagram shows that after relabeling, we can assume that 
+\begin{align*}
+|x_1-x_4|&=|x_1-x_2|+|x_2-x_4|=|x_1-x_3|+|x_3-x_4|,
+\\
+|x_2-x_3|&=|x_2-x_4|+|x_4-x_3|.
+\end{align*}
+(If it touches all sides, then in addition we have $|x_2-x_3|=|x_2-x_1|+|x_1-x_3|$.)
+In any case cases the array is embeddable in $r\cdot \mathbb{S}^1$, where $r=|x_1-x_4|/\pi$.
+\qeds
+
+Following the convention from \cite{lebedeva-petrunin-2010},
+the equalities at the end of the proof can be encoded by the first three diagrams;
+\begin{figure}[h!]
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-30}
+\vskip-0mm
+\end{figure}
+if three indexes $x_1$, $x_2$, and $x_3$ uppear in this order on a smooth line, then it means that \[|x_1-x_2|+|x_2-x_3|=|x_1-x_3|.\]
+The last diagram says that the array is isometric to an array on the real line.
+From the proof one should see that this classifies all extremal rays of the convex cone of all forms associated to 4-point arrays in metric spaces.
+
+
+\paragraph{Alexandrov's comparison.}
+In terms of $v$, inequalities of negative type $(2,2)$ means that $v$ points from one edge of $\triangle$ to the opposite edge;
+the type $(3,1)$ means that $v$ points from a vertex to the opposite face (or in the opposite direction).
+
+\begin{thm}{Proposition}
+Suppose $K\subset W$ is defined by one rank-one ineqaulity on four-point arrays.
+\begin{enumerate}[(i)]
+\item If the inequality is of negative type $(2,2)$, then $\mathcal{M}_K$ consists all length spaces with nonnegative curvature in the sense of Alexandrov.
+\item If the inequality is of negative type $(3,1)$, then $\mathcal{M}_K$ consists all length spaces with nonnegative curvature in the sense of Alexandrov.
+\item In the remaining cases, $\mathcal{M}_K$ consists all length spaces.
+\end{enumerate}
+
+\end{thm}
+
+The proof is a straightforward combination of the arguments by Takashi Sato \cite{sato} and its variation by the first two authors \cite{lebedeva-petrunin-2010}.
+These notes consider particular cases of $(2,2)$ and $(3,1)$ inequalities, namely for $\lambda$-arrays $(1,1,-1,-1)$ and $(1,1,1,-3)$, respectively.
+
+\parit{Proof.}
+Our inequality can be written as 
+\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\le 0,
+\eqlbl{eq:lambda}
+\]
+where $\lambda_1+\lambda_2+\lambda_3+\lambda_4=0$.
+If $\lambda_i=0$ for some $i$,
+then the inequality follows from the triangle inequality.
+It means that $\mathcal{M}_K$ consists of all length spaces.
+
+It remains to consider the inequalities of negative type $(2,2)$ or $(3,1)$.
+In these cases, we can and will assume that our $\lambda$-array is
+\[(\alpha\cdot (1-\beta),\  (1-\alpha)\cdot(1-\beta),\  \beta,\ -1)\] 
+for some $\alpha,\beta$ distinct from $0$ and $1$.
+
+Consider the 4-point array $\bm{x}=(x_1,x_2,x_3,x_4)$  in the plane such that 
+\[x_4=(\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_3.\]
+We can assume that the array is enumerated as on the pictures, 
+so for the inequalities of type $(2,2)$ segment $[x_1,x_3]$ intersects $[x_2,x_4]$ and 
+for inequalities of type $(3,1)$ point $x_4$ lies inside of triangle $x_1x_2x_3$.
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-10}
+\vskip0mm
+\end{figure}
+
+Consider the point
+\begin{align*}
+x_5&=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_4=
+\\
+&=\alpha\cdot (1-\beta^2)\cdot x_1+(1-\alpha)\cdot(1-\beta^2)\cdot x_2+\beta^2\cdot x_3.
+\end{align*}
+
+Moreover, the inequality defines the array uniquely up to an affine transformation. 
+
+
+
+
+Note that we get equality in \ref{eq:lambda} for this array.
+Moreover, this defines bijection between $\bm{x}$-arrays up to affine traansformation and $\lambda$-arrays up to multiplication by a nonzero coefficient;
+as before, we assume that the $\bm{x}$-arrays are in general position --- three of its points do not lie on one line.
+So we can describe our inequality by a 4-point array in general position.
+If the points of the array lie in a vertices of a convex quadrangle,
+then it corresponds to an inequalities of type $(2,2)$.
+If one of the points in the array lie inside of the triangle formed by the remaining points, then it corresponds to an inequalities of type $(3,1)$.
+
+
+Consider the affine transformation that sends $x_1\mapsto x_1$, $x_2\mapsto x_2$ and $x_3\mapsto x_4$;
+let $x_5$ be the image of $x_4$ under this transformation.
+Note that $x_4$ lies between $x_3$ and $x_5$;
+in particular $|x_3-x_4|+|x_4-x_5|=|x_3-x_5|$.
+
+Consider the inequalities of type \ref{eq:lambda} that corresponds to array $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_3,x_5$;
+let us call them first and second.
+
+\begin{thm}{Claim}
+Suppose that the first inequality holds for any four-point array in a length space $X$, then so does the second inequality.
+\end{thm}
+
+Indeed, passing tho the ultracompletion, we may assume that $X$ is geodesic.
+Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3,x_5]$ that divides it in the same ration as in the 5-point configuration in the plane.
+If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with an appropriate coefficient, then we get the second inequality for $x_1,x_2,x_3,x_5$.
+
+The claim implies that intequality for $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$ implies the inequality for the array $(\lambda_1\cdot (1+\lambda_3),\lambda_2\cdot (1+\lambda_3),\lambda_3^2,-1)$.
+Iterating the procedure, we get all the inequalities with $\lambda$-arrays
+$(\lambda_1\cdot (1+\lambda_3^n),\lambda_2\cdot (1+\lambda_3),\lambda_3^n,-1)$.
+\qeds
+
+UNFINISHED!!!
+
+
+\paragraph{Globalization.}
+Suppose $K\subset W$ is closed convex cone.
+We say that a metric space $X$ is said to meet local $K$-comparison if any point $x\in X$ admits a neighborhood $U$ such that $K$-comparison for any $n$-point array in $U$.
+
+Suppose local $K$-comparison implies $K$-comparison for any length space.
+Then we say that \emph{globalization holds} for the $K$-comparison.
+
+\begin{thm}{Theorem}
+Suppose that globalization holds for the $K$-comparison for for some closed cone $K\subset W=\RR^3$.
+Then $\mathcal{M}_K$ consists of all Alexandrov spaces with nonnegative curvature.
+\end{thm}
+
+\begin{thm}{Lemma}
+In the assumption of the theorem, $\mathcal{M}_K$ contains all Alexandrov spaces with nonnegative curvature.
+\end{thm}
+
+\parit{Proof.}
+Suppose $K\ne\{0\}$.
+By the proposition in § \ref{Associated form}, $\mathcal{M}_K$ contrains real line.
+Therefore, local $K$-comparison holds for any circle $r\cdot \mathbb{S}^1$, and therefore for the prduct space $r\cdot \mathbb{S}^1\times\RR^3$ for any $r>0$.
+It remains to apply the proposition in~\ref{Four-point arrays}.
+\qeds
+
+\parit{Proofo of the theorem.}
+So far we have problem here, but hopefully it will be resolved.
+\qeds
+
+{\sloppy
+\def\emph{\textit}
+\printbibliography[heading=bibintoc]
+\fussy
+}
+
+\end{document}
