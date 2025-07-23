@@ -28,30 +28,69 @@ path p[];
 z.x1=(0,0)*u;
 z.x2=(2,0)*u;
 z.x3=(1.4,2)*u;
-z.x4=.6[z.x3,.4[z.x1,z.x2]];
-z.xx4=.6[z.x3,(-.4)[z.x1,z.x2]];
+z.x4=.5[z.x3,.4[z.x1,z.x2]];
+z.xx4=.5[z.x3,(-.4)[z.x1,z.x2]];
+z.x5=whatever[z.x3,z.x4];
+y.x5=y.x4*y.x4/y.x3;
+z.xx5=whatever[z.x3,z.xx4];
+y.xx5=y.xx4*y.xx4/y.x3;
 
 z.shift=(6,0)*u;
 
-draw z.x1--z.x2--z.x3--z.x4--cycle;
-draw z.x1--z.x3;
-draw z.x2--z.x4;
-draw z.x1+z.shift--z.x2+z.shift--z.x3+z.shift--z.xx4+z.shift--cycle;
-draw z.x1+z.shift--z.x3+z.shift;
-draw z.x2+z.shift--z.xx4+z.shift;
+draw z.x1--z.x3--z.x2--z.x4--cycle;
+draw z.x3--z.x5;
+draw z.x1--z.x2--z.x5--cycle;
+draw (z.x1--z.x3--z.x2--z.xx4--cycle) shifted z.shift;
+draw (z.x3--z.xx5) shifted z.shift;
+draw (z.x1--z.x2--z.xx5--cycle) shifted z.shift;
 
-dOt z.x1,z.x2,z.x3,z.x4,z.x1+z.shift,z.x2+z.shift,z.x3+z.shift,z.xx4+z.shift;
+dOt z.x1,z.x2,z.x3,z.x4,z.x1+z.shift,z.x2+z.shift,z.x3+z.shift,z.xx4+z.shift,z.x5,z.xx5+z.shift;
 
 label.lft(btex $x_1$ etex, z.x1);
 label.rt(btex $x_2$ etex, z.x2);
 label.top(btex $x_3$ etex, z.x3);
-label.bot(btex $x_4$ etex, z.x4+(0,-1));
-
+label.rt(btex $x_4$ etex, z.x4);
+whitelabel.bot(btex $x_5$ etex, z.x5);
 
 label.lft(btex $x_1$ etex, z.x1+z.shift);
 label.rt(btex $x_2$ etex, z.x2+z.shift);
 label.top(btex $x_3$ etex, z.x3+z.shift);
 label.ulft(btex $x_4$ etex, z.xx4+z.shift);
+label.ulft(btex $x_5$ etex, z.xx5+z.shift);
+
+endfig;
+
+beginfig(15)
+save u,p;
+u:=1cm;
+path p[];
+
+z.x1=(0,0)*u;
+z.x2=(2,0)*u;
+z.x3=(1.4,2)*u;
+z.x4=.5[z.x3,.4[z.x1,z.x2]];
+z.xx4=.5[z.x3,(-.4)[z.x1,z.x2]];
+z.x5=whatever[z.x3,z.x4]=whatever[z.x1,z.x2];
+z.xx5=whatever[z.x3,z.xx4]=whatever[z.x1,z.x2];
+
+z.shift=(6,0)*u;
+
+draw z.x1--z.x3--z.x2--cycle;
+draw z.x3--z.x5;
+draw (z.x2--z.x3--z.xx5--cycle) shifted z.shift;
+draw (z.x3--z.x1) shifted z.shift;
+
+dOt z.x1,z.x2,z.x3,,z.x1+z.shift,z.x2+z.shift,z.x3+z.shift,,z.x5,z.xx5+z.shift;
+
+label.lft(btex $x_1$ etex, z.x1);
+label.rt(btex $x_2$ etex, z.x2);
+label.top(btex $x_3$ etex, z.x3);
+whitelabel.bot(btex $x_4$ etex, z.x5);
+
+label.bot(btex $x_1$ etex, z.x1+z.shift);
+label.rt(btex $x_2$ etex, z.x2+z.shift);
+label.top(btex $x_3$ etex, z.x3+z.shift);
+label.lft(btex $x_4$ etex, z.xx5+z.shift);
 
 endfig;
 
@@ -146,7 +185,7 @@ draw (z.b1..z.b2..z.b4..z.b3..z.b1) shifted z.shift;
 
 draw (z.b1..z.c2..z.b4..z.c3..cycle) shifted (2*z.shift);
 
-p4=z.b1{..z.d2{up}..z.d3{up}..z.b4;
+p4=z.b1..z.d2{up}..z.d3{up}..z.b4;
 
 draw p4 shifted (3*z.shift);
 
