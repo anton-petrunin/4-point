@@ -425,7 +425,7 @@ and this is equivalent to the point-on-side comparison for nonpositive curvature
 \qeds
 
 
-\paragraph{Globalization.}
+\paragraph{Globalization.}\label{par:globalization}
 Suppose $K\subset W$ is closed convex cone.
 We say that a metric space $X$ meets \emph{local $K$-comparison} if any point $x\in X$ admits a neighborhood $U$ such that $K$-comparison for any $n$-point array in $U$.
 
@@ -450,6 +450,16 @@ It remains to apply the proposition in §~\ref{Four-point arrays}.
 \parit{Proof of the theorem.}
 So far we have problem here, but hopefully it will be resolved.
 \qeds
+
+\paragraph{Remarks.}
+The requiremnt that the cone $K$ is closed in §~\ref{par:globalization} is necessary;
+without it, the globalization holds for the cone described by inequality
+\[|x_1-x_2|^2+|x_1-x_3|^2+|x_2-x_3|^2<4\cdot(|x_1-x_4|^2+|x_2-x_4|^2+|x_3-x_4|^2).\]
+To check the statement note and use that this ineqaulity forbids tripods.
+
+It would be super-nice to find a quadratic inequality for $n$-point array that is essentailly different from the globalization theorem.
+Some canditates can be found in our earlier paper \cite{lebedeva-petrunin-zolotov}.
+Also it might be possible to prove an analog of our globalization theorem for simply connected spaces; which includes Cartan--Hadamrd theorem.
 
 {\sloppy
 \def\emph{\textit}
