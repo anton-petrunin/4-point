@@ -185,17 +185,60 @@ draw (z.b1..z.b2..z.b4..z.b3..z.b1) shifted z.shift;
 
 draw (z.b1..z.c2..z.b4..z.c3..cycle) shifted (2*z.shift);
 
-p4=z.b1..z.d2{up}..z.d3{up}..z.b4;
+%p4=z.b1..z.d2{up}..z.d3{up}..z.b4;
+%draw p4 shifted (3*z.shift);
+%draw (z.d2{direction 1 of p4}..z.b4) shifted (3*z.shift);
+%draw (z.b1..{direction 2 of p4}z.d3) shifted (3*z.shift);
 
-draw p4 shifted (3*z.shift);
+z.za0=(1,0)*u;
+z.za1=z.za0 rotated 60;
+z.za2=z.za0 rotated 120;
+z.za3=-z.za0 ;
+z.za4=z.za0 rotated -120;
+z.za5=z.za0 rotated -60;
+z.zb0=(0,.5)*u;
+z.zb2=z.zb0 rotated 120;
+z.zb4=z.zb0 rotated -120;
 
-draw (z.d2{direction 1 of p4}..z.b4) shifted (3*z.shift);
-draw (z.b1..{direction 2 of p4}z.d3) shifted (3*z.shift);
+z.vshift = (0,2.3)*u;
+
+p10= z.za0..z.za1..z.za2..z.za3..z.za4..z.za5..cycle;
+p11=z.za1..z.zb0..z.zb2..z.za4;
+p12=z.za3..z.zb2..z.zb4..z.za0;
+p13=z.za5..z.zb4..z.zb0..z.za2;
+
+draw p10 shifted z.vshift;
+draw p11 shifted z.vshift;
+draw p12 shifted z.vshift;
+draw p13 shifted z.vshift;
+
+draw p10 shifted (z.vshift+z.shift);
+draw p11 shifted (z.vshift+z.shift);
+draw p12 shifted (z.vshift+z.shift);
+draw p13 shifted (z.vshift+z.shift);
+
+draw p10 shifted (z.vshift+2*z.shift);
+draw p11 shifted (z.vshift+2*z.shift);
+draw p12 shifted (z.vshift+2*z.shift);
+draw p13 shifted (z.vshift+2*z.shift);
+
+%draw p10 shifted (z.vshift+3*z.shift);
+%draw p11 shifted (z.vshift+3*z.shift);
+%draw p12 shifted (z.vshift+3*z.shift);
+%draw p13 shifted (z.vshift+3*z.shift);
+
+p21=point 1.4 of p11{direction 1.4 of p11}..point 1.6 of p12{direction 1.6 of p12}..point 1.5 of p13{direction 1.5 of p13}..cycle;
+p22=point 1.5 of p11{-direction 1.5 of p11}..point 2.4 of p13{direction 2.4 of p13}..tension 2..point .6 of p12{direction .6 of p12}..cycle;
+p23=point 1.5 of p11{-direction 1.5 of p11}..point 2.6 of p13{direction 2.6 of p13}..point 2.5 of p10{direction 2.5 of p10}..point .4 of p12{direction .4 of p12}..cycle;
+
+fill p21 shifted z.vshift withcolor .5;
+fill p22 shifted (z.vshift+z.shift) withcolor .5;
+fill p23 shifted (z.vshift+2*z.shift) withcolor .5;
 
 dOt z.o,z.a1,z.a2,z.a3,
 z.b1+z.shift,z.b2+z.shift,z.b3+z.shift,z.b4+z.shift,
-z.b1+2*z.shift,z.c2+2*z.shift,z.c3+2*z.shift,z.b4+2*z.shift,
-z.b1+3*z.shift,z.d2+3*z.shift,z.d3+3*z.shift,z.b4+3*z.shift;
+z.b1+2*z.shift,z.c2+2*z.shift,z.c3+2*z.shift,z.b4+2*z.shift;
+%z.b1+3*z.shift,z.d2+3*z.shift,z.d3+3*z.shift,z.b4+3*z.shift;
 
 endfig;
 
