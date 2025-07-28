@@ -58,7 +58,7 @@ The inequality of this type will be called \emph{quadratic}.
 
 Nonnegative and nonpositive curvature in the sense of Alexandrov can be described by inequalities of that type for $n=4$.
 Namely they are described by the so-called inequalities of negative type $(3,1)$ and $(2,2)$ respectively.
-It motivated us to investigate the whole class of these inequalies.
+It motivated us to investigate the whole class of these inequalities.
 
 Our paper contains several simple observations, but all together they form something interesting, and they open ground for further investigations.
 We certainly want to tackle the case $n>4$, but first we need to thoroughly grasp the simplest case $n=4$, which is exactly what we are trying to do.
@@ -71,7 +71,7 @@ Consider quadratic form $\rho_{\bm{x}}$ on $V$ that satisfies the following equa
 \[\rho_{\bm{x}}(v_i-v_j)=|x_i-x_j|^2_X\] 
 for all $i$ and $j$.
 
-The quadratic form $\rho_{\bm{x}}$ will bne called the \emph{associated form} of $\bm{x}=(x_1,\z\dots,x_n)$;
+The quadratic form $\rho_{\bm{x}}$ will be called the \emph{associated form} of $\bm{x}=(x_1,\z\dots,x_n)$;
 it is uniquely defined and remembers all distances $|x_i-x_j|_X$
 (we assume that the simplex $\triangle$ in $V$ is known).
 
@@ -84,6 +84,8 @@ Let $K$ be a convex cone in $W$;
 that is, $K$ is a nonempty set such that if $v,w\in K$, then $a\cdot v+b\cdot w\in K$ for any $a,b\ge0$.
 Denote by $\mathcal{M}_K$ the class of all length spaces $X$ such that
 $\rho_{\bm{x}}\in K$ for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in $X$.
+The class $\mathcal{M}_K$ respects distance-preserving embedding; that is
+if there is a distance-preserving embedding $X\to Y$ between length spaces and $Y \in  \mathcal{M}_K$, then $X\in \mathcal{M}_K$.
 
 Suppose $X,Y\in  \mathcal{M}_K$ and $a\ge 0$.
 Since $K$ is convex,  $X\times Y$ and $a\cdot X$ are in $\mathcal{M}_K$;
@@ -123,11 +125,11 @@ Hence the result.
 
 \begin{thm}{Proposition}
 Let $K$ be a closed convex cone in $W$ such that $K=K'$.
-If $K$ is nontrival (that is, $K\ne \{0\}$), then $\mathcal{M}_K$ contains all Euclidean spaces.
+If $K$ is nontrivial (that is, $K\ne \{0\}$), then $\mathcal{M}_K$ contains all Euclidean spaces.
 \end{thm}
 
 \parit{Proof.}
-Since $K$ is nontrival, $\mathcal{M}_K$ contains a space, say $X$, with two distinct points.
+Since $K$ is nontrivial, $\mathcal{M}_K$ contains a space, say $X$, with two distinct points.
 Consider the ultracompletion $X^\omega$ of $X$;
 recall that $X$ can be (and will be) considered as a subset of $X^\omega$.
 Since $K$ is closed, the observation implies that $X^\omega\in \mathcal{M}_K$.
@@ -283,7 +285,7 @@ In terms of $v$, inequalities of negative type $(2,2)$ means that $v$ points fro
 the type $(3,1)$ means that $v$ points from a vertex to the opposite face (or in the opposite direction).
 
 \begin{thm}{Proposition}
-Suppose $K\subset W$ is defined by one rank-one ineqaulity on four-point arrays.
+Suppose $K\subset W$ is defined by one rank-one inequality on four-point arrays.
 \begin{enumerate}[(i)]
 \item If the inequality is of negative type $(2,2)$, then $\mathcal{M}_K$ consists all length spaces with nonpositive curvature in the sense of Alexandrov.
 \item If the inequality is of negative type $(3,1)$, then $\mathcal{M}_K$ consists all length spaces with nonnegative curvature in the sense of Alexandrov.
@@ -372,7 +374,7 @@ in particular, we get the following inequality
 arbitrarily small $\delta>0$.
 
 Choose $X\in \mathcal{M}_K$.
-Let us apply the corresponding ineqaulity
+Let us apply the corresponding inequality
 \begin{figure}[ht!]
 \vskip-0mm
 \centering
@@ -433,8 +435,11 @@ We say that a metric space $X$ meets \emph{local $K$-comparison} if any point $x
 If local $K$-comparison implies $K$-comparison for any length space, then we say that \emph{globalization holds} for the $K$-comparison.
 
 \begin{thm}{Theorem}
-Suppose that globalization holds for the $K$-comparison for for some closed cone $K\subset W=\RR^3$.
-Then $\mathcal{M}_K$ consists of all Alexandrov spaces with nonnegative curvature.
+Let $K\subset W=\RR^3$ be a closed cone.
+Suppose that the globalization holds for the $K$-comparison.
+Assume that the $K$-comparison is not trivial; that is, $\mathcal{M}_K$ does not inlude all length spaces,
+and $\mathcal{M}_K$ contains a space with at least two points.
+Then $\mathcal{M}_K$ consists of Alexandrov spaces with nonnegative curvature.
 \end{thm}
 
 \begin{thm}{Lemma}
@@ -449,14 +454,29 @@ It remains to apply the proposition in §~\ref{Four-point arrays}.
 \qeds
 
 \parit{Proof of the theorem.}
-So far we have problem here, but hopefully it will be resolved.
+Let us denote by $K_0$ the cone in $\RR^3$ described by all inequalities of negaive type $(3,1)$;
+in other words, $K_0$ describes all metrics on 4-point set that embeddable in Alexandrov spaces with nonnegative curvature.
+According to the lemma, $K\supset K_0$.
+
+Choose $\eps>0$.
+Let us denote by $K_\eps$ the minimal convex cone that includes all associated forms for metrics embeddable in the Alexandrov spaces with curvature $\ge-\eps$ and diameter at most $1$.
+Note that any compact manifolds with constant curvature $-\eps$ meets local $K_\eps$-comparison.
+
+If $K\subset K_\eps$ for some $\eps>0$, then $\mathcal{M}_K$ contains all compact manifolds of curvature $-\eps$.
+Since $\mathcal{M}_K$ is invariant with respect to rescaling, it contains all compact manifolds of constant negative curvature.
+By the result of Vedrin Šahović \cite{sahovic2009}, any compact metric space can be approximated by compact manifolds of constant negative curvature and fixed dimension $n\ge 2$ (the case $n=2$ is sufficient for us and its proof is slightly simpler).
+Since $K$ is closed, it contais forms associated to all metrics on 4-point set.
+Hence $\mathcal{M}_K$ contians all length spaces; that is $K$-comparison is trivial.
+
+Therefore, for any $\eps>0$ there is a from $\rho\in K_\eps\setminus K$.
+TBC...
 \qeds
 
 \paragraph{Remarks.}
 The requiremnt that the cone $K$ is closed in §~\ref{par:globalization} is necessary;
 without it, the globalization holds for the cone described by inequality
 \[|x_1-x_2|^2+|x_1-x_3|^2+|x_2-x_3|^2<4\cdot(|x_1-x_4|^2+|x_2-x_4|^2+|x_3-x_4|^2).\]
-To check the statement note and use that this ineqaulity forbids tripods.
+To check the statement note and use that this inequality forbids tripods.
 
 It would be super-nice to find a quadratic inequality for $n$-point array that is essentailly different from the globalization theorem.
 Some canditates can be found in our earlier paper \cite{lebedeva-petrunin-zolotov}.
