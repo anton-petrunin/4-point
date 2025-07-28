@@ -354,21 +354,22 @@ Indeed, passing to the ultracompletion, we may assume that $X$ is geodesic.
 Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3,x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
 If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with an appropriate coefficient, then we get the second inequality for $x_1,x_2,x_3,x_5$.
 
-The claim implies that intequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
+By the claim, the intequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
 Iterating the procedure, we get all the inequalities with $\lambda$-arrays
 \[(\alpha\cdot (1-\delta),\  (1-\alpha)\cdot(1-\delta),\ \delta,\ -1)\]
 for $\delta=\beta^{2^n}$ with any integer $n\ge 1$;
-in particular $\delta>0$ can be taken arbitrarily small.
+in particular, we get the following inequality
 \[
 \begin{aligned}
 \alpha\cdot (1-\alpha)\cdot(1-\delta)^2\cdot|x_1-x_2|^2 - \delta\cdot |x_3-x_4|^2 &+
 \\
 +(1-\alpha)\cdot(1-\delta)\cdot\delta\cdot|x_2-x_3|^2-\alpha\cdot (1-\delta)\cdot |x_1-x_4|^2&+
 \\
-+\alpha\cdot(1-\delta)\cdot\delta\cdot|x_1-x_3|^2-(1-\alpha)\cdot(1-\delta)\cdot |x_2-x_4|^2&\le 0.
++\alpha\cdot(1-\delta)\cdot\delta\cdot|x_1-x_3|^2-(1-\alpha)\cdot(1-\delta)\cdot |x_2-x_4|^2&\le 0
 \end{aligned}
 \eqlbl{eq:lambda-inq}
 \]
+arbitrarily small $\delta>0$.
 
 Choose $X\in \mathcal{M}_K$.
 Let us apply the corresponding ineqaulity
@@ -382,27 +383,28 @@ a quadruple $x_1,x_2,x_3,x_4\in X$ such that $x_1$, $x_2$ and $x_4$ lie on one g
 \[(\alpha,\  (1-\alpha),\ 0,\ -1);\]
 that is,
 \[\alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2-\alpha\cdot |x_1-x_4|^2-(1-\alpha)\cdot |x_2-x_4|^2=0.\eqlbl{eq:trig-inq}\]
-Let us subtract \ref{eq:trig-inq} from \ref{eq:lambda-inq} and divide the result by $\delta$:
-\[
-\begin{aligned}
--\alpha\cdot (1-\alpha)\cdot(2-\delta)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
-\\
-+(1-\alpha)\cdot(1-\delta)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+
-\\
-+\alpha\cdot(1-\delta)\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.
-\end{aligned}
-\]
-Since $\delta>0$ can be taken arbitrary small, we get
-\[
-\begin{aligned}
--2\cdot \alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
-\\
-+(1-\alpha)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+
-\\
-+\alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.
-\end{aligned}
-\]
-Adding two \ref{eq:trig-inq} to the last inequality, we get
+%\[
+%\begin{aligned}
+%-\alpha\cdot (1-\alpha)\cdot(2-\delta)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
+%\\
+%+(1-\alpha)\cdot(1-\delta)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+
+%\\
+%+\alpha\cdot(1-\delta)\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.
+%\end{aligned}
+%\]
+%Since $\delta>0$ can be taken arbitrary small, we get
+%\[
+%\begin{aligned}
+%-2\cdot \alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
+%\\
+%+(1-\alpha)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+
+%\\
+%+\alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.
+%\end{aligned}
+%\]
+%Adding two \ref{eq:trig-inq} to the last inequality, we get
+
+Passing to the limit $\delta\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfrac1\delta\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get
 \[
 \begin{aligned}
 |x_3-x_4|^2&\ge
@@ -413,13 +415,12 @@ Adding two \ref{eq:trig-inq} to the last inequality, we get
 \eqlbl{eq:CBB-CBA}
 \]
 Recall that nonnegative or nonpositive curvature in the sense of Alexandrov is defined via this inequality for all $\alpha\in (0,1)$ and $\alpha\in (1,\infty)$, respectively.
-So far we get it only for one value of $\alpha$, but iterating
+So far we get it only for one value of $\alpha$, but iterating this inequality we get it for the remaining values.
 
-Since $x_1$, $x_2$, and $x_4$ lie on one geodesic so that \ref{eq:trig-inq} holds,
-depending on sing of $1-\alpha$ it is the defining inequality of nonnegative or nonpositive curvature in the sense of Alexandrov.
-More presisely, assume this inequality holds for some $\alpha\in (0,1)$, then appying iteration we can choose $\alpha$ from the follwing sequence of nimbers $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha)^2$, and so on.
-This sequence is dense in $(0,1)$.
-Therefore, the \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$; the latter is equivalent to the point-on-side comparison for nonnegative curvature; see \cite[8.14]{AKP-2024}.
+More presisely, assume this inequality holds for some $\alpha\in (0,1)$, then appying iteration we can choose $\alpha$ from the follwing nimbers: $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha)^2$, and so on.
+Together with any value $\xi$, this set contains $\alpha\cdot \xi$ and $(1-\alpha)\cdot\xi$.
+Note that this set is dense in $(0,1)$.
+Therefore, inequality \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$; the latter is equivalent to the point-on-side comparison for nonnegative curvature; see \cite[8.14]{AKP-2024}.
 Similarly one can show that if the inequality holds for some $\alpha>1$, then it holds for any $\alpha>1$,
 and this is equivalent to the point-on-side comparison for nonpositive curvature; see \cite[9.14]{AKP-2024}.
 \qeds
