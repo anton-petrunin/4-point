@@ -52,16 +52,24 @@ We are interested in length spaces $X$ that
 satisfy the inequalities of the following type
 \[\sum_{i,j}a_{i,j}\cdot|x_i-x_j|_X^2\ge 0\]
 for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in $X$.
-
 The inequality of this type will be called \emph{quadratic}.
 
 
 Nonnegative and nonpositive curvature in the sense of Alexandrov can be described by inequalities of that type for $n=4$.
-Namely they are described by the so-called inequalities of negative type $(3,1)$ and $(2,2)$ respectively.
+Namely they are described by the so-called inequalities of negative type $(3,1)$ and $(2,2)$ respectively; see §~\ref{par:rank-one}.
 It motivated us to investigate the whole class of these inequalities.
+We certainly want to tackle the case $n>4$, but only after the simplest case $n=4$, which is the main subject of this paper.
 
-Our paper contains several simple observations, but all together they form something interesting, and they open ground for further investigations.
-We certainly want to tackle the case $n>4$, but first we need to thoroughly grasp the simplest case $n=4$, which is exactly what we are trying to do.
+Our paper contains several simple observations, but all together they form something interesting and nontrivial; it also opens ground for further investigations.
+We define associated quadratic form for a point array in a metric space (§~\ref{Associated form})
+and discuss inequalities of negative type (§~\ref{par:rank-one}).
+Further we prove a new version of a theorem of Abraham Wald \cite[§ 7]{wald} that describes metrics of all possible 4-point arrays Alexandrov spaces with nonnegative and nonpositive curvature;
+see §~\ref{Four-point arrays}.
+Further, we show that Alexandrov spaces with nonnegative and nonpositive curvature can be defined by arbitrary inequality of negative type $(3,1)$ and $(2,2)$ respectively;
+see §~\ref{Alexandrov's comparison}.
+Finally, we show that nontrivial case of globalization theorem holds only for Alexandrov spaces with nonnegative curvature, in other words for inequalities of negative type $(3,1)$;
+see §~\ref{par:globalization}.
+
 
 \paragraph{Associated form.}\label{Associated form}
 Let $\bm{x}=(x_1,\dots,x_n)$ be a point array in a metric space, and let $V\z=\RR^{n-1}$.
@@ -211,7 +219,7 @@ that is, three half-lines glued along the base points.
 
 Inequalities of negative type $(3, 1)$ hold in Alexandrov spaces with nonnegative curvature; it follows from the so-called Lang--Schroeder--Sturm inequality \cite{lang-schroeder, sturm}.
 Similarly, inequalities of negative type $(2, 2)$ hold in Alexandrov spaces with nonpositive curvature; it follows from \cite[9.5]{AKP-2024}.
-Since the tripod $T$ has nonpositive curvature, and $\mathbb{S}^1$ has nonnegative curvature in the sense of Alexandrov, we get the following.
+Since the tripod $T$ has nonpositive curvature, and $\mathbb{S}^1$ has nonnegative curvature in the sense of Alexandrov, we get the following corollary, which also follows from the result of Abraham Wald \cite[§ 7]{wald}.
 
 \begin{thm}{Corollary}
 A 4-point metric space $X$ is isometric to subset in a length space with nonpositive (nonnegative) curvature in the sense of Alexandrov if and only if all inequalities of negative type $(3, 1)$ (respectively, type $(2, 2)$) hold in $X$.
@@ -280,7 +288,7 @@ Below it we draw a diagram following the convention from \cite{lebedeva-petrunin
 if three points, say $x_1$, $x_2$, and $x_3$, uppear in this order on a smooth line, then $|x_1-x_2|+|x_2-x_3|=|x_1-x_3|$.
 
 
-\paragraph{Alexandrov's comparison.}
+\paragraph{Alexandrov's comparison.}\label{Alexandrov's comparison}
 In terms of $v$, inequalities of negative type $(2,2)$ means that $v$ points from one edge of $\triangle$ to the opposite edge;
 the type $(3,1)$ means that $v$ points from a vertex to the opposite face (or in the opposite direction).
 
@@ -454,22 +462,86 @@ It remains to apply the proposition in §~\ref{Four-point arrays}.
 \qeds
 
 \parit{Proof of the theorem.}
-Let us denote by $K_0$ the cone in $\RR^3$ described by all inequalities of negaive type $(3,1)$;
-in other words, $K_0$ describes all metrics on 4-point set that embeddable in Alexandrov spaces with nonnegative curvature.
+Let us denote by $K_0$ the cone in $\RR^3$ described by all inequalities of negaive type $(3,1)$ and $(2,1)$.
+By the corollary in §~\ref{Four-point arrays}, $K_0$ describes all metrics on 4-point set that embeddable in Alexandrov spaces with nonnegative curvature.
 According to the lemma, $K\supset K_0$.
 
-Choose $\eps>0$.
-Let us denote by $K_\eps$ the minimal convex cone that includes all associated forms for metrics embeddable in the Alexandrov spaces with curvature $\ge-\eps$ and diameter at most $1$.
-Note that any compact manifolds with constant curvature $-\eps$ meets local $K_\eps$-comparison.
+Given $\eps>0$, consider all metrics on the set $\{x_1,x_2,x_3,x_4\}$ such that for each $i$
+the sum of three model angles at $x_i$ is at most $2\cdot\pi+\eps$; that is, inequality
+\[\angk{x_1}{x_2}{x_3}+\angk{x_1}{x_2}{x_4}+\angk{x_1}{x_3}{x_4}\le 2\cdot\pi+\eps\]
+holds for any relabeling of $\{x_1,x_2,x_3,x_4\}$.
+Denote by $K_\eps$ the minimal convex cone that includes all associated forms of these metrics.
+Note that $K_0\subset K_\eps$;
+moreover, $K_0=\bigcap_{\eps>0} K_\eps$.
 
-If $K\subset K_\eps$ for some $\eps>0$, then $\mathcal{M}_K$ contains all compact manifolds of curvature $-\eps$.
-Since $\mathcal{M}_K$ is invariant with respect to rescaling, it contains all compact manifolds of constant negative curvature.
-By the result of Vedrin Šahović \cite{sahovic2009}, any compact metric space can be approximated by compact manifolds of constant negative curvature and fixed dimension $n\ge 2$ (the case $n=2$ is sufficient for us and its proof is slightly simpler).
+Since Riemannian manifolds are almost Euclidean at a small scale,
+any compact Riemannian manifold meets local $K_\eps$-comparison.
+If $K\supset K_\eps$ for some $\eps>0$, then $\mathcal{M}_K$ contains all compact Riemannian manifolds.
+Note that any finite metric graph can be approximated by compact Riemannian manifolds;
+to prove it, embed the graph isometrically in the Euclidean space and pass to a boundary of an appropriate neighbourhood.
+(A much stronger result is proved by Vedrin Šahović \cite{sahovic2009} in his thesis).
+Any metric on $\{x_1,x_2,x_3,x_4\}$ admits an distance preserving embedding into a metric graph, so $K$ contains a form near associalted form for any metric on $\{x_1,x_2,x_3,x_4\}$.
 Since $K$ is closed, it contais forms associated to all metrics on 4-point set.
-Hence $\mathcal{M}_K$ contians all length spaces; that is $K$-comparison is trivial.
+Hence $K$-comparison is trivial; in this case, $\mathcal{M}_K$ contains all length spaces.
 
-Therefore, for any $\eps>0$ there is a from $\rho\in K_\eps\setminus K$.
-TBC...
+Now, we can assume that for any $\eps>0$ there is a from $\rho\in K_\eps\setminus K$.
+Thus we can choose quadratic intequality that does not hold for $\rho$, but holds for any form in $K$.
+This inequality can be written as $\langle \omega,\rho \rangle\ge 0$, where $\rho\in W$ is an associated form, $\omega$ is a fixed form in $W$ and the scalar product is uniquely defined by the identity $\langle \alpha^2,\beta^2\rangle=\langle\alpha,\beta\rangle^2$ for any 1-forms $\alpha$ and $\beta$.
+
+Let us show that the inequality $\langle \omega,\rho \rangle\ge 0$ can be rewritten as
+\[\rho(v_1)+\rho(v_2)+\rho(v_3)\ge 0.\eqlbl{eq:v_123}\]
+Indeed, by spectral theorem we can choose orthogonal vectors $v_1,v_2,v_3\in V$ such that
+\[\langle \omega,\rho \rangle=b_1\cdot\rho(v_1)+b_2\cdot\rho(v_2)+b_3\cdot\rho(v_3).\]
+Recall that the inequality holds for ...
+
+Let $N\subset \SSS^2\subset V$ be the set of unit vectors $v$ such that $\rho(v)<0$.
+Note that $N$ does not intersect the four equators;
+moreover, by since $K\supset K_0$, it lies in one of triangles say $\Delta$;
+we can assume that equators $e_1$, $e_2$, $e_3$ are extensions of sides $\Delta$, and $e_4$ is the remaining equator.
+Since the vectors $v_1,v_2,v_3$ are orthogonal, only one of them can point in $N$; let it be $v_1$.
+
+If $v_2=v_3=0$, then \ref{eq:v_123} is a rank-one inequality.
+Moreover, since $K\supset K_0$ it must be an inequality of negative type $(3,1)$ and it remains to apply §~\ref{Alexandrov's comparison}.
+
+Suppose $v_2\ne0$ just for two vectors in \ref{eq:v_123}.
+Note that \ref{eq:v_123} can be rewritten as
+\[\rho(v_1')+\rho(v_2')+\rho(v_3)\ge 0,\]
+where $v_1'=\cos\theta\cdot v_1+\sin \theta \cdot v_2$ and $v_2'=\cos\theta\cdot v_2-\sin \theta \cdot v_1$ for some $\theta$.
+Adjusting $\theta$ we can assume that $v_1'$ still points in $N$ and $v_2'$ points in the equator $e_4$.
+If $v_3\ne 0$, then applying the same argument we can assume that $v_1$ points in $\Delta$ and and if $v_2$ or $v_3$ is not zero, then it points in $e_4$.
+The inequality $\rho(v_1)\ge 0$ has negative type $(3,1)$ and the remaining inequalities $\rho(v_2)\ge 0$ and
+$\rho(v_3)\ge 0$ are of type $(2,1)$;
+they follow from the triangle inequality, so we always have that $\rho(v_2)\ge 0$ and
+$\rho(v_3)\ge 0$.
+Morevoer the values $\rho(v_2)$ and $\rho(v_3)$ depend only on sides of triange $[x_1x_2x_3]$.
+
+Let us pass to the limit $w_1$ of $v_1$ as $\eps\to 0$.
+We have three options:
+\begin{enumerate}[(a)]
+\item $w_1$ points in the interor of $\Delta$,
+\item $w_1$ points to a side of $\Delta$,
+\item $w_1$ points to a vertex of $\Delta$.
+\end{enumerate}
+Each case will be done separately.
+
+Suppose $w_1$ points in the interor of $\Delta$, so $\rho(w)\ge0$ is an inequality of negative type $(3,1)$.
+Choose $X\in \mathcal{K}$;
+let us show that inequality $\rho(w)\ge0$ holds for any quadruple $x_1,x_2,x_3,x_4\in X$.
+
+Fix three points $x_1$, $x_2$, and $x_3$.
+If the triangle $[x_1x_2x_3]$ is degenerate then any $\rho(w)\ge0$ for any $x_4$.
+So we can assume that $[x_1x_2x_3]$ is nondegenerate, so each of the triangle inequality is strict.
+
+
+
+Let \[(\alpha\cdot (1-\beta),\  (1-\alpha)\cdot(1-\beta),\  \beta,\ -1)\]
+be the $\lambda$ array for the $(3,1)$ inequality $\rho(v_1)\ge 0$.
+We can assume that $\alpha\in (\tfrac12,1)$ and $\beta\in(\tfrac13,1)$.
+Let us pass to the limits pair $(\alpha,\beta)$ for some sequence $\eps_n\to0$.
+
+Suppose $\alpha,\beta<1$.
+Then the limit inequality $\rho(v_1)\ge 0$ is of type $(3,1)$.
+
 \qeds
 
 \paragraph{Remarks.}
