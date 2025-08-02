@@ -61,13 +61,14 @@ isbn=false]{biblatex}
 \renewcommand{\thesubsection}{\thesection\Alph{subsection}}
 
 \newcounter{thm}[section]
-\renewcommand{\thethm}{\arabic{thm}}
-\def\claim#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf #1.}
+\renewcommand{\thethm}{\thesection.\arabic{thm}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thesection.\arabic{thm}. #2.#1}
 \it\ %\ignorespaces
 }
 \def\endclaim{
 \par\medskip}
 \newenvironment{thm}{\claim}{\endclaim}
+
 
 \newcommand*{\DCto}{\begin{picture}(20,10)
 \put(1,0){$\longrightarrow$}
