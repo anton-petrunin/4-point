@@ -58,11 +58,11 @@ The inequality of this type will be called \emph{quadratic}.
 
 Nonnegative and nonpositive curvature in the sense of Alexandrov can be described by inequalities of that type for $n=4$.
 Namely they are described by the so-called inequalities of negative type $(3,1)$ and $(2,2)$ respectively; see Section~\ref{par:rank-one}.
-It motivated us to investigate the whole class of these inequalities.
+This observation motivated us to investigate the entire class of such inequalities.
 We certainly want to tackle the case $n>4$, but only after the simplest case $n=4$, which is the main subject of this paper.
 
 Our paper contains several simple observations, but all together they form something interesting and nontrivial; it also opens ground for further investigations.
-We define associated quadratic form for a point array in a metric space (Section~\ref{Associated form})
+We define an associated quadratic form for a point array in a metric space (Section~\ref{Associated form})
 and discuss inequalities of negative type (Section~\ref{par:rank-one}).
 Further we prove a new version of a theorem of Abraham Wald \cite[§ 7]{wald} that describes metrics of all possible 4-point arrays Alexandrov spaces with nonnegative and nonpositive curvature;
 see Section~\ref{Four-point arrays}.
@@ -87,7 +87,7 @@ it is uniquely defined and remembers all distances $|x_i-x_j|_X$
 The Euclidean structure on $V$ identifies it with $V^*$.
 The space of quadratic forms over $V$ will be denoted by $W$;
 it is the symmetric square of $V=V^*$, and can be written as $W=S^2(V^*)=S^2(V)$.
-Any quadratic inequalities described above define linear inequalities on $W$, so it can be written as $\langle\omega,\xi\rangle\ge 0$ for a fixed $\omega\in W$ and asociated form $\xi$.
+Any quadratic inequalities described above define linear inequalities on $W$, so it can be written as $\langle\omega,\rho_{\bm{x}}\rangle\ge 0$ for a fixed $\omega\in W$.
 
 This makes it possible to redefine the spaces that we are going to consider can be described the following way.
 
@@ -112,14 +112,14 @@ First reason comes form the triangle inequality, which is equivalent to $\rho_{\
 These inequalities must hold for any form in $K'$.
 Furthermore, if $\rho_{\bm{x}}\in K'$, then $\rho_{\bm{y}}\in K'$ for any $n$-point array $\bm{y}$ made from the points of $\bm{x}$; in particular $\bm{y}$ might be a permutation of points in $\bm{x}$.
 
-These two conditions work for all metrics (not necessary intrinsic),
+These two conditions hold for all metrics (not necessary intrinsic),
 and one cannot get more for general metric spaces.
 The next observation already use length-metricness.
 
 \begin{thm}{Observation}
 If $K$ is closed convex cone in $W$.
 Then $K'$ is closed.
-Moreover, $\mathcal{M}_K$ closed under ultralimits.
+Moreover, $\mathcal{M}_K$ is closed under ultralimits.
 \end{thm}
 
 
@@ -367,22 +367,22 @@ Indeed, passing to the ultracompletion, we may assume that $X$ is geodesic.
 Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3,x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
 If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with an appropriate coefficient, then we get the second inequality for $x_1,x_2,x_3,x_5$.
 
-By the claim, the intequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
+By the claim, the inequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
 Iterating the procedure, we get all the inequalities with $\lambda$-arrays
-\[(\alpha\cdot (1-\delta),\  (1-\alpha)\cdot(1-\delta),\ \delta,\ -1)\]
-for $\delta=\beta^{2^n}$ with any integer $n\ge 1$;
+\[(\alpha\cdot (1-\gamma),\  (1-\alpha)\cdot(1-\gamma),\ \gamma,\ -1)\]
+for $\gamma=\beta^{2^n}$ with any integer $n\ge 1$;
 in particular, we get the following inequality
 \[
 \begin{aligned}
-\alpha\cdot (1-\alpha)\cdot(1-\delta)^2\cdot|x_1-x_2|^2 - \delta\cdot |x_3-x_4|^2 &+
+\alpha\cdot (1-\alpha)\cdot(1-\gamma)^2\cdot|x_1-x_2|^2 - \gamma\cdot |x_3-x_4|^2 &+
 \\
-+(1-\alpha)\cdot(1-\delta)\cdot\delta\cdot|x_2-x_3|^2-\alpha\cdot (1-\delta)\cdot |x_1-x_4|^2&+
++(1-\alpha)\cdot(1-\gamma)\cdot\gamma\cdot|x_2-x_3|^2-\alpha\cdot (1-\gamma)\cdot |x_1-x_4|^2&+
 \\
-+\alpha\cdot(1-\delta)\cdot\delta\cdot|x_1-x_3|^2-(1-\alpha)\cdot(1-\delta)\cdot |x_2-x_4|^2&\le 0
++\alpha\cdot(1-\gamma)\cdot\gamma\cdot|x_1-x_3|^2-(1-\alpha)\cdot(1-\gamma)\cdot |x_2-x_4|^2&\le 0
 \end{aligned}
 \eqlbl{eq:lambda-inq}
 \]
-arbitrarily small $\delta>0$.
+arbitrarily small $\gamma>0$.
 
 Choose $X\in \mathcal{M}_K$.
 Let us apply the corresponding inequality
@@ -398,14 +398,14 @@ that is,
 \[\alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2-\alpha\cdot |x_1-x_4|^2-(1-\alpha)\cdot |x_2-x_4|^2=0.\eqlbl{eq:trig-inq}\]
 %\[
 %\begin{aligned}
-%-\alpha\cdot (1-\alpha)\cdot(2-\delta)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
+%-\alpha\cdot (1-\alpha)\cdot(2-\gamma)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
 %\\
-%+(1-\alpha)\cdot(1-\delta)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+
+%+(1-\alpha)\cdot(1-\gamma)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+
 %\\
-%+\alpha\cdot(1-\delta)\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.
+%+\alpha\cdot(1-\gamma)\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.
 %\end{aligned}
 %\]
-%Since $\delta>0$ can be taken arbitrary small, we get
+%Since $\gamma>0$ can be taken arbitrary small, we get
 %\[
 %\begin{aligned}
 %-2\cdot \alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+
@@ -417,7 +417,7 @@ that is,
 %\]
 %Adding two \ref{eq:trig-inq} to the last inequality, we get
 
-Passing to the limit $\delta\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfrac1\delta\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get
+Passing to the limit $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get
 \[
 \begin{aligned}
 |x_3-x_4|^2&\ge
@@ -430,7 +430,7 @@ Passing to the limit $\delta\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfr
 Recall that nonnegative or nonpositive curvature in the sense of Alexandrov is defined via this inequality for all $\alpha\in (0,1)$ and $\alpha\in (1,\infty)$, respectively.
 So far we get it only for one value of $\alpha$, but iterating this inequality we get it for the remaining values.
 
-More presisely, assume this inequality holds for some $\alpha\in (0,1)$, then appying iteration we can choose $\alpha$ from the follwing nimbers: $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha)^2$, and so on.
+More precisely, assume this inequality holds for some $\alpha\in (0,1)$, then appying iteration we can choose $\alpha$ from the follwing nimbers: $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha)^2$, and so on.
 Together with any value $\xi$, this set contains $\alpha\cdot \xi$ and $(1-\alpha)\cdot\xi$.
 Note that this set is dense in $(0,1)$.
 Therefore, inequality \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$; the latter is equivalent to the point-on-side comparison for nonnegative curvature; see \cite[8.14]{AKP-2024}.
@@ -467,7 +467,7 @@ It remains to apply \ref{prop:Four-point arrays}.
 \parit{Proof of the theorem.}
 Let us denote by $K_0$ the cone in $\RR^3$ described by all inequalities of negaive type $(3,1)$ and $(2,1)$.
 By \ref{cor:Four-point arrays}, $K_0$ describes all metrics on 4-point arrays in Alexandrov spaces with nonnegative curvature.
-By \ref{lem:globalization}, $K\supset K_0$.
+By \ref{lem:globalization},  $K$~includes $K_0$.
 
 Given $\delta>0$, consider all metrics on the set $\{x_1,x_2,x_3,x_4\}$ such that for each $i$
 the sum of three model angles at $x_i$ is at most $2\cdot\pi+\delta$; that is, inequality
@@ -479,19 +479,20 @@ moreover, $K_0=\bigcap_{\delta>0} K_\delta$.
 
 Since Riemannian manifolds are almost Euclidean at small scale,
 any compact Riemannian manifold meets local $K_\delta$-comparison.
+
 Suppose $K\supset K_\delta$ for some $\delta>0$.
-Since the globalization holds for the $K$-comparison, $\mathcal{M}_K$ contains all compact Riemannian manifolds.
+Since the globalization holds for $K$, the class $\mathcal{M}_K$ contains all compact Riemannian manifolds.
 Note that any finite metric graph can be approximated by compact Riemannian manifolds;
 to prove it, embed the graph isometrically in the Euclidean space and pass to a boundary of an appropriate neighbourhood.
-(A much stronger result is proved by Vedrin Šahović in his thesis \cite{sahovic2009}.)
-Any metric on $\{x_1,x_2,x_3,x_4\}$ admits a distance-preserving embedding into a metric graph, so $K$ contains a form near the associalted form for any metric on $\{x_1,x_2,x_3,x_4\}$.
+(A way stronger result is proved by Vedrin Šahović in his thesis \cite{sahovic2009}.)
+Any metric on $\{x_1,x_2,x_3,x_4\}$ admits a distance-preserving embedding into a metric graph, so $K$ contains a form near the associated form for any metric on $\{x_1,x_2,x_3,x_4\}$.
 Since $K$ is closed, it contais forms associated to all metrics on 4-point set, so it is solely defined by triangle inequalities;
 in other words, $K$ is described by all inequalities of negative type $(2,1)$.
 Hence $K$-comparison is trivial; in this case, $\mathcal{M}_K$ contains all length spaces.
 
 From now on, we can assume that for any $\delta>0$ there is a from $\theta_\delta\in K_\delta\setminus K$.
-Thus we can choose quadratic intequality that does not hold for $\theta_\delta$, but holds for any form in $K$.
-Our inequality can be written as $\langle \omega,\xi \rangle\ge 0$, where $\xi\in W$ is an associated form of some 4-point array $(x_1,x_2,x_3,x_4)$ and $\omega$ is a fixed form in $W$.
+Thus we can choose quadratic inequality that does not hold for $\theta_\delta$, but holds for any form in $K$.
+Our inequality can be written as $\langle \omega,\rho_{\bm{x}} \rangle\ge 0$, where $\rho_{\bm{x}}\in W$ is an associated form of some 4-point array $(x_1,x_2,x_3,x_4)$ and $\omega$ is a fixed form in $W$.
 
 (Recall that $V$ and $W$ come with natural scalar product; see Section~\ref{Associated form}.
 In particular, we have indentification $V=V^*$ and $W=W^*$.
@@ -502,18 +503,26 @@ Note that $N$ does not intersect the four equators.
 Moreover, since $K\supset K_0$, the set $N$ lies in one of triangles say $\Delta$;
 we can assume that equators $e_1$, $e_2$, $e_3$ are extensions of sides $\Delta$, and $e_4$ is the remaining equator.
 
-Let $u\in V$ be a unit vector perpendicular to the equator $e_4$.
 Since $K\supset K_0$, we have $\omega(v)\ge 0$ for any $v\in V$.
+Let $u\in V$ be a unit vector perpendicular to the equator $e_4$.
 By the spectral thereom, $\omega$ and $u^2$ can be diagonalized in common basis (which does not have to be orthonormal).
-Therefore, our inequality $\langle \omega,\xi \rangle\ge 0$ can be rewritten as
-\[\xi(v_1)+\xi(v_2)+\xi(v_3)\ge 0\eqlbl{eq:v_123}\]
+Therefore,
+\[\langle \omega,\rho_{\bm{x}}\rangle=\rho_{\bm{x}}(v_1)+\rho_{\bm{x}}(v_2)+\rho_{\bm{x}}(v_3)\eqlbl{eq:v_123}\]
 for fixed vectors $v_1,v_2,v_3\in V$ such that $v_2$ and $v_3$ point in the direction of the equator $e_4$ or vanish.
 
-The inequalities $\xi(v_2)\ge 0$ and
-$\xi(v_3)\ge 0$ are of type $(2,1)$;
-they follow from the triangle inequality, so we always have that $\xi(v_2)\ge 0$ and
-$\xi(v_3)\ge 0$.
-Morevoer the values $\xi(v_2)$ and $\xi(v_3)$ depend only on sides of triange $[x_1x_2x_3]$.
+The inequalities $\rho_{\bm{x}}(v_2)\ge 0$ and
+$\rho_{\bm{x}}(v_3)\ge 0$ are of type $(2,1)$;
+they follow from the triangle inequality, so we always have that $\rho_{\bm{x}}(v_2)\ge 0$ and
+$\rho_{\bm{x}}(v_3)\ge 0$.
+Morevoer the values $\rho_{\bm{x}}(v_2)$ and $\rho_{\bm{x}}(v_3)$ depend only on sides of triange $[x_1x_2x_3]$.
+
+\begin{wrapfigure}{o}{30mm}
+\centering
+\vskip-4mm
+\includegraphics{mppics/pic-40}
+\vskip-0mm
+\end{wrapfigure}
+
 Since
 \begin{align*}
 \langle\omega,\theta_\delta\rangle=\theta_\delta(v_1)+\theta_\delta(v_2)+\theta_\delta(v_3)&<0,
@@ -522,8 +531,9 @@ Since
 \\
 \theta_\delta(v_3)&\ge0,
 \end{align*}
- we have that $v_1\in N$.
-Therefore, $\xi(v_1)\ge0$ is an inequality of negative type $(3,1)$.
+ we have that $v_1$ points in a direction of $N$.
+(In particular $N\ne\emptyset$.)
+Therefore, $\rho_{\bm{x}}(v_1)\ge0$ is an inequality of negative type $(3,1)$.
 
 Let $w_1$ be a partial limit of $v_1$ as $\delta\to 0$.
 We have three options:
@@ -535,25 +545,28 @@ We have three options:
 Each case will be done separately.
 
 \parit{Case \ref{in}.}
-Note that $\xi(w_1)\ge0$ is an inequality of negative type $(3,1)$.
-Choose $X\in \mathcal{K}$ and a quadruple $x_1$, $x_2$, $x_3$, $x_4\in X$; denote by $\xi$ its associalted form.
-Let us show that $\xi(w_1)\ge0$;
+Note that $\rho_{\bm{x}}(w_1)\ge0$ is an inequality of negative type $(3,1)$.
+Suppose $X\in \mathcal{M}_K$ and $\rho_{\bm{x}}$ is associated form of an aray $\bm{x}=(x_1, x_2, x_3, x_4)$ in $X$.
+Let us show that $\rho_{\bm{x}}(w_1)\ge0$;
 once it is done, it will remain to apply \ref{prop:Alexandrov's comparison}.
 
-Assume $\xi(w_1)<0$.
+Assume $\rho_{\bm{x}}(w_1)<0$.
 Observe that $[x_1x_2x_3]$ is nondegenerate, so each of the triangle inequality with vrtices $x_1$, $x_2$, and $x_3$ is strict.
-We can assume that $[x_2,x_3]$ is the longest of $[x_1x_2x_3]$.
-Observe that the distances $|x_1-x_4|$, $|x_2-x_4|$, $|x_3-x_4|$ cannot exceed $|x_2-x_3|$;
-otherwise $\xi(w_1)\ge0$.
+Moreover,
+\[\angk{x_4}{x_1}{x_2}+\angk{x_4}{x_2}{x_3}+\angk{x_4}{x_3}{x_1}>2\cdot\pi.\]
+We can assume that $[x_1,x_2]$ is the longest of $[x_1x_2x_3]$.
+Observe that the distances $|x_1-x_4|$, $|x_2-x_4|$, $|x_3-x_4|$ cannot exceed $|x_1-x_2|$.
 
 Choose small $\eps>0$.
-Consider new metric on $\{x_1,x_2,x_3,x_4\}$ redefining the distance $|x_2-x_3|\z{\mathrel{:=}}(1-\eps)\cdot|x_2-x_3|$ and leaving the remaining five distances the same; denote by $\xi'$ its asociated form.
-If $\delta$ is sufficiently small, then $\xi'(v_1)\ge0$ (here $v_1$ depends on $\delta$).
-It follows that $\xi'(w_1)\ge0$;
-passing to the limit as $\eps\to 0$, we get $\xi(w_1)\ge0$.
+Redefine distances of $\{x_1,x_2,x_3,x_4\}$ by setting $|x_2-x_3|\z{\mathrel{:=}}(1-\eps)\cdot|x_2-x_3|$ and leaving the remaining five distances the same.
+These new distances might fail to meet triangle inequality, but we still can produce its associated form;
+denote it by $\rho_{\bm{x}}'$.
+If $\delta$ is sufficiently small, then $\rho_{\bm{x}}'(v_1)\ge0$ (here $v_1$ depends on $\delta$).
+It follows that $\rho_{\bm{x}}'(w_1)\ge0$;
+passing to the limit as $\eps\to 0$, we get $\rho_{\bm{x}}(w_1)\ge0$.
 
 \parit{Case \ref{side}.}
-Note that $\xi(w_1)\ge0$ is an inequality of negative type $(2,1)$;
+Note that $\rho_{\bm{x}}(w_1)\ge0$ is an inequality of negative type $(2,1)$;
 let us assume that $(\alpha,(1-\alpha), 0,-1)$ is its $\lambda$-array.
 
 Choose $X\in \mathcal{K}$ and a quadruple $x_1$, $x_2$, $x_3$, $x_4\in X$.
@@ -563,16 +576,40 @@ once it is done, it will remain to apply the final step in the proof of \ref{pro
 Assume the contrary.
 In this case $[x_1x_2x_3]$ is nondegenerate, so each of the triangle inequality with vrtices $x_1$, $x_2$, and $x_3$ is strict; moreover $x_4$ lies on a geodesic $[x_1,x_2]$.
 We can assume that $|x_2-x_3|\ge |x_1-x_3|$.
-Consider new metric on $\{x_1,x_2,x_3,x_4\}$ redefining the distance $|x_2-x_3|:=(1-\eps)\cdot|x_2-x_3|$ and leaving the remaining five distances the same; denote by $\xi'$ its asociated form.
-If $\delta$ is sufficiently small, then $\xi'(v_1)\ge0$.
+
+Again, choose small $\eps>0$, and redefine distances on $\{x_1,x_2,x_3,x_4\}$ by setting $|x_2-x_3|:=(1-\eps)\cdot|x_2-x_3|$ and leaving the remaining five distances the same; denote by $\rho_{\bm{x}}'$ its asociated form.
+Again, if $\delta>0$ is sufficiently small, then $\rho_{\bm{x}}'(v_1)\ge0$.
 It remains to repeat the derivation of \ref{eq:CBB-CBA} in the proof of \ref{prop:Alexandrov's comparison} and pass the the limit as $\eps\to 0$.
 
 \parit{Case \ref{vertex}.}
-Note that $\xi(w_1)\ge0$ is an inequality of negative type $(1,1)$.
-Let us assume that $(1,0, 0,-1)$ is its $\lambda$-array;
-so, the inequality can be written as $|x_1-x_4|^2\ge 0$.
+Note that $\rho_{\bm{x}}(w_1)\ge0$ is an inequality of negative type $(1,1)$.
+Let us assume that $(0,0, 1,-1)$ is its $\lambda$-array;
+so, the inequality can be written as $|x_3-x_4|^2\ge 0$.
 
-TBC
+This case will be reduced to previous two using the manipulations with inequalites from the proof of \ref{prop:Alexandrov's comparison}.
+
+Choose a sequence $\delta_n\to0$ such that $v_1=v_1(\delta_n)\to w_1$ as $n\to \infty$.
+Let
+\[(\alpha_n\cdot (1-\beta_n),\  (1-\alpha_n)\cdot(1-\beta_n),\  \beta_n,\ -1)\]
+be the $\lambda$-arrays of the inequalities $\rho_{\bm{x}}(v_1(\delta_n))\ge 0$.
+Note that $\alpha_n,\beta_n\in(0,1)$ and $\beta_n\to 1$ as $n\to\infty$.
+
+Similarly to the above, choose small $\eps>0$, and redefine distances on $\{x_1$, $x_2$, $x_3$, $x_4\}$ by setting $|x_1-x_2|:=(1-\eps)\cdot|x_1-x_2|$ and leaving the remaining five distances the same; denote by $\rho_{\bm{x}}'$ its asociated form.
+Note that $\rho_{\bm{x}}'(v_1(\delta_n))\ge0$ for all large $n$.
+Applying the iteration procedure in \ref{prop:Alexandrov's comparison}.
+we get that inequality for $\rho_{\bm{x}}'$ with $\lambda$-array
+\[(\alpha_n\cdot (1-\beta_n^2),\  (1-\alpha_n)\cdot(1-\beta_n^2),\  \beta_n^2,\ -1)\]
+for all large $n$.
+Repeating this procedure several times we get inequality for $\rho_{\bm{x}}'$ with $\lambda$-array
+\[(\alpha_n\cdot (1-\beta_n^{2^k}),\  (1-\alpha_n)\cdot(1-\beta_n^{2^k}),\  \beta_n^{2^k},\ -1)\]
+Choosing $k=k(n)$ appropriately, we get inequality for $\rho_{\bm{x}}'$ with $\lambda$-array
+\[(\alpha_n\cdot (1-\gamma_n),\  (1-\alpha_n)\cdot(1-\gamma_n),\  \gamma_n,\ -1)\]
+with $\gamma_n\in[\tfrac12,\tfrac14]$.
+
+Passing to a subsequence, we can assume that $\alpha_n\to \alpha$ and $\gamma_n\to \gamma$ as $n\to \infty$.
+Note that $\gamma\in (0,1)$.
+If $\alpha\in (0,1)$, then arguing as in case \ref{side} we get the result.
+If $\alpha=0$ or $1$, then we should apply the argument in case \ref{side}.
 \qeds
 
 \section{Remarks}

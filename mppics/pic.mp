@@ -242,4 +242,40 @@ z.b1+2*z.shift,z.c2+2*z.shift,z.c3+2*z.shift,z.b4+2*z.shift;
 
 endfig;
 
+beginfig(40)
+save u,p;
+u:=1cm;
+path p[];
+
+z.za0=(1,0)*u;
+z.za1=z.za0 rotated 60;
+z.za2=z.za0 rotated 120;
+z.za3=-z.za0 ;
+z.za4=z.za0 rotated -120;
+z.za5=z.za0 rotated -60;
+z.zb0=(0,.5)*u;
+z.zb2=z.zb0 rotated 120;
+z.zb4=z.zb0 rotated -120;
+
+p10= z.za0..z.za1..z.za2..z.za3..z.za4..z.za5..cycle;
+p11=z.za1..z.zb0..z.zb2..z.za4;
+p12=z.za3..z.zb2..z.zb4..z.za0;
+p13=z.za5..z.zb4..z.zb0..z.za2;
+
+draw p10;
+draw p11;
+draw p12;
+draw p13;
+
+p21=(.7*z.zb0)..tension 1.5..(.9*.5[z.zb2,z.zb4])..tension 1.5..cycle;
+
+fill p21 withcolor .5;
+
+label(btex $N$ etex, .5[.7*z.zb0,.9*.5[z.zb2,z.zb4]]) withcolor 1;
+label.top(btex $e_4$ etex, point 1.5 of p10);
+label.ulft(btex $e_1$ etex, (0,-2)+point 1.5 of p11);
+label.bot(btex $e_2$ etex, point 1.5 of p12);
+label.urt(btex $e_3$ etex, (0,-2)+point 1.5 of p13);
+endfig;
+
 end
