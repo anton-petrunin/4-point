@@ -52,7 +52,8 @@ Suppose $a_{i,j}$ are components of a symmetric $n{\times}n$ matrix.
 We are interested in length spaces $X$ that
 satisfy the inequalities of the form
 \[\sum_{i,j}a_{i,j}\cdot|x_i-x_j|_X^2\ge 0\]
-for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in $X$.
+for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in $X$;
+here $|x-y|_X$ denotes distance between $x$ and $y$ in $X$.
 Inequalities of this kind will be called \emph{quadratic}.
 
 Nonnegative and nonpositive curvature in the sense of Alexandrov can be described by inequalities of that type for $n=4$.
@@ -61,21 +62,19 @@ This observation motivated us to investigate the entire class of such inequaliti
 We certainly want to tackle the case $n>4$, but only after the simplest case $n=4$, which is the main subject of this paper.
 
 Our paper contains several simple observations, but altogether they form something interesting and nontrivial; it also lays the groundwork for further investigation.
-We define an associated quadratic form for a point array in a metric space (Section~\ref{Associated form})
-and discuss inequalities of negative type (Section~\ref{par:rank-one}).
-Further we prove a new version of a theorem of Abraham Wald \cite[§ 7]{wald} that describes
-the metrics of all possible 4-point arrays in Alexandrov spaces with nonnegative and nonpositive curvature;
-see Section~\ref{Four-point arrays}.
-Further, we show that Alexandrov spaces with nonnegative and nonpositive curvature can be defined by arbitrary inequality of negative type $(3,1)$ and $(2,2)$ respectively;
-see Section~\ref{Alexandrov's comparison}.
-Finally, we show that the nontrivial case of the globalization theorem holds only for Alexandrov spaces with nonnegative curvature, in other words, for inequalities of negative type $(3,1)$;
+Sections \ref{Associated form} and \ref{par:rank-one} introduce necessary definitions (associated quadratic form for a point array and inequalities of negative type) and prove several basic statements that valid for all $n$-point arrays.
+Further, we turn our attentions to the $4$-point arrays.
+In Section~\ref{Four-point arrays}, we prove a new version of a theorem of Abraham Wald \cite[§ 7]{wald} that describes
+the metrics of all possible 4-point arrays in Alexandrov spaces with nonnegative and nonpositive curvature.
+In Section~\ref{Alexandrov's comparison}, we show that Alexandrov spaces with nonnegative and nonpositive curvature can be defined by arbitrary inequality of negative type $(3,1)$ and $(2,2)$ respectively.
+Finally, we show that the globalization theorem holds only for Alexandrov spaces with nonnegative curvature, in other words, for inequalities of negative type $(3,1)$;
 see Section~\ref{par:globalization}.
 
 
 \section{Associated form}\label{Associated form}
+
 Let $\bm{x}=(x_1,\dots,x_n)$ be a point array in a metric space, and let $V\z=\RR^{n-1}$.
 Choose once and for all a unit-edge regular simplex $\triangle$ in $V$; denote by $y_1,\dots,y_n$ its vertices.
-Note that $V$ comes with a natural Euclidean structure.
 Consider the quadratic form $\rho_{\bm{x}}$ on $V$ that is defined by the equalities
 \[\rho_{\bm{x}}(y_i-y_j)=|x_i-x_j|^2_X\]
 for all $i$ and $j$.
@@ -89,7 +88,7 @@ The space of quadratic forms over $V$ will be denoted by $W$;
 it is the symmetric square of $V=V^*$, and can be written as $W=S^2(V^*)=S^2(V)$.
 Any quadratic inequalities described above define linear inequalities on $W$, so they can be written as $\langle\omega,\rho_{\bm{x}}\rangle\ge 0$ for a fixed $\omega\in W$.
 
-This makes it possible to redefine the spaces that we are going to consider can be described the following way.
+This makes it possible to redefine the spaces that we are going to consider.
 
 Let $K$ be a convex cone in $W$;
 that is, $K$ is a nonempty set such that if $v,w\in K$, then $a\cdot v+b\cdot w\in K$ for any $a,b\ge0$.
@@ -106,8 +105,7 @@ $a\cdot X$ denotes the rescaled copy of $X$ with factor $a$.
 The last observation can be used in the opposite direction as well.
 It gives that all forms $\rho_{\bm{x}}$ for point arrays in $\mathcal{M}_K$-spaces form a convex cone, say $K'$.
 
-Evidently $K'\subset K$.
-This inclusion might be strict.
+Evidently $K'\subset K$, and this inclusion might be strict.
 First reason comes from the triangle inequality, which is equivalent to $\rho_{\bm{x}}(w)\ge 0$ for any vector $w$ in a 2-face of $\triangle$.
 These inequalities must hold for any form in $K'$.
 Furthermore, if $\rho_{\bm{x}}\in K'$, then $\rho_{\bm{y}}\in K'$ for any $n$-point array $\bm{y}$ made from the points of $\bm{x}$; in particular $\bm{y}$ might be a permutation of points in $\bm{x}$.
@@ -146,7 +144,7 @@ recall that $X$ can be (and will be) considered as a subset of $X^\omega$.
 Since $K$ is closed, the observation implies that $X^\omega\in \mathcal{M}_K$.
 
 Since  $X$ is a length space, $X^\omega$ has to be geodesic.
-Since $X^\omega$ contains pair of distinct point, it must contain a nontrivial geodesic.
+Since $X^\omega$ contains a pair of distinct point, it must have a nontrivial geodesic.
 It follows that $\mathcal{M}_K$ contains a line segment.
 Rescaling the segment and passing to the ultralimit, we get $\RR\in \mathcal{M}_K$;
 passing to the products of $\RR$, we get the result. 
@@ -184,9 +182,9 @@ Since changing the signs of all $\lambda_i$ does not change the inequality, we c
 
 \section{Four-point arrays}\label{Four-point arrays}
 Now suppose that $n=4$.
-In this case, we have two interesting types of rank-one inequalities: $(2,2)$ and $(3,1)$.
-The case $(1,1)$ is trivial and 
-the case $(2,1)$ follows from the triangle inequality.
+In this case, we have two interesting types of rank-one inequalities: negative type $(2,2)$ and $(3,1)$.
+The type $(1,1)$ is trivial and
+the type $(2,1)$ follows from the triangle inequality.
 In fact, the triangle inequality is equivalent to all inequalities of negative type $(2,1)$.
 
 \begin{wrapfigure}{o}{36mm}
@@ -323,23 +321,23 @@ This means that $\mathcal{M}_K$ consists of all length spaces.
 It remains to consider the inequalities of negative type $(2,2)$ or $(3,1)$.
 In these cases, we can and will assume that our $\lambda$-array is
 \[(\alpha\cdot (1-\beta),\  (1-\alpha)\cdot(1-\beta),\  \beta,\ -1)\] 
-for some $\alpha,\beta$ such that $0< \beta< 1$;
-in case of $(2,2)$-inequality, $0<\alpha<1$;
-in case of $(3,1)$-inequality, $1<\alpha$.
+for some $\alpha,\beta$ such that $0< \beta< 1$.
+In case of $(2,2)$-inequality, $1<\alpha$;
+in case of $(3,1)$-inequality, $0<\alpha<1$.
 
 Consider the 4-point array $\bm{x}=(x_1,x_2,x_3,x_4)$  in the plane such that 
 \[x_4=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_3.\]
 We can assume that the array is labeled so that it matches one of the configurations in the pictures below,
 so for $(3,1)$-inequality, point $x_4$ lies inside of triangle $x_1x_2x_3$,
-and for $(2,2)$-inequality segment $[x_1,x_3]$ intersects $[x_2,x_4]$.
+and for $(2,2)$-inequality segment $[x_1x_3]$ intersects $[x_2x_4]$.
 
 Note that we get equality in \ref{eq:lambda} for this array.
 Moreover, this defines a bijection between $\bm{x}$-arrays up to affine transformation and $\lambda$-arrays up to multiplication by a nonzero coefficient;
-as before, we assume that the $\bm{x}$-arrays are in general position --- three of its points do not lie on one line.
+as before, we assume that the $\bm{x}$-arrays are in general position --- no three of its points lie on one line.
 So we can describe our inequality by a 4-point array in general position.
 If the points of the array lie at the vertices of a convex quadrangle,
 then it corresponds to an inequality of type $(2,2)$.
-If one of the points in the array lie inside of the triangle formed by the remaining points, then it corresponds to an inequality of type $(3,1)$.
+If one of the points lies inside of the triangle formed by the remaining points, then it corresponds to an inequality of type $(3,1)$.
 
 \begin{figure}[ht!]
 \vskip-0mm
@@ -367,13 +365,13 @@ Suppose that the first inequality holds for any four-point array in a length spa
 \end{thm}
 
 Indeed, passing to the ultracompletion, we may assume that $X$ is geodesic.
-Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3,x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
-If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with an appropriate coefficient, then we get the second inequality for $x_1,x_2,x_3,x_5$.
+Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
+If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with an appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_5$.
 
 By the claim, the inequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
-Iterating the procedure, we get all the inequalities with $\lambda$-arrays
+Applying the claim several times, we get all the inequalities with $\lambda$-arrays
 \[(\alpha\cdot (1-\gamma),\  (1-\alpha)\cdot(1-\gamma),\ \gamma,\ -1)\]
-for $\gamma=\beta^{2^n}$ with any integer $n\ge 1$;
+for $\gamma=\beta^{2^k}$ with any integer $k\ge 1$;
 in particular, we get the following inequality
 \[
 \begin{aligned}
@@ -420,7 +418,7 @@ that is,
 %\]
 %Adding two \ref{eq:trig-inq} to the last inequality, we get
 
-Passing to the limit $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get
+Passing to the limit as $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get
 \[
 \begin{aligned}
 |x_3-x_4|^2&\ge
@@ -430,13 +428,13 @@ Passing to the limit $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfr
 \end{aligned}
 \eqlbl{eq:CBB-CBA}
 \]
-Recall that nonnegative or nonpositive curvature in the sense of Alexandrov is defined via this inequality for all $\alpha\in (0,1)$ and $\alpha\in (1,\infty)$, respectively.
+Nonnegative or nonpositive curvature in the sense of Alexandrov can be defined via this inequality for all $\alpha\in (0,1)$ and $\alpha\in (1,\infty)$, respectively; see \cite[8.14 and 9.14]{AKP-2024}.
 So far, we obtain it for only one value of $\alpha$.
 However, by iterating the inequality, we derive it for the remaining values.
 
-More precisely, assume this inequality holds for some $\alpha\in (0,1)$, then applying iteration we can choose $\alpha$ from the following numbers: $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha)^2$, and so on.
-Together with any value $\xi$, this set contains $\alpha\cdot \xi$ and $(1-\alpha)\cdot\xi$.
-Note that this set is dense in $(0,1)$.
+More precisely, assume this inequality holds for some $\alpha\in (0,1)$, then applying iteration we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
+Together with any value $\xi$, this set contains $1-\xi$ and $\xi^k$ for any integer $k\ge 1$.
+Observe that this set is dense in $(0,1)$.
 Therefore, inequality \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$.
 This is equivalent to the point-on-side comparison for nonnegative curvature; see \cite[8.14]{AKP-2024}.
 Similarly one can show that if the inequality holds for some $\alpha>1$, then it holds for any $\alpha>1$,
@@ -446,13 +444,14 @@ and this is equivalent to the point-on-side comparison for nonpositive curvature
 
 \section{Globalization}\label{par:globalization}
 
-Let $K\subset W=S^2(V)$ be a closed convex cone.
+We continue to consider 4-point arrays, so $V=\RR^3$ and $W=S^2(V^*)=\RR^6$.
+Let $K\subset W$ be a closed convex cone.
 We say that a metric space $X$ meets \emph{local $K$-comparison} if any point $x\in X$ admits a neighborhood $U$ such that $K$-comparison holds for any $n$-point array in $U$.
 
 If local $K$-comparison implies $K$-comparison for any length space, then we say that \emph{globalization holds} for $K$.
 
 \begin{thm}{Theorem}\label{thm:globalization}
-Suppose that the globalization holds a closed cone convex $K\subset W=S^2(\RR^3)$.
+Suppose that the globalization holds a closed convex cone $K\z\subset W=\RR^6$.
 Assume that the $K$-comparison is not trivial;
 that is, $\mathcal{M}_K$ does not include all length spaces.
 Also, suppose $\mathcal{M}_K$ contains a space with at least two distinct points.
@@ -474,7 +473,7 @@ It remains to apply \ref{prop:Four-point arrays}.
 \parit{Proof of the theorem.}
 Let us denote by $K_0$ the cone in $\RR^3$ described by all inequalities of negative type $(3,1)$ and $(2,1)$.
 By \ref{cor:Four-point arrays}, $K_0$ describes all metrics on 4-point arrays in Alexandrov spaces with nonnegative curvature.
-By \ref{lem:globalization},  $K$~contains $K_0$.
+By \ref{lem:globalization},  $K$~includes $K_0$.
 
 Given $\delta>0$, consider all metrics on the set $\{x_1,x_2,x_3,x_4\}$ such that for each $i$
 the sum of three model angles at $x_i$ is at most $2\cdot\pi+\delta$; that is, the inequality
@@ -494,8 +493,7 @@ to prove it, embed the graph isometrically in the Euclidean space and pass to a 
 neighborhood.
 (A way stronger result is proved by Vedrin Šahović in his thesis \cite{sahovic2009}.)
 Any metric on $\{x_1,x_2,x_3,x_4\}$ admits a distance-preserving embedding into a metric graph, so $K$ contains a form near the associated form for any semimetric on $\{x_1,x_2,x_3,x_4\}$.
-Since $K$ is closed, it contains forms associated to all metrics on 4-point set, so it is solely defined by triangle inequalities;
-in other words, $K$ is described by all inequalities of negative type $(2,1)$.
+Since $K$ is closed, it contains forms associated to all metrics on 4-point set, so it is solely defined by triangle inequalities.
 Hence the $K$-comparison is trivial.
 
 From now on, we can assume that for any $\delta>0$ there is a form $\theta\in K_\delta\setminus K$.
@@ -503,8 +501,8 @@ Thus we can choose a quadratic inequality that does not hold for $\theta$, but h
 Our inequality can be written as $\langle \omega,\rho_{\bm{x}} \rangle\ge 0$, where $\rho_{\bm{x}}\in W$ is an associated form of some 4-point array $(x_1,x_2,x_3,x_4)$ and $\omega$ is a fixed unit form in $W$.
 
 (Recall that $V$ and $W$ come with natural scalar product; see Section~\ref{Associated form}.
-In particular, we have identification $V=V^*$ and $W=W^*$.
-Note that the scalar product on $W$ satisfies the identity $\langle u^2,v^2\rangle=\langle u,v\rangle^2$ for $u,v\in V$.)
+In particular, we have identification $V=V^*$ and $W=S^2(V^*)=S^2(V)=W^*$.
+Note that the scalar product on $W$ satisfies the identity $\langle \sigma^2,\tau^2\rangle=\langle \sigma,\tau\rangle^2$ for $\sigma,\tau\in V^*$.)
 
 \begin{wrapfigure}{o}{30mm}
 \centering
@@ -545,7 +543,7 @@ Since
 Therefore, $\rho_{\bm{x}}(u)\ge0$ is an inequality of negative type $(3,1)$.
 
 Let $u_\infty$ be a partial limit of $u$ as $\delta\to 0$;
-that is, for some sequence $\delta_n\to 0^+$, we can choose corresponding $\theta_n$, $\omega_n$ and vectors $u_n,v_n,w_n\in V$
+that is, for some sequence $\delta_n\to 0^+$, we can choose corresponding forms $\theta_n$, $\omega_n\in W$ and vectors $u_n,v_n,w_n\in V$
 so that $u_n\to u_\infty$ as $n\to\infty$.
 We have three options:
 \begin{enumerate}[(i)]
@@ -557,7 +555,7 @@ Each case will be done separately.
 
 \parit{Case \ref{in}.}
 Note that $\rho_{\bm{x}}(u_\infty)\ge0$ is an inequality of negative type $(3,1)$.
-Suppose $X\in \mathcal{M}_K$ and $\rho_{\bm{x}}$ is associated form of a fixed array $\bm{x}=(x_1, x_2, x_3, x_4)$ in $X$.
+Choose $X\in \mathcal{M}_K$ and $\rho_{\bm{x}}$ is associated form of a fixed array $\bm{x}=(x_1, x_2, x_3, x_4)$ in $X$.
 Let us show that $\rho_{\bm{x}}(u_\infty)\ge0$;
 once it is done, it will remain to apply \ref{prop:Alexandrov's comparison}.
 
@@ -590,7 +588,7 @@ Let us prove inequality \ref{eq:CBB-CBA};
 once it is done, it will remain to apply the final step in the proof of \ref{prop:Alexandrov's comparison}.
 
 Assume the contrary.
-In this case, $[x_1x_2x_3]$ is nondegenerate, so each triangle inequality with vertices $x_1$, $x_2$, and $x_3$ is strict; moreover $x_4$ lies on a geodesic $[x_1,x_2]$.
+In this case, $[x_1x_2x_3]$ is nondegenerate, so each triangle inequality with vertices $x_1$, $x_2$, and $x_3$ is strict; moreover $x_4$ lies on a geodesic $[x_1x_2]$.
 We can assume that $|x_2-x_3|\ge |x_1-x_3|$.
 
 Once again, choose a small $\eps>0$, and redefine distances on $\{x_1,x_2,x_3,x_4\}$ by setting $|x_2-x_3|:=(1-\eps)\cdot|x_2-x_3|$ and leaving the remaining five distances the same; denote by $\rho_{\bm{x}}'$ its associated form.
