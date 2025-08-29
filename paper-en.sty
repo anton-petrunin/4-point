@@ -69,6 +69,15 @@ isbn=false]{biblatex}
 \par\medskip}
 \newenvironment{thm}{\claim}{\endclaim}
 
+\newcounter{thmA}
+\renewcommand{\thethmA}{\Alph{thmA}}
+\newcommand\claimA[2][{}]{\par\medskip\noindent\refstepcounter{thmA}\hbox{\bf #2 \Alph{thmA}.#1}
+\it\ %\ignorespaces
+}
+\def\endclaimA{
+\par\medskip}
+\newenvironment{thmA}{\claimA}{\endclaimA}
+
 
 \newcommand*{\DCto}{\begin{picture}(20,10)
 \put(1,0){$\longrightarrow$}

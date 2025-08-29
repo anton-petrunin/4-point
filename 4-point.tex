@@ -30,7 +30,7 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We study the effect on metric spaces imposed by quadratic inequalities on the six distances between points in every quadruple.
+We study the effect on length-metric spaces imposed by quadratic inequalities on the six distances between points in every quadruple.
 \end{abstract}
 
 \section{Quadratic inequality}\label{par:quadratic-inq}
@@ -39,34 +39,59 @@ Let $\bm{x}\z=(x_1,\dots,x_n)$ be an $n$-point array in a metric space $X$ and l
 An inequality of the following type
 \[\sum_{i,j}a_{i,j}\cdot|x_i-x_j|_X^2\ge 0\]
 will be called \emph{quadratic}.
+A system of quadratic intequalities will be called \emph{quadratic condition}.
 
-We will be interested in length spaces $X$ such that a fixed collection of quadratic inequalities holds for any $n$-point array in a metric space $X$.
+We will be interested in length spaces $X$ such that a given quadratic conditon holds for any $n$-point array in a metric space $X$.
 
-Nonnegative and nonpositive curvature in the sense of Alexandrov can be described by inequalities of that type for $n=4$.
-Namely, they are described by the so-called inequalities of negative type $(3,1)$ and $(2,2)$ respectively; see Section~\ref{par:rank-one}.
+As we will see, quadratic conditionons can be used to define  nonnegative and nonpositive curvature in the sense of Alexandrov.
 This observation motivated us to investigate the entire class of such inequalities for $n=4$.
 We certainly want to tackle the case $n>4$, but only after the simpler case $n=4$.
 
-Our paper contains several simple observations, but altogether they form something interesting and nontrivial;
-it also lays the groundwork for further investigation.
+\paragraph{Outline.}
 Sections \ref{Associated form} and \ref{par:rank-one} introduce necessary definitions.
 Here we define
 the
 associated quadratic form for a point array and inequalities of negative type, a special class of quadratic inequalities with $a_{i,j}=-\lambda_i\cdot\lambda_j$ for a real array $(\lambda_1,\dots, \lambda_n)$ such that $\lambda_1+\dots+\lambda_n=0$.
 We also prove several basic statements that are valid for all $n$-point arrays.
 
-Next, we turn our attention to the $4$-point arrays.
-In Section~\ref{Four-point arrays}, we prove Proposition~\ref{prop:Four-point arrays}, which is a new version of a theorem of Abraham Wald \cite[§ 7]{wald} that describes the metrics of all possible 4-point arrays in Alexandrov spaces with nonnegative and nonpositive curvature.
+The rest of the paper deals with $4$-point arrays.
+In Section~\ref{par:globalization}, we show that the globalization theorem holds only for Alexandrov spaces with nonnegative curvature.
 
-In Section~\ref{Alexandrov's comparison}, we show any nondegenerate inequality of negative type defines Alexandrov spaces with nonnegative and nonpositive curvature,
-which one depends on the sign of $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4$.
+\begin{thmA}{Statement}
+Suppose that a quadratic condition on 4-points satisfies the globalization property;
+that is, if this condition holds locally (in a neighborgood of any point) in a lenght space $X$ then it holds in $X$.
+Then either the condition is trival, or it describes Alexandrov spaces with nonnegative curvature.
+\end{thmA}
+
+This statement essentially says that the Toponogov theorem has no simple relatives.
+The rest of the paper have auxiliary nature, but let us list two results that have independednt interest.
+In Section~\ref{Four-point arrays}, we prove the following version of a theorem of Abraham Wald \cite[§ 7]{wald} that describes the metrics of all possible 4-point arrays in Alexandrov spaces with nonnegative and nonpositive curvature.
+
+\begin{thmA}{Theorem}
+The following three conditions are equivalent:
+\begin{enumerate}[(i)]
+\item A 4-point metric space $X$ is isometric to a subset of a length space with nonnegative (nonpositive) curvature in the sense of Alexandrov.
+\item $X$ is isometric to a subset in the product of $\RR^3\times r\cdot \SSS^1$ for some $r>0$ (respectively, $\RR^3\times Y$, where $Y$ denotes the tripod; that is, three half-lines with a common base point)
+\item All inequalities of negative type inequalities of negative type with $\lambda$-arrays such that $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4<0$ (respectively, type $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4>0$) hold in hold in $X$.
+\end{enumerate}
+\end{thmA}
+
+Further, in Section~\ref{Alexandrov's comparison} we prove that single nondegenerate inequality of negative type defines Alexandrov spaces with nonnegative and nonpositive curvature.
+
+\begin{thmA}{Theorem}
+Let us consider all length spaces that satisfy the quadratic condition given by an inequality of negative type $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$.
+\begin{enumerate}[(i)]
+\item If $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4<0$, then it describes all Alexandrov spaces with nonnegative curvature.
+\item If $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4>0$, then it describes all Alexandrov spaces with nonpositive curvature.
+\item If $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4=0$, then it gives no restrictions; it describes all length spaces.
+\end{enumerate}
+
+\end{thmA}
+
 This statement shows that we might impose a relatively weak form 4-point comparison on a space with length metric that forces much stronger 4-point comparison.
 The proof is a straightforward combination of the arguments by Takashi Sato \cite{sato} and its variation by the first two authors \cite{lebedeva-petrunin-2010};
 these papers consider particular cases
 such inequalities, namely those for the $\lambda$-arrays $(1,1,-1,-1)$ and $(1,1,1,-3)$.
-
-Finally, in Section~\ref{par:globalization}, we show that the globalization theorem holds only for Alexandrov spaces with nonnegative curvature.
-Of course this type of result was expected, but we now know for sure that there are no simple relatives of the Toponogov theorem.
 
 \section{Associated form}\label{Associated form}
 
@@ -99,7 +124,7 @@ here $X\times Y$ denotes the $\ell_2$-product of metric spaces, and
 $a\cdot X$ denotes the rescaled copy of $X$ with factor $a$.
 
 The last observation can be used in the opposite direction as well.
-It gives that all forms $\rho_{\bm{x}}$ for point arrays in $\mathcal{M}_K$-spaces form a convex cone, say $K'$.
+It gives that all forms $\rho_{\bm{x}}$ for point arrays $\bm{x}$ in $\mathcal{M}_K$-spaces form a convex cone, say $K'$.
 
 Evidently $K'\subset K$, and this inclusion might be strict.
 The first reason comes from the triangle inequality, which is equivalent to $\rho_{\bm{x}}(w)\ge 0$ for any vector $w$ in a 2-face of $\triangle$.
@@ -134,7 +159,7 @@ If $K$ is nontrivial (that is, $K\ne \{0\}$), then $\mathcal{M}_K$ contains all 
 \parit{Proof.}
 Since $K$ is nontrivial, $\mathcal{M}_K$ contains a space, say $X$, with two distinct points.
 Consider the ultracompletion $X^\omega$ of $X$;
-recall that $X$ can be (and will be) considered as a subset of $X^\omega$.
+the space $X$ will be considered as a subset of $X^\omega$.
 Since $K$ is closed, the observation implies that $X^\omega\in \mathcal{M}_K$.
 
 Since  $X$ is a length space, $X^\omega$ has to be geodesic.
@@ -146,7 +171,7 @@ taking products of real lines then yields the result.
 \qeds
 
 Let us denote by $Q$ the cone of nonnegative quadratic forms in $W_n$.
-Its dual cone $Q^*\subset W_n^*=S^2(V_n)$ is the space generated by tensor squares of vectors in~$V_n$.
+Its dual cone $Q^*\subset W_n^*=S^2(V_n)$ is generated by tensor squares of vectors in~$V_n$.
 
 \begin{thm}{Corollary}
 Let $K$ be a closed convex cone in $W_n$ such that $K=K'$.
@@ -165,7 +190,7 @@ Recall that $\rho_{\bm{x}}$ denotes the associated quadratic form for a given po
 A given point array $\bm{x}=(x_1,\dots,x_n)$ is isometric to an array in a Euclidean space if and only if $\rho_{\bm{x}}(v)\ge 0$ for any vector $v$.
 \end{thm}
 
-An inequality of type $\rho_{\bm{x}}(v)\ge 0$ for a fixed vector $v\in V_n$ will be called rank-one inequality.
+An inequality of type $\rho_{\bm{x}}(v)\ge 0$ for a fixed vector $v\in V_n$ will be called \emph{rank-one} inequality.
 It belongs to the class of quadratic inequalities
 In the notation of Section~\ref{par:quadratic-inq}, it means that $a_{i,j}=-\lambda_i\cdot\lambda_j$ for a real array $(\lambda_1,\dots, \lambda_n)$ such that
 $\lambda_1+\dots+\lambda_n=0$.
@@ -206,9 +231,9 @@ For example, if it is marked by $12$, then $x_1=x_2$.
 \begin{thm}{Proposition}\label{prop:Four-point arrays}
 Let $X$ be a 4-point metric space.
 
-If $X$ satisfies all inequalities of negative type $(3, 1)$, then it admits an isometric embedding into the product $r\cdot \mathbb{S}^1\times\RR^3$ for some $r>0$.
+If $X$ satisfies all inequalities of negative type $(3, 1)$, if and only if it admits an isometric embedding into the product $r\cdot \mathbb{S}^1\times\RR^3$ for some $r>0$.
 
-If $X$ satisfies all inequalities of negative type $(2, 2)$, then it admits an isometric embedding into the product $Y\times\RR^3$, where $Y$ denotes the \emph{tripod};
+If $X$ satisfies all inequalities of negative type $(2, 2)$, if and only if it admits an isometric embedding into the product $Y\times\RR^3$, where $Y$ denotes the \emph{tripod};
 that is, three half-lines with a common base point.
 \end{thm}
 
@@ -218,10 +243,10 @@ This follows easily from the (2+2)-point comparison \cite[9.5]{AKP-2024}.
 Since the tripod $Y$ has nonpositive curvature, and $\mathbb{S}^1$ has nonnegative curvature in the sense of Alexandrov, we get the following corollary, which also follows from the result of Abraham Wald \cite[§ 7]{wald}.
 
 \begin{thm}{Corollary}\label{cor:Four-point arrays}
-A 4-point metric space $X$ is isometric to a subset of a length space with nonpositive (nonnegative) curvature in the sense of Alexandrov if and only if all inequalities of negative type $(3, 1)$ (respectively, type $(2, 2)$) hold in $X$.
+A 4-point metric space $X$ is isometric to a subset of a length space with nonnegative (nonpositive) curvature in the sense of Alexandrov if and only if all inequalities of negative type $(3, 1)$ (respectively, type $(2, 2)$) hold in $X$.
 \end{thm}
 
-More general five-point versions of this corollary have already been proved by Tetsu Toyoda \cite{toyoda,lebedeva-petrunin2021} and the first two authors \cite{lebedeva-petrunin-2024}, respectively.
+A five-point versions of this corollary have been proved by Tetsu Toyoda \cite{toyoda,lebedeva-petrunin2021} and the first two authors \cite{lebedeva-petrunin-2024}, respectively.
 
 \parit{Proof of \ref{prop:Four-point arrays}.}
 Let us enumerate points in $X$ and let $\rho$ be the associated form on $V_4$.
@@ -251,7 +276,7 @@ Therefore, $\tilde\rho$ is not minimal --- a contradiction.
 It means that $\bar N$ lies in a quadrangle or triangle, respectively, and touches its sides at three points or more.
 
 In the case of a triangle, $\bar N$ has to touch all of its sides.
-The diagram shows that we may, after relabeling, assume that
+According to the diagram above, after relabeling, we can assume that
 \begin{align*}
 |x_1-x_2|&=|x_1-x_4|+|x_4-x_2|,
 \\
@@ -269,7 +294,8 @@ The diagram shows that we may, after relabeling, assume that
 |x_2-x_3|&=|x_2-x_4|+|x_4-x_3|.
 \end{align*}
 (If it touches all sides, then in addition we have $|x_2-x_3|=|x_2-x_1|+|x_1-x_3|$.)
-In any case, the array can be embedded into $r\cdot \mathbb{S}^1$, where $r=|x_1-x_4|/\pi$.
+In any case, the array can be embedded into $r\cdot \mathbb{S}^1$, where $r=|x_1-x_4|/\pi$;
+so the points $x_1$ and $x_4$ are antipodal in $r\cdot \mathbb{S}^1$.
 \qeds
 
 The following picture shows the possible positions of the set $N$.
