@@ -211,10 +211,11 @@ Since the sign of $v$ does not change the inequality, we may assume that it lies
 These equators divide the hemisphere into 8 triangles and 6 quadrangles.
 The inequality $\rho_{\bm{x}}(v)\ge 0$ has negative type $(2,2)$ or $(3,1)$
 if and only if $v$ lies in the interior of a triangle or a quadrangle, respectively.
+Equivalently, this inequality is of negative type $(2,2)$ if $v$ points from one edge of the tetrahedron $\triangle$ to the opposite edge, and of type $(3,1)$ if $v$ points from a vertex to the opposite facet (up to the sign of $v$).
 
 \begin{wrapfigure}{o}{36mm}
 \centering
-\vskip-0mm
+\vskip-3mm
 \includegraphics{mppics/pic-20}
 \vskip-0mm
 \end{wrapfigure}
@@ -298,7 +299,7 @@ In any case, the array can be embedded into $r\cdot \mathbb{S}^1$, where $r=|x_1
 so the points $x_1$ and $x_4$ are antipodal in $r\cdot \mathbb{S}^1$.
 \qeds
 
-The following picture shows the possible positions of the set $N$.
+The picture shows the possible positions of the set $N$.
 \begin{figure}[h!]
 \centering
 \vskip-0mm
@@ -310,10 +311,6 @@ if three points, say $x_1$, $x_2$, and $x_3$, appear in that order on a smooth l
 
 \section{Alexandrov's comparison}\label{Alexandrov's comparison}
 
-Consider a rank-one inequality $\rho_{\bm{x}}(v)\ge 0$.
-This inequality is of negative type $(2,2)$ if $v$ points from one edge of $\triangle$ to the opposite edge.
-Further, it is of type $(3,1)$ if $v$ points from a vertex to the opposite facet (up to the sign of $v$).
-
 \begin{thm}{Proposition}\label{prop:Alexandrov's comparison}
 Suppose $K\subset W_4$ is defined by a single rank-one inequality on $4$-point arrays.
 \begin{enumerate}[(i)]
@@ -324,7 +321,7 @@ Suppose $K\subset W_4$ is defined by a single rank-one inequality on $4$-point a
 
 \end{thm}
 
-Combining this statement with Corollary~\ref{cor:Four-point arrays} gives that imposing a single inequality inequality of negative type $(2,2)$ or $(3,1)$ on a length space implies \emph{all} inequalities of the same type which is much stronger and might be surprising at first.
+Combining this statement with Corollary~\ref{cor:Four-point arrays} gives that imposing a single inequality inequality of negative type $(2,2)$ or $(3,1)$ on a length space implies \emph{all} inequalities of the same type, which is much stronger and might be surprising at first.
 
 \parit{Proof.}
 Our inequality can be written as 
@@ -375,7 +372,7 @@ x_5&=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot
 Note that $x_4$ lies between $x_3$ and $x_5$;
 in particular $|x_3-x_4|+|x_4-x_5|=|x_3-x_5|$.
 
-\begin{thm}{Claim}
+\begin{thm}{Claim}\label{clm:1=>2}
 Consider the inequalities of type \ref{eq:lambda} that correspond to the arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_3,x_5$;
 let us call them first and second.
 
@@ -387,7 +384,7 @@ Indeed, passing to the ultracompletion, we may assume that $X$ is geodesic.
 Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
 If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with with the appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_5$.
 
-According to the claim, the inequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
+By the claim, the inequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
 Applying the claim several times, we get all the inequalities with $\lambda$-arrays
 \[(\alpha\cdot (1-\gamma),\  (1-\alpha)\cdot(1-\gamma),\ \gamma,\ -1)\]
 for $\gamma=\beta^{2^k}$ with any integer $k\ge 1$;
@@ -431,7 +428,7 @@ Nonnegative or nonpositive curvature in the sense of Alexandrov can be defined v
 So far, we have obtained it for only one value of $\alpha$;
 however, by iterating the inequality we can derive it for the remaining values.
 
-More precisely, assume this inequality holds for some $\alpha\in (0,1)$, then applying iteration we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
+More precisely, assume this inequality holds for some $\alpha\in (0,1)$, then we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
 Together with any value $\xi$, this set contains $1-\xi$ and $\xi^k$ for any integer $k\ge 1$.
 Observe that this set is dense in $(0,1)$.
 Therefore, inequality \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$.
@@ -447,13 +444,11 @@ We say that a metric space $X$ meets \emph{local $K$-comparison} if any point $x
 
 If local $K$-comparison implies $K$-comparison for any length space, then we say that \emph{globalization holds} for $K$.
 
-We continue to consider 4-point arrays, so $V_4=\RR^3$ and $W_4=S^2(V_4^*)=\RR^6$.
-
 The following statement shows that if globalization holds for quadratic comparison, then it is either trivial or characterizes nonnegatively curved Alexandrov spaces;
-so, in some sense Toponogov's theorem is the only nontrivial globalization theorem for quadratic conditions on 4-point arrays.
+so, Toponogov's theorem is the only nontrivial globalization theorem for quadratic conditions on 4-point arrays.
 
 \begin{thm}{Theorem}\label{thm:globalization}
-Suppose that the globalization holds a closed convex cone $K\z\subset W_4$.
+Suppose that the globalization holds for a closed convex cone $K\z\subset W_4$.
 Assume that the $K$-comparison is not trivial;
 that is, $\mathcal{M}_K$ does not include all length spaces.
 Also, suppose $\mathcal{M}_K$ contains a space with at least two distinct points.
@@ -471,6 +466,8 @@ Therefore, local $K$-comparison holds
 for any circle $r\cdot \mathbb{S}^1$ with $r>0$, and hence also for any product space $r\cdot \mathbb{S}^1\times\RR^3$.
 It remains to apply \ref{prop:Four-point arrays}.
 \qeds
+
+In the following proof we will use a statement form the next section.
 
 \parit{Proof of the theorem.}
 Let us denote by $K_0$ the cone in $W_4$ described by all inequalities of negative type $(3,1)$ and $(2,1)$.
@@ -508,8 +505,8 @@ By \ref{cor:squared-sides}, we can choose a $(3,1)$-inequality with the $\lambda
 \eqlbl{eq:+squares}\]
 for any 4-array $(x_1,x_2,x_3,x_4)$ with its form in $K$.
 
-Let $\bm{\lambda}_\infty=(\lambda_1,\lambda_2,\lambda_2,-1)$ be a partial limit of $\lambda$-arrays of these inequalities;
-that is, for some sequence $\delta_n\to 0^+$, we can choose corresponding forms $\theta_n$ and corresponding inequalities of the form \ref{eq:+squares} with $\lambda$-arrays $\bm{\lambda}_n$ such that $\bm{\lambda}_n\to \bm{\lambda}_\infty$ as $n\to \infty$.
+Let $\bm{\lambda}_\infty=(\lambda_1,\lambda_2,\lambda_3,-1)$ be a partial limit of $\lambda$-arrays of these inequalities;
+that is, for some sequence $\delta_n\to 0^+$, we can choose corresponding inequalities of the form \ref{eq:+squares} with $\lambda$-arrays $\bm{\lambda}_n$ such that $\bm{\lambda}_n\to \bm{\lambda}_\infty$ as $n\to \infty$.
 We have three options:
 \begin{enumerate}[(i)]
 \item\label{in} $\lambda_1>0$, $\lambda_2>0$, and $\lambda_3>0$;
@@ -517,7 +514,7 @@ We have three options:
 \item\label{vertex} $\lambda_i=0$ for two indices $i$.
 \end{enumerate}
 
-In the first case,  $(\lambda_1,\lambda_2,\lambda_2,-1)$ defines an inequality of negative type $(3,1)$.
+In the first case,  $(\lambda_1,\lambda_2,\lambda_3,-1)$ defines an inequality of negative type $(3,1)$.
 This inequality holds for any form in $K$.
 Therefore, \ref{prop:Alexandrov's comparison}\ref{prop:Alexandrov's comparison:(3,1)} finishes the proof.
 
@@ -539,24 +536,24 @@ It remains to follow the end of proof of \ref{prop:Alexandrov's comparison}.
 In case \ref{vertex}, we can assume that $\lambda_1=\lambda_2=0$, so $\bm{\lambda}_\infty=(0,0,1,-1)$ and
 \[\bm{\lambda}_n=(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1),\]
 where $0<\alpha_n<1$ and $\beta_n\to 1^-$ as $n\to\infty$.
-Let us rock-and-shake the corresponding inequalities defined by \ref{eq:+squares} to to sweep $\bm{\lambda}_\infty$ out of the corners.
+Let us modify the corresponding inequalities defined by \ref{eq:+squares} to sweep $\bm{\lambda}_\infty$ out of the corner.
 Namely, we have that the inequality with array
 \[(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1)\]
 holds with an error
 \[6\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
-Applying the procedure, we get that inequality with array
+Following the calculations in \ref{clm:1=>2}, we get that inequality with array
 \[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1)\]
 holds with an error
 \[60\cdot2^k\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
-Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ and $n\to \infty$ and $\gamma^2\le \beta_n^{2^k}<\gamma$ for some fixed $0<\gamma<1$ and
+Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\gamma^2\le \beta_n^{2^k}<\gamma$ for some fixed $0<\gamma<1$ and
 \[
 2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
 <
 \delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k}
 \]
 
-That is, from a sequence of inequalities with $\lambda$-arrays converging to $(0,0,1,-1)$,
-we cook another sequence with the limit $\lambda$-array covered in cases \ref{in} or \ref{side}.
+That is, starting from a sequence of inequalities with $\lambda$-arrays converging to $(0,0,1,-1)$,
+we have constructed another sequence of the same type with the limit $\lambda$-array covered in cases \ref{in} or \ref{side}.
 \qeds
 
 \section{Auxiliary statements}
@@ -583,8 +580,8 @@ In particular, $\tilde a^2$ is a quadratic form on $W_4$.
 
 \parit{Proof.}
 Without loss of generality, we may assume that $x_1$, $x_2$, $x_3$ and $x_4$ lie in the hyperbolic plane; moreover $x_4$ belongs to the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$.
+Denote by $a$ the area of this triangle.
 
-Denote by $a$ the area of the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$.
 By the Kirszbraun theorem,
 \[a\le \tilde a.\]
 Since the hyperbolic plane has curvature $-1$, we have
@@ -598,7 +595,7 @@ Applying all this with the comparison, we get
 \end{align*}
 
 Set $\phi=\angk{x_1}{x_2}{x_3}_{\EE^2}$ and $\psi=\angk{x_1}{x_2}{x_4}_{\EE^2}+\angk{x_1}{x_4}{x_3}_{\EE^2}$.
-From the above, we get $\phi\le \psi+a$.
+From the above, we get $\phi\le \psi+\tilde a$.
 By the law of cosines,
 \[|x_2-x_3|^2=|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\phi\]
 Redefining the distance $|x_2-x_3|$ via the law of cosines with angle $\psi$,
@@ -667,10 +664,9 @@ Since
 \theta(w)&\ge0,
 \end{align*}
  we have that $u$ points in a direction of $N$.
-(In particular, $N\ne\emptyset$.)
 Therefore, $\rho_{\bm{x}}(u)\ge0$ is an inequality of negative type $(3,1)$.
 
-Suppose $(x_1,x_2,x_3,x_4)$ comes with semimetric that with the associated form $\theta$.
+Suppose that the array $(x_1,x_2,x_3,x_4)$ is equipped with a metric such that its associated form is $\theta$.
 Let us rescale $u$, $v$, and $w$ so that the inequality $\theta(u)\ge 0$ (which as we know has negative type $(3,1)$)
 has $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$.
 By \ref{lem:area-bound}, we have
