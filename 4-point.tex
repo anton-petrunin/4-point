@@ -477,8 +477,8 @@ By \ref{lem:globalization},  $K$~includes $K_0$.
 
 Given $\delta>0$, consider all metrics with diameter at most $\delta$ on a 4-point array $\{x_1,x_2,x_3,x_4\}$ in an Alexandrov space with curvature at least $-1$.
 Denote by $K_\delta\subset W_4$ the minimal closed convex cone that includes all associated forms of these metrics.
-Note that $K_0\z\subset K_\delta$;
-moreover, $K_0=\bigcap_{\delta>0} K_\delta$.
+Note that $K_0\z\subset K_\delta$.
+Furthermore, after rescaling the metric on $\{x_1,x_2,x_3,x_4\}$ with a factor of $\tfrac1\delta$, the array gets diameter at most $1$ and is embeddable in an Alexandrov space with curvature at least $-\delta^2$; therefore, $K_0=\bigcap_{\delta>0} K_\delta$ (see also Lemma~\ref{lem:area-bound}).
 
 Every Riemannian manifold admits a local curvature bound at each point.
 In particular, after appropriate rescaling, a small neighborhood of any point of Riemannian manifold has curvature at least $-1$.
@@ -564,7 +564,7 @@ Let $(\lambda_1,\lambda_2,\lambda_3,-1)$ be the $\lambda$-array of an inequality
 let $(x_1$, $x_2$, $x_3$, $x_4)$ be a 4-point array in the hyperbolic space.
 
 Then
-\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
+\[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
 \le
 12\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2,\]
 where $\tilde a$ denotes the area of model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$.
