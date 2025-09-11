@@ -501,7 +501,7 @@ By \ref{cor:squared-sides}, we can choose a $(3,1)$-inequality with the $\lambda
 \le
 \\
 &\le
-6\cdot\delta^2\cdot \lambda_1\cdot\lambda_2\cdot\lambda_3\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2)
+10\cdot\delta^2\cdot \lambda_1\cdot\lambda_2\cdot\lambda_3\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2)
 \end{aligned}
 \eqlbl{eq:+squares}\]
 for any 4-array $(x_1,x_2,x_3,x_4)$ with its form in $K$.
@@ -541,11 +541,11 @@ Let us modify the corresponding inequalities defined by \ref{eq:+squares} to swe
 Namely, we have that the inequality with array
 \[(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1)\]
 holds with an error
-\[6\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+\[10\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 Following the calculations in \ref{clm:1=>2}, we get that inequality with array
 \[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1)\]
 holds with an error
-\[60\cdot2^k\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+\[100\cdot2^k\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\gamma^2\le \beta_n^{2^k}<\gamma$ for some fixed $0<\gamma<1$ and
 \[
 2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
@@ -566,8 +566,8 @@ let $(x_1$, $x_2$, $x_3$, $x_4)$ be a 4-point array in the hyperbolic space.
 Then
 \[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
 \le
-12\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2,\]
-where $\tilde a$ denotes the area of model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$.
+(12+3\cdot\delta^2)\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2,\]
+where $\tilde a$ denotes the area of model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ and $\delta=\max\{|x_1-x_2|,|x_1-x_3|,|x_2-x_3|\}$.
 \end{thm}
 
 By Heron's formula,
@@ -580,14 +580,14 @@ By Heron's formula,
 In particular, $\tilde a^2$ is a quadratic form on $W_4$.
 
 \parit{Proof.}
-Without loss of generality, we may assume that $x_1$, $x_2$, $x_3$ and $x_4$ lie in the hyperbolic plane; moreover $x_4$ belongs to the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$.
+By the Kirszbraun theorem (see \cite{lang-schroeder,AKP-2011} or \cite[Chapter 10]{AKP-2024}), we may assume that $x_1$, $x_2$, $x_3$ and $x_4$ lie in the hyperbolic plane; moreover $x_4$ belongs to the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$.
 Denote by $a$ the area of this triangle.
 
 By the Kirszbraun theorem,
 \[a\le \tilde a.\]
 Since the hyperbolic plane has curvature $-1$, we have
 \[\pi-\angk{x_1}{x_2}{x_3}_{\HH^2}-\angk{x_2}{x_3}{x_1}_{\HH^2}-\angk{x_3}{x_1}{x_2}_{\HH^2}=a.\]
-Applying all this with the comparison, we get
+Applying these inequalities with the comparison, we get
 \begin{align*}
 0&\le \angk{x_1}{x_2}{x_3}_{\EE^2}-\angk{x_1}{x_2}{x_3}_{\HH^2}\le \tilde a.
 \intertext{Since $x_4$ lies in the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$, we also have $\angk{x_1}{x_2}{x_4}_{\HH^2}+\angk{x_1}{x_4}{x_3}_{\HH^2}=\angk{x_1}{x_2}{x_3}_{\HH^2}$. Hence, the comparison also implies}
@@ -603,16 +603,22 @@ Redefining the distance $|x_2-x_3|$ via the law of cosines with angle $\psi$,
 \[|x_2-x_3|^2\mathrel{:=}|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\psi\]
 yields a Euclidean quadruple.
 That is, decreasing $|x_2-x_3|^2$ by
-\[2\cdot |x_1-x_2|\cdot|x_1-x_3|(\cos\phi-\cos\psi)
+\begin{align*}
+&
+2\cdot |x_1-x_2|\cdot|x_1-x_3|\cdot(\cos\phi-\cos\psi)
 \le
-2\cdot|x_1-x_2|\cdot|x_1-x_3|\cdot \tilde a\cdot\sin\phi
-=
-4\cdot \tilde a^2\]
+\\
+\le\
+&2\cdot|x_1-x_2|\cdot|x_1-x_3|\cdot (\tilde a\cdot\sin\phi+\tfrac12\cdot\tilde a^2\cdot\cos\phi)
+\le
+\\
+\le\ &(4+\delta^2)\cdot \tilde a^2
+\end{align*}
 makes the quadruple Euclidean.
 It follows that
-\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\le 4\cdot \lambda_2\cdot\lambda_3\cdot\tilde a^2,\]
-We may assume that $\lambda_1\ge \lambda_2\ge \lambda_3>0$;
-therefore, $\lambda_1\ge \tfrac13$, and the statement follows.
+\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\le \lambda_2\cdot\lambda_3\cdot(4+\delta^2)\cdot \tilde a^2,\]
+We may assume that $\lambda_1\ge \lambda_2\ge \lambda_3>0$.
+Since $\lambda_1+ \lambda_2+ \lambda_3=1$, we have $\lambda_1\ge \tfrac13$, and the statement follows.
 \qeds
 
 Recall that $K_0$ denotes the cone in $W_4$ described by all inequalities of negative type $(3,1)$ and $(2,1)$.
@@ -620,8 +626,11 @@ Recall that $K_0$ denotes the cone in $W_4$ described by all inequalities of neg
 \begin{thm}{Corollary}\label{cor:squared-sides}
 Let $K\subset W_4$ be a convex closed cone.
 Suppose that $K\supset K_0$, but $K$-comparison does not hold for a 4-array of diameter at most $\delta$ in the hyperbolic space.
-Then there is an inequality of negative type $(3,1)$ with a $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$ such that the inequality
-\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\le 6\cdot\delta^2\cdot \lambda_1\cdot\lambda_2\cdot\lambda_3\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2)\]
+If $\delta$ is sufficiently small,
+then there is an inequality of negative type $(3,1)$ with a $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$ such that the inequality
+\[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
+\le
+10\cdot\delta^2\cdot \lambda_1\cdot\lambda_2\cdot\lambda_3\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2)\]
 holds for any quadruple in $K$.
 \end{thm}
 
@@ -670,10 +679,10 @@ Therefore, $\rho_{\bm{x}}(u)\ge0$ is an inequality of negative type $(3,1)$.
 Suppose that the array $(x_1,x_2,x_3,x_4)$ is equipped with a metric such that its associated form is $\theta$.
 Let us rescale $u$, $v$, and $w$ so that the inequality $\theta(u)\ge 0$ (which as we know has negative type $(3,1)$)
 has $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$.
-By \ref{lem:area-bound}, we have
+Since $\delta$ is small, \ref{lem:area-bound} implies that
 \[\theta(v)+\theta(w)
 \le
-12\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
+13\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
 Note that $\theta(v)=\eps_v\cdot \tilde d_v^2$ and $\theta(w)=\eps_w\cdot \tilde d_w^2$, where
 $\tilde d_v$ and $\tilde d_w$ are distances from a vertex of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ to a point that divide the opposite side in a certain ratio and $\eps_v,\eps_w\ge 0$,
 Since diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$,
@@ -682,7 +691,7 @@ Since diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$,
 \\
 \tilde a&\le \delta\cdot \tilde d_w/2.
 \end{align*}
-Hence $\eps_v+\eps_w\le 3\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3$.
+Hence $\eps_v+\eps_w\le \tfrac{13}4\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3$.
 Furthermore, each value $\tilde d_v$ and $\tilde d_w$ does not exceed the maximal side of $[x_1x_2x_3]$ --- hence the result.
 \qeds
 
