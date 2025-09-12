@@ -603,18 +603,19 @@ Redefining the distance $|x_2-x_3|$ via the law of cosines with angle $\psi$,
 \[|x_2-x_3|^2\mathrel{:=}|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\psi\]
 yields a Euclidean quadruple.
 That is, decreasing $|x_2-x_3|^2$ by
-\begin{align*}
-&
-2\cdot |x_1-x_2|\cdot|x_1-x_3|\cdot(\cos\phi-\cos\psi)
-\le
-\\
-\le\
-&2\cdot|x_1-x_2|\cdot|x_1-x_3|\cdot (\tilde a\cdot\sin\phi+\tfrac12\cdot\tilde a^2)
-\le
-\\
-\le\ &(4+\delta^2)\cdot \tilde a^2
-\end{align*}
+\[s=2\cdot |x_1-x_2|\cdot|x_1-x_3|\cdot(\cos\psi-\cos\phi)\]
 makes the quadruple Euclidean.
+Since
+\[\cos\psi-\cos\phi=\sin\phi\cdot\sin(\phi-\psi)-2\cdot\cos\phi\cdot (\sin\tfrac{\phi-\psi}2)^2,\] we get
+\begin{align*}
+s
+&\le\
+2\cdot|x_1-x_2|\cdot|x_1-x_3|\cdot (\tilde a\cdot\sin\phi+\tfrac12\cdot\tilde a^2)
+\le
+\\
+&\le\ (4+\delta^2)\cdot \tilde a^2
+\end{align*}
+
 It follows that
 \[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\le \lambda_2\cdot\lambda_3\cdot(4+\delta^2)\cdot \tilde a^2,\]
 We may assume that $\lambda_1\ge \lambda_2\ge \lambda_3>0$.
