@@ -419,7 +419,7 @@ Passing to the limit as $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\
 \[
 \begin{aligned}
 \alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot|x_2-x_3|^2-
-\alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2 &\le   |x_3-x_4|^2.\end{aligned}
+\alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2 \le |x_3-x_4|^2.\end{aligned}
 \eqlbl{eq:CBB-CBA}
 \]
 %Passing to the limit as $\gamma\to 0$ in the inequality $2\cdot$\ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get \[ \begin{aligned} |x_3-x_4|^2&\ge (1-\alpha)\cdot|x_3-x_2|^2+\alpha\cdot x_3-x_1|^2- \\ &-(1-\alpha)\cdot |x_4-x_2|^2-\alpha\cdot|x_4-x_1|^2. \end{aligned} \eqlbl{eq:CBB-CBA'} \]
@@ -522,14 +522,31 @@ it defines an inequality of negative type $(2,1)$.
 Note that
 \[\bm{\lambda}_n=(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1),\]
 for some sequences $\alpha_n\to\alpha$ and $\beta_n\to 0^+$ as $n\to\infty$.
-Applying the same calculations as in the proof of \ref{prop:Alexandrov's comparison} to these inequalities and passing to the limit, we get
+In the next paragraph we will show that the same calculations as in the proof of \ref{prop:Alexandrov's comparison} to these inequalities and passing to the limit, we get
 \[
 \alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot|x_2-x_3|^2-\alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2
 \le
 |x_3-x_4|^2
 \]
-if $x_4$ lies on $[x_2x_3]$ and divides it in the ratio $(1-\alpha):\alpha$.
-It remains to follow the end of proof of \ref{prop:Alexandrov's comparison}.
+if $x_4$ lies on $[x_1x_2]$ and divides it in the ratio $(1-\alpha):\alpha$.
+After that it remains to follow the end of proof of \ref{prop:Alexandrov's comparison}.
+
+Indeed, suppose $x_4$ lies on $[x_1x_2]$ and divides it in the ratio $(1-\alpha_n):\alpha_n$, then
+\[\alpha_n\cdot (1-\alpha_n)\cdot|x_1-x_2|^2-\alpha_n\cdot |x_1-x_4|^2-(1-\alpha_n)\cdot |x_2-x_4|^2=0;\leqno{\text{\ref{eq:trig-inq}}'}\]
+this will be used instead of \ref{eq:trig-inq}.
+If we assume $\alpha=\alpha_n$ and $\gamma=\beta_n$ in \ref{eq:lambda-inq}, then intead of zero in the right-hand side, we get the following error term:
+\[E_n=10\cdot\delta_n^2\cdot \alpha_n\cdot (1-\alpha_n)\cdot(1-\beta_n)^2\cdot \beta_n\cdot(|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
+let us label this inequality by  \ref{eq:lambda-inq}$'$.
+The inequality \ref{eq:trig-inq}$'\,+\,\tfrac1\beta_n\cdot($\ref{eq:lambda-inq}$'\,-\,$\ref{eq:trig-inq}$')$ implies the following
+\[
+\begin{aligned}
+\alpha_n\cdot|x_1-x_3|^2+(1-\alpha_n)\cdot|x_2-x_3|^2-
+\alpha_n&\cdot (1-\alpha_n)\cdot|x_1-x_2|^2 \le
+\\
+&\le |x_3-x_4|^2 +  E_n/\beta_n+E_n.
+\end{aligned}
+\]
+It remains to observe that the error term $E_n/\beta_n+E_n\to0$ as $n\to\infty$.
 
 In case \ref{vertex}, we can assume that $\lambda_1=\lambda_2=0$, so $\bm{\lambda}_\infty=(0,0,1,-1)$ and
 \[\bm{\lambda}_n=(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1),\]
