@@ -306,7 +306,7 @@ The picture shows the possible positions of the set $N$.
 \includegraphics{mppics/pic-30}
 \vskip-0mm
 \end{figure}
-Below it, we provide a diagram following the convention from \cite{lebedeva-petrunin-2010};
+Below it, we provide a diagram following the convention from \cite{lebedeva-petrunin-2024};
 if three points, say $x_1$, $x_2$, and $x_3$, appear in that order on a smooth line, then $|x_1-x_2|+|x_2-x_3|=|x_1-x_3|$.
 
 \section{Alexandrov's comparison}\label{Alexandrov's comparison}
@@ -537,7 +537,7 @@ this will be used instead of \ref{eq:trig-inq}.
 If we assume $\alpha=\alpha_n$ and $\gamma=\beta_n$ in \ref{eq:lambda-inq}, then intead of zero in the right-hand side, we get the following error term:
 \[E_n=10\cdot\delta_n^2\cdot \alpha_n\cdot (1-\alpha_n)\cdot(1-\beta_n)^2\cdot \beta_n\cdot(|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
 let us label this inequality by  \ref{eq:lambda-inq}$'$.
-The inequality \ref{eq:trig-inq}$'\,+\,\tfrac1\beta_n\cdot($\ref{eq:lambda-inq}$'\,-\,$\ref{eq:trig-inq}$')$ implies the following
+The inequality \ref{eq:trig-inq}$'\,+\,\tfrac1{\beta_n}\cdot($\ref{eq:lambda-inq}$'\,-\,$\ref{eq:trig-inq}$')$ implies the following
 \[
 \begin{aligned}
 \alpha_n\cdot|x_1-x_3|^2+(1-\alpha_n)\cdot|x_2-x_3|^2-
@@ -555,14 +555,14 @@ Let us modify the corresponding inequalities defined by \ref{eq:+squares} to swe
 Namely, we have a sequence of $(3,1)$-inequalities with array
 \[(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1)\]
 that hold with error
-\[10\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+\[10\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 Following the calculations in \ref{clm:1=>2}, we will use the same inequality several times for a sequence of point arrays.
 By triangle inequality, we may assume that the error in the intermediate inequalities are at most
-\[100\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+\[100\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 As a result we get an inequality with array
 \[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1)\]
 holds with an error
-\[2^k\cdot100\cdot\delta_n^2\cdot\alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+\[2^k\cdot100\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\gamma^2\le \beta_n^{2^k}<\gamma$ for some fixed $0<\gamma<1$ and
 \[
 2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
