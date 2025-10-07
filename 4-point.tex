@@ -344,8 +344,8 @@ in case of $(2,2)$-inequality, we have $1<\alpha$, and in case of $(3,1)$-inequa
 Consider the 4-point array $\bm{x}=(x_1,x_2,x_3,x_4)$  in the plane such that 
 \[x_4=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_3.\]
 We can assume that the array matches one of the configurations in the pictures below,
-so for $(3,1)$-inequality, point $x_4$ lies inside of the triangle $x_1x_2x_3$,
-and for $(2,2)$-inequality the segment $[x_1x_3]$ intersects $[x_2x_4]$.
+so for $(3,1)$-inequality, the point $x_4$ lies inside the triangle $x_1x_2x_3$,
+and for $(2,2)$-inequality, the segment $[x_1x_3]$ intersects $[x_2x_4]$.
 
 Note that we get equality in \ref{eq:lambda} for this array.
 Moreover, this defines a bijection between plane $\bm{x}$-arrays up to affine transformation and $\lambda$-arrays up to multiplication by a nonzero coefficient;
@@ -362,7 +362,7 @@ If one of the points lies inside the triangle formed by the remaining points, th
 \vskip0mm
 \end{figure}
 
-Consider the affine transformation that sends $x_1\mapsto x_1$, $x_2\mapsto x_2$ and $x_3\z\mapsto x_4$;
+Consider the affine transformation that sends $x_1\mapsto x_1$, $x_2\mapsto x_2$, and $x_3\z\mapsto x_4$;
 suppose $x_4\mapsto x_5$.
 Then
 \begin{align*}
@@ -429,14 +429,14 @@ Passing to the limit as $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\
 Note that if this inequality holds for all $\alpha\in (0,1)$ (or $\alpha\in (1,\infty)$) then we get
 a point-on-side comparison for nonnegative (respectively nonpositive) curvature in the sense of Alexandrov \cite[8.14 and 9.14]{AKP-2024}.
 Indeed, for Euclidean space, equality in \ref{eq:CBB-CBA} holds for any $\alpha$.
-Therefore, if $\alpha<1$, we get $|x_3-x_4|\ge |\tilde x_3-\tilde x_4|$, where $\tilde x_4$ divides the side $[\tilde x_1\tilde x_2]$ of the model tirangle $[\tilde x_1\tilde x_2\tilde x_3]=\tilde\triangle(x_1x_2x_3)$ in the same ratio $(1-\alpha):\alpha$.
-Similarly, if $\alpha>1$, we get $|x_3-x_1|\le |\tilde x_3-\tilde x_1|$, where $\tilde x_1$ divides the side $[\tilde x_4\tilde x_2]$ of the model tirangle $[\tilde x_4\tilde x_2\tilde x_3]=\tilde\triangle(x_4x_2x_3)$ in the same ratio $(\alpha-1):1$.
+Therefore, if $\alpha<1$, we get $|x_3-x_4|\ge |\tilde x_3-\tilde x_4|$, where $\tilde x_4$ divides the side $[\tilde x_1\tilde x_2]$ of the model triangle $[\tilde x_1\tilde x_2\tilde x_3]=\tilde\triangle(x_1x_2x_3)$ in the same ratio $(1-\alpha):\alpha$.
+Similarly, if $\alpha>1$, we get $|x_3-x_1|\le |\tilde x_3-\tilde x_1|$, where $\tilde x_1$ divides the side $[\tilde x_4\tilde x_2]$ of the model triangle $[\tilde x_4\tilde x_2\tilde x_3]=\tilde\triangle(x_4x_2x_3)$ in the same ratio $(\alpha-1):1$.
 
 So far, we have obtained it for only one value of $\alpha$;
-however, applying iteration we can derive inequalities for the remaining values $\alpha\in (0,1)$ (respectively, $\alpha\in (1,\infty)$).
+however, by applying iteration, we can derive inequalities for the remaining values $\alpha\in (0,1)$ (respectively, $\alpha\in (1,\infty)$).
 More precisely, assume this inequality holds for some $\alpha\in (0,1)$,
 then we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
-In other words, if $\mathcal{A}\subset(0,1)$ be the set of all values $\alpha$ such that \ref{eq:CBB-CBA} holds, then together with any value $\xi$, it contains $1-\xi$ and $\xi^k$ for any integer $k\ge 1$.
+In other words, if $\mathcal{A}\subset(0,1)$ is the set of all values $\alpha$ such that \ref{eq:CBB-CBA} holds, then together with any value $\xi$, it contains $1-\xi$ and $\xi^k$ for any integer $k\ge 1$.
 This implies that $\mathcal{A}$ is dense in $(0,1)$, and by continuity, we get $\mathcal{A}=(0,1)$.
 That is, inequality \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$.
 This is equivalent to the point-on-side comparison for nonnegative curvature \cite[8.14]{AKP-2024}.
@@ -572,7 +572,7 @@ that hold with error
 This sequence of inequalities can be used to produce another sequence that is covered in cases \ref{in} or \ref{side}.
 To do this, we follow the calculations in \ref{clm:1=>2};
 that is, we will use each inequality several times for a sequence of point arrays.
-We may assume that the error in the intermediate inequalities are at most
+We may assume that the error in the intermediate inequalities is at most
 \[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
 That is, the error is most 100 times larger than in the original inequality; if this is not the case, then by the triangle inequality, the target inequality (stated below) will hold trivially.
 
@@ -621,10 +621,11 @@ Again, by the Kirszbraun theorem,
 
 Since the hyperbolic plane has curvature $-1$, we have
 \[\pi-\angk{x_1}{x_2}{x_3}_{\HH^2}-\angk{x_2}{x_3}{x_1}_{\HH^2}-\angk{x_3}{x_1}{x_2}_{\HH^2}=a.\]
-These inequalities and the comparison implies that
+These inequalities and the comparison imply that
 \begin{align*}
 0&\le \angk{x_1}{x_2}{x_3}_{\EE^2}-\angk{x_1}{x_2}{x_3}_{\HH^2}\le \tilde a.
-\intertext{Since $x_4$ lies in the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$, we also have $\angk{x_1}{x_2}{x_4}_{\HH^2}+\angk{x_1}{x_4}{x_3}_{\HH^2}=\angk{x_1}{x_2}{x_3}_{\HH^2}$. Hence, the comparison also implies}
+\intertext{Since $x_4$ lies in the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$, we also have $\angk{x_1}{x_2}{x_4}_{\HH^2}+\angk{x_1}{x_4}{x_3}_{\HH^2}=\angk{x_1}{x_2}{x_3}_{\HH^2}$.
+Hence, the comparison also implies}
 0&\le
 \angk{x_1}{x_2}{x_4}_{\EE^2}+\angk{x_1}{x_4}{x_3}_{\EE^2}-\angk{x_1}{x_2}{x_3}_{\HH^2}\le \tilde a.
 \end{align*}
@@ -691,7 +692,7 @@ we can assume that equators $e_1$, $e_2$, $e_3$ are extensions of sides of $T$, 
 
 Since $K\supset K_0$, we have $\omega(v)\ge 0$ for any $v\in V_4$.
 Let $\sigma$ be a unit 1-form on $V_4$ that vanishes on $e_4$.
-By the spectral theorem, $\omega$ and $\sigma^2$ can be diagonalized in common basis (which does not have to be orthogonal).
+By the spectral theorem, $\omega$ and $\sigma^2$ can be diagonalized in a common basis (which does not have to be orthogonal).
 Therefore,
 \[\langle \omega,\rho_{\bm{x}}\rangle=\rho_{\bm{x}}(u)+\rho_{\bm{x}}(v)+\rho_{\bm{x}}(w)\eqlbl{eq:v_123}\]
 for fixed vectors $u,v,w\in V_4$ such that $v$ and $w$ point in the direction of the equator $e_4$ or vanish;
@@ -701,7 +702,7 @@ The inequalities $\rho_{\bm{x}}(v)\ge 0$ and
 $\rho_{\bm{x}}(w)\ge 0$ are of type $(2,1)$;
 they follow from the triangle inequality, so we always have that $\rho_{\bm{x}}(v)\ge 0$ and
 $\rho_{\bm{x}}(w)\ge 0$.
-Moreover, the values $\rho_{\bm{x}}(v)$ and $\rho_{\bm{x}}(w)$ depend only on sides of the triangle $[x_1x_2x_3]$.
+Moreover, the values $\rho_{\bm{x}}(v)$ and $\rho_{\bm{x}}(w)$ depend only on the sides of the triangle $[x_1x_2x_3]$.
 
 Since
 \[
