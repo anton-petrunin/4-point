@@ -115,6 +115,8 @@ $\rho_{\bm{x}}\in K$ for any $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in~$X$.
 The class $\mathcal{M}_K$ respects distance-preserving embeddings; that is,
 if there is a distance-preserving embedding $X\to Y$ between length spaces and $Y \in  \mathcal{M}_K$, then $X\in \mathcal{M}_K$.
 
+The following two observations were made by Alexandr Andoni, Assaf Naor, and Ofer Neiman \cite[1.4.1]{ANN}.
+
 Since $K$ is a convex cone,
 \[X,\ Y\in  \mathcal{M}_K
 \qquad\Longrightarrow\qquad
@@ -123,9 +125,9 @@ X\times Y,\ a\cdot X\in\mathcal{M}_K
 for any $a\ge 0$;
 here $X\times Y$ denotes the $\ell_2$-product of metric spaces, and
 $a\cdot X$ denotes the rescaled copy of $X$ with factor $a$.
-
-The last observation can be used in the opposite direction as well.
-It gives that all forms $\rho_{\bm{x}}$ for point arrays $\bm{x}$ in $\mathcal{M}_K$-spaces form a convex cone, denote it by $K'$.
+Moreover, this can be used in the opposite direction as well.
+It gives that all forms $\rho_{\bm{x}}$ for point arrays $\bm{x}$ in $\mathcal{M}_K$-spaces form a convex cone.
+Let us denote this new cone by $K'$.
 
 Evidently $K'\subset K$, and this inclusion might be strict.
 The first reason comes from the triangle inequality, which is equivalent to $\rho_{\bm{x}}(w)\ge 0$ for any vector $w$ in 2-faces of $\triangle$.
@@ -423,7 +425,12 @@ Passing to the limit as $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\
 \eqlbl{eq:CBB-CBA}
 \]
 %Passing to the limit as $\gamma\to 0$ in the inequality $2\cdot$\ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get \[ \begin{aligned} |x_3-x_4|^2&\ge (1-\alpha)\cdot|x_3-x_2|^2+\alpha\cdot x_3-x_1|^2- \\ &-(1-\alpha)\cdot |x_4-x_2|^2-\alpha\cdot|x_4-x_1|^2. \end{aligned} \eqlbl{eq:CBB-CBA'} \]
-Nonnegative or nonpositive curvature in the sense of Alexandrov can be defined via this inequality for all $\alpha\in (0,1)$ and $\alpha\in (1,\infty)$, respectively; see \cite[8.14 and 9.14]{AKP-2024}.
+Note that if this inequality holds for all $\alpha\in (0,1)$ (or $\alpha\in (1,\infty)$) then we get
+a point-on-side comparison for nonnegative (respectively nonpositive) curvature in the sense of Alexandrov \cite[8.14 and 9.14]{AKP-2024}.
+Indeed, for Euclidean space, equality in \ref{eq:CBB-CBA} holds for any $\alpha$.
+Therefore, if $\alpha<1$, we get $|x_3-x_4|\ge |\tilde x_3-\tilde x_4|$, where $\tilde x_4$ divides the side $[\tilde x_1\tilde x_2]$ of the model tirangle $[\tilde x_1\tilde x_2\tilde x_3]=\tilde\triangle(x_1x_2x_3)$ in the same ratio $\alpha:(1-\alpha)$.
+Similarly, if $\alpha>1$, we get $|x_3-x_1|\le |\tilde x_3-\tilde x_1|$, where $\tilde x_1$ divides the side $[\tilde x_4\tilde x_2]$ of the model tirangle $[\tilde x_4\tilde x_2\tilde x_3]=\tilde\triangle(x_4x_2x_3)$ in the same ratio $\alpha:1$.
+
 So far, we have obtained it for only one value of $\alpha$;
 however, applying iteration we can derive inequalities for the remaining values $\alpha\in (0,1)$ (respectively, $\alpha\in (1,\infty)$).
 
