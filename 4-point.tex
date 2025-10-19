@@ -339,7 +339,8 @@ It remains to consider the inequalities of negative type $(2,2)$ or $(3,1)$.
 In these cases, we can assume that our $\lambda$-array is
 \[(\alpha\cdot (1-\beta),\  (1-\alpha)\cdot(1-\beta),\  \beta,\ -1)\] 
 for some $\alpha,\beta$ such that $0< \beta< 1$;
-in case of $(2,2)$-inequality, we have $1<\alpha$, and in case of $(3,1)$-inequality, we have $0<\alpha<1$.
+in case of $(3,1)$-inequality, we have $0<\alpha<1$, and
+in case of $(2,2)$-inequality, we have $1<\alpha$.
 
 Consider the 4-point array $\bm{x}=(x_1,x_2,x_3,x_4)$  in the plane such that 
 \[x_4=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_3.\]
@@ -347,8 +348,8 @@ We can assume that the array matches one of the configurations in the pictures b
 so for $(3,1)$-inequality, the point $x_4$ lies inside the triangle $x_1x_2x_3$,
 and for $(2,2)$-inequality, the segment $[x_1x_3]$ intersects $[x_2x_4]$.
 
-Note that we get equality in \ref{eq:lambda} for this array.
-Moreover, this defines a bijection between plane $\bm{x}$-arrays up to affine transformation and $\lambda$-arrays up to multiplication by a nonzero coefficient;
+Note that for this array we get equality in \ref{eq:lambda}.
+Moreover, there is a bijection between plane $\bm{x}$-arrays up to affine transformation and $\lambda$-arrays without zeros up to multiplication by a nonzero coefficient;
 as before, we assume that the $\bm{x}$-arrays are in general position --- no three of its points lie on one line.
 In other words, we can describe our inequality by a 4-point array in general position up to affine transformation.
 If the points of the array lie at the vertices of a convex quadrangle,
@@ -363,41 +364,54 @@ If one of the points lies inside the triangle formed by the remaining points, th
 \end{figure}
 
 Consider the affine transformation that sends $x_1\mapsto x_1$, $x_2\mapsto x_2$, and $x_3\z\mapsto x_4$;
-suppose $x_4\mapsto x_5$.
-Then
+suppose $x_4\mapsto x_5\mapsto x_6\mapsto\dots$, so
 \begin{align*}
-x_5&=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_4=
+x_{3+k}&=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_{2+k}=
 \\
-&=\alpha\cdot (1-\beta^2)\cdot x_1+(1-\alpha)\cdot(1-\beta^2)\cdot x_2+\beta^2\cdot x_3.
+&=\alpha\cdot (1-\beta^k)\cdot x_1+(1-\alpha)\cdot(1-\beta^k)\cdot x_2+\beta^k\cdot x_3
 \end{align*}
-Note that $x_4$ lies between $x_3$ and $x_5$;
-in particular $|x_3-x_4|+|x_4-x_5|=|x_3-x_5|$.
+for $k\ge 1$.
+Note that $x_4,\dots, x_{2+k}$ lie between $x_3$ and $x_{3+k}$ in the same order;
+in particular,
+\[|x_3-x_4|+\dots+|x_{2+k}-x_{3+k}|=|x_3-x_{3+k}|.\]
 
 \begin{thm}{Claim}\label{clm:1=>2}
-If innequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)$ holds for any point arry in $X$,
-then so does the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
+Suppose that innequality \ref{eq:lambda} for $\lambda$-array
+\[(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)\] holds for any point arry in $X$.
+Then so does the inequality for the $\lambda$-array
+\[(\alpha\cdot (1-\beta^k), (1-\alpha)\cdot(1-\beta^k), \beta^k,-1)\] for any integer $k\ge 1$.
 \end{thm}
 
-Thse two inequalities correspond to the arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_3,x_5$;
+These two inequalities correspond to the arrays $x_1$, $x_2$, $x_3$, $x_4$ and $x_1$, $x_2$, $x_3$, $x_{3+k}$;
 let us denote by $L(p, q, r, s)$ and $L'(p, q, r, s)$ the left-hand sides in \ref{eq:lambda} for these two inequalities for the array $p, q, r, s$.
 We know that $L\le 0 $ holds for any four-point array in $X$ and need to show the same for $L'\le 0$.
 
 Passing to the ultracompletion, we may assume that $X$ is geodesic.
-Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
-If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with the appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_5$.
+Choose 4 points $x_1,x_2,x_3,x_{3+k}\in X$ and let $x_4,\dots,x_{2+k}$ be the points on a geodesic $[x_3x_{3+k}]$ that divide in the same proportions as in our plane configuration;
+that is
+\[|x_3-x_4|:|x_4-x_5|:\dots:|x_{2+k}-x_{3+k}|=\beta:\beta^2:\dots:\beta^k.\]
+If we sum up the first inequality for arrays $(x_1,x_2,x_{2+i},x_{3+i})$ with the appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_{3+k}$.
 
 Namely, $x_4$ divides $[x_3x_5]$ in the ratio $1:\beta$.
 Therefore,
-\[\beta^2\cdot|x_3-x_5|^2 =\beta^2\cdot (1+\beta)\cdot|x_3-x_4|^2+\beta\cdot(1+\beta)\cdot|x_4-x_5|^2.\]
+\[\beta^k\cdot|x_3-x_{3+k}|^2 =\tfrac{1-\beta^k}{1-\beta}\cdot(\beta^k\cdot |x_3-x_4|^2+\dots+\beta\cdot|x_{2+k}-x_{3+k}|^2).\]
 It follows that
-\[L'(x_1,x_2,x_3,x_5)
+\[
+\begin{aligned}
+L'(x_1,x_2,x_3,x_5)
 =
-\beta\cdot(1+\beta)\cdot L(x_1,x_2,x_3,x_4)+ (1+\beta)\cdot L(x_1,x_2,x_4,x_5).\eqlbl{eq:L'=L+L}\]
-In particular, if $L \le 0$ implies $L' \le 0$ as requred.
+\tfrac{1-\beta^k}{1-\beta}\cdot\biggl(
+&\beta^{k-1}\cdot L(x_1,x_2,x_3,x_4)+\dots
+\\
+&\dots+  \beta^{0}\cdot L(x_1,x_2,x_{2+k},x_{3+k})\biggr).
+\end{aligned}
+\eqlbl{eq:L'=L+L}
+\]
+In particular, $L \le 0$ implies $L' \le 0$ as requred.
 
 Applying the claim several times, we get all the inequalities with $\lambda$-arrays
 \[(\alpha\cdot (1-\gamma),\  (1-\alpha)\cdot(1-\gamma),\ \gamma,\ -1),\]
-where $\gamma=\beta^{2^k}$ for an integer $k\ge 1$;
+where $\gamma=\beta^k$ for an integer $k\ge 1$;
 in particular, we get the following inequality
 \[
 \begin{aligned}
@@ -589,60 +603,61 @@ L_n(x_1,x_2,x_3,x_4)\le \delta_n^2\cdot E_n(x_1,x_2,x_3),
 where $\delta_n\to0$ as $n\to\infty$,
 $L_n$ is the left-hand side of~\ref{eq:lambda} for $\bm{\lambda}_n$, and
 \[
-E_n=10\alpha_n(1-\alpha_n)\beta_n(1-\beta_n)^2
+E_n=10\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2
 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).
 \]
 
-Fix $\theta=\tfrac{99}{100}$ and choose $k = k(n)$ such that $\theta^2\le \beta_n^{2^k}<\theta$;
-note that $k(n)$ is defined for all sufficiently large~$n$.
-Let $\hat L_n$ denote the left-hand side of~\ref{eq:lambda} corresponding to the array
-\[\hat{\bm{\lambda}}_n=(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1),\]
+Fix $\theta=\tfrac{99}{100}$ and choose the largest $k = k(n)$ such that $ \beta_n^{k}\ge \theta$.
+Note that $k(n)$ is defined for all sufficiently large~$n$;
+morevoer $\beta_n^k\to \theta$ as $n\to\infty$.
+As in the proof of Claim~\ref{clm:1=>2}, let $L_n'$ be the left-hand side in~\ref{eq:lambda} for the array
+\[\hat{\bm{\lambda}}_n=(\alpha_n\cdot(1-\beta_n^{k}),(1-\alpha_n)\cdot(1-\beta_n^{k}),\beta_n^{k},-1),\]
 and define
-\[\hat E_n=10\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n^{2^k}\cdot(1-\beta_n^{2^k})^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
-It suffices to establish the inequality
+\[E_n'=10\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n^{k}\cdot(1-\beta_n^{k})^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+
+Note that a partial limit of $\hat{\bm{\lambda}}_n$ cannot get into the corner of the triangle.
+Therefore, it suffices to prove the following inequlaitly
 \[
-\hat L_n(x_1,x_2,x_3,x_4)\le 1000\cdot \delta_n^2\cdot \hat E_n(x_1,x_2,x_3).
+L_n'\le 1000\cdot \delta_n^2\cdot E_n'.
 \eqlbl{eq:L<En-hats}
 \]
 
-Assume that~\ref{eq:L<En-hats} does not hold for a given point array $x_1,x_2,x_3,x_4$.
+Assume the contrary; choose an array $x_1,x_2,x_3,x_{3+k}$ for which \ref{eq:L<En-hats} does not hold.
 Then
 \[
-|x_3-x_4|\le \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
+|x_3-x_{3+k}|\le \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
 \]
-since otherwise $\hat L_n(x_1,x_2,x_3,x_4)\le 0$, which would imply~\ref{eq:L<En-hats}.
+since otherwise $L_n'(x_1,x_2,x_3,x_{3+k})\le 0$, which would imply~\ref{eq:L<En-hats}.
 
-Expanding the iterations of Claim~\ref{clm:1=>2} in the proof of Proposition~\ref{prop:Alexandrov's comparison},
+Following calculations in Claim~\ref{clm:1=>2},
 we find that
-$\hat L_n(x_1,x_2,x_3,x_4)$ can be written as a telescoping sum
-of $L_n(x_1,x_2,z_0,z_1)$, $L_n(x_1,x_2,z_1,z_2),\z\dots,L_n (x_1,x_2,z_{2^k-1},z_{2^k})$ with appropriate positive coefficients
-with suitable positive coefficients;
-here $x_3=z_0$, $z_1,\dots,z_{2^k}=x_4$ are points along the geodesic $[x_3,x_4]$.
-Applying $k$ times \ref{eq:L'=L+L}, we see that the coefficient in front of each $L_n(x_1,x_2,z_{i-1},z_i)$ does not exceed $2^k$.
+$L_n'(x_1,x_2,x_3,x_{3+k})$ can be written as a telescoping sum
+of $L_n(x_1,x_2,z_{2+i},z_{3+i})$ with appropriate positive coefficients;
+here $x_3,\dots,x_{3+k}$ are points on the geodesic $[x_3,x_{3+k}]$.
+Applying \ref{eq:L'=L+L}, we see that the coefficient in front of each $L_n(x_1,x_2,x_{2+i},x_{3+i})$ does not exceed $k$.
 Therefore,
-\[\hat L_n(x_1,x_2,x_3,x_4)\le 2^k\cdot \delta_n^2\cdot \sum_{i=0}^{2^k-1}E_n(x_1,x_2,z_i).
+\[L_n'(x_1,x_2,x_3,x_4)\le k\cdot \delta_n^2\cdot \sum_{i=1}^{k}E_n(x_1,x_2,x_{2+i}).
 \]
 
 Since $|x_3-x_4|\le \max\{\,|x_3-x_1|,|x_3-x_2|\,\}$, we have
 \begin{align*}
-|x_1-z_i|&\le 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},\\
-|x_2-z_i|&\le 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
+|x_1-x_{2+i}|&\le 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},\\
+|x_2-x_{2+i}|&\le 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
 \end{align*}
-for each~$i$.
+for each~$i\ge1$.
 It follows that
 \[
-E_n(x_1,x_2,z_i)\le 100\cdot E_n(x_1,x_2,x_3)
+E_n(x_1,x_2,x_{2+i})\le 100\cdot E_n(x_1,x_2,x_3)
 \]
-for all~$i$.
-Therefore
-\[\hat L_n(x_1,x_2,x_3,x_4)\le 100\cdot 4^k\cdot \delta_n^2\cdot E_n(x_1,x_2,x_3).
+for all~$i$, and
+\[L_n'(x_1,x_2,x_3,x_4)\le 100\cdot 4^k\cdot \delta_n^2\cdot E_n(x_1,x_2,x_3).
 \]
-Furthermore, since $1>\beta_n\ge\beta_n^{2^k}\ge \theta^2$,
-we have $1-\beta_n^{2^k}\ge 2^{k-1}(1-\beta_n)$, and hence
+Furthermore, since $1>\beta_n\ge\beta_n^{k}\ge \theta$,
+we have $1-\beta_n^{k}\ge \tfrac k2\cdot(1-\beta_n)$, and hence
 \[
-\hat E_n(x_1,x_2,x_3)\ge  \tfrac1{10}\cdot4^{k}\cdot E_n(x_1,x_2,x_3),
+4^{k}\cdot E_n(x_1,x_2,x_3)\le 10\cdot E_n'(x_1,x_2,x_3);
 \]
-and \ref{eq:L<En-hats} follows.
+that is, \ref{eq:L<En-hats} holds for $x_1,x_2,x_3,x_{3+k}$ --- a contradiction.
 \qeds
 
 
