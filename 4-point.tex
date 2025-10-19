@@ -374,28 +374,27 @@ Note that $x_4$ lies between $x_3$ and $x_5$;
 in particular $|x_3-x_4|+|x_4-x_5|=|x_3-x_5|$.
 
 \begin{thm}{Claim}\label{clm:1=>2}
-Consider the inequalities of type \ref{eq:lambda} that correspond to the arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_3,x_5$;
-let us call them first and second.
-
-Suppose that the first inequality holds for any four-point array in a length space $X$.
-Then the second inequality also holds.
+If innequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)$ holds for any point arry in $X$,
+then so does the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
 \end{thm}
 
-Indeed, passing to the ultracompletion, we may assume that $X$ is geodesic.
+Thse two inequalities correspond to the arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_3,x_5$;
+let us denote by $L(p, q, r, s)$ and $L'(p, q, r, s)$ the left-hand sides in \ref{eq:lambda} for these two inequalities for the array $p, q, r, s$.
+We know that $L\le 0 $ holds for any four-point array in $X$ and need to show the same for $L'\le 0$.
+
+Passing to the ultracompletion, we may assume that $X$ is geodesic.
 Choose 4 points $x_1,x_2,x_3,x_5\in X$ and let $x_4$ be a point on a geodesic $[x_3x_5]$ that divides it in the same ratio as in the 5-point configuration in the plane.
 If we sum up the first inequality for arrays $x_1,x_2,x_3,x_4$ and $x_1,x_2,x_4,x_5$ with the appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_5$.
 
-{\color{blue}
 Namely, $x_4$ divides $[x_3x_5]$ in the ratio $1:\beta$.
 Therefore,
 \[\beta^2\cdot|x_3-x_5|^2 =\beta^2\cdot (1+\beta)\cdot|x_3-x_4|^2+\beta\cdot(1+\beta)\cdot|x_4-x_5|^2.\]
 It follows that
-\[L_2(x_1,x_2,x_3,x_5)
+\[L'(x_1,x_2,x_3,x_5)
 =
-\beta\cdot(1+\beta)\cdot L_1(x_1,x_2,x_3,x_4)+ (1+\beta)\cdot L_1(x_1,x_2,x_4,x_5),\]
-where $L_i(p, q, r, s)$ denotes the left-hand side of the $i^{\text{th}}$ inequality \ref{eq:lambda} for the array $p, q, r, s$.
-In particular, if $L_1 \le 0$ holds for every point array, then so does} $L_2 \le 0$.
-That is, the inequality for $\lambda$-array $(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)$ implies the inequality for the $\lambda$-array $(\alpha\cdot (1-\beta^2), (1-\alpha)\cdot(1-\beta^2), \beta^2,-1)$.
+\beta\cdot(1+\beta)\cdot L(x_1,x_2,x_3,x_4)+ (1+\beta)\cdot L(x_1,x_2,x_4,x_5).\eqlbl{eq:L'=L+L}\]
+In particular, if $L \le 0$ implies $L' \le 0$ as requred.
+
 Applying the claim several times, we get all the inequalities with $\lambda$-arrays
 \[(\alpha\cdot (1-\gamma),\  (1-\alpha)\cdot(1-\gamma),\ \gamma,\ -1),\]
 where $\gamma=\beta^{2^k}$ for an integer $k\ge 1$;
@@ -576,20 +575,84 @@ The inequality \ref{eq:trig-inq}$'\,+\,\tfrac1{\beta_n}\cdot($\ref{eq:lambda-inq
 It remains to observe that $E_n/\beta_n+E_n\to0$ as $n\to\infty$.
 
 \parit{Case \ref{vertex}.}
-We can assume that $\lambda_1=\lambda_2=0$, so $\bm{\lambda}_\infty=(0,0,1,-1)$ and
+We may assume that $\lambda_1=\lambda_2=0$, so $\bm{\lambda}_\infty=(0,0,1,-1)$ and
 \[\bm{\lambda}_n=(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1),\]
-where $0<\alpha_n<1$ and $\beta_n\to 1^-$ as $n\to\infty$.
-Let us modify the corresponding inequalities defined by \ref{eq:+squares} to sweep $\bm{\lambda}_\infty$ out of the corner.
-Namely, we have a sequence of $(3,1)$-inequalities with array
-\[(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1)\]
-that hold with error
-\[10\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+where $0<\alpha_n<1$, $0<\beta_n<1$, and $\beta_n\to 1^-$ as $n\to\infty$.
 
-This sequence of inequalities can be used to produce another sequence that is covered in cases \ref{in} or \ref{side}. 
+The following argument pushes $\bm{\lambda}_\infty$ out of the corner; that is, it produces a new sequence of inequalities~\ref{eq:L<En-hats} with new arrays $\hat{\bm{\lambda}}_n$ that fall under cases~\ref{in} or~\ref{side}.
+
+We start with a sequence of inequalities
+\[
+L_n(x_1,x_2,x_3,x_4)\le \delta_n^2\cdot E_n(x_1,x_2,x_3),
+\eqlbl{eq:L<En}
+\]
+where $\delta_n\to0$ as $n\to\infty$,
+$L_n$ is the left-hand side of~\ref{eq:lambda} for $\bm{\lambda}_n$, and
+\[
+E_n=10\alpha_n(1-\alpha_n)\beta_n(1-\beta_n)^2
+\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).
+\]
+
+Fix $\theta=\tfrac{99}{100}$ and choose $k = k(n)$ such that $\theta^2\le \beta_n^{2^k}<\theta$;
+note that $k(n)$ is defined for all sufficiently large~$n$.
+Let $\hat L_n$ denote the left-hand side of~\ref{eq:lambda} corresponding to the array
+\[\hat{\bm{\lambda}}_n=(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1),\]
+and define
+\[\hat E_n=10\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n^{2^k}\cdot(1-\beta_n^{2^k})^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+It suffices to establish the inequality
+\[
+\hat L_n(x_1,x_2,x_3,x_4)\le 1000\cdot \delta_n^2\cdot \hat E_n(x_1,x_2,x_3).
+\eqlbl{eq:L<En-hats}
+\]
+
+Assume that~\ref{eq:L<En-hats} does not hold for a given point array $x_1,x_2,x_3,x_4$.
+Then
+\[
+|x_3-x_4|\le \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
+\]
+since otherwise $\hat L_n(x_1,x_2,x_3,x_4)\le 0$, which would imply~\ref{eq:L<En-hats}.
+
+Expanding the iterations of Claim~\ref{clm:1=>2} in the proof of Proposition~\ref{prop:Alexandrov's comparison},
+we find that
+$\hat L_n(x_1,x_2,x_3,x_4)$ can be written as a telescoping sum
+of $L_n(x_1,x_2,z_0,z_1)$, $L_n(x_1,x_2,z_1,z_2),\z\dots,L_n (x_1,x_2,z_{2^k-1},z_{2^k})$ with appropriate positive coefficients
+with suitable positive coefficients;
+here $x_3=z_0$, $z_1,\dots,z_{2^k}=x_4$ are points along the geodesic $[x_3,x_4]$.
+Applying $k$ times \ref{eq:L'=L+L}, we see that the coefficient in front of each $L_n(x_1,x_2,z_{i-1},z_i)$ does not exceed $2^k$.
+Therefore,
+\[\hat L_n(x_1,x_2,x_3,x_4)\le 2^k\cdot \delta_n^2\cdot \sum_{i=0}^{2^k-1}E_n(x_1,x_2,z_i).
+\]
+
+Since $|x_3-x_4|\le \max\{\,|x_3-x_1|,|x_3-x_2|\,\}$, we have
+\begin{align*}
+|x_1-z_i|&\le 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},\\
+|x_2-z_i|&\le 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
+\end{align*}
+for each~$i$.
+It follows that
+\[
+E_n(x_1,x_2,z_i)\le 100\cdot E_n(x_1,x_2,x_3)
+\]
+for all~$i$.
+Therefore
+\[\hat L_n(x_1,x_2,x_3,x_4)\le 100\cdot 4^k\cdot \delta_n^2\cdot E_n(x_1,x_2,x_3).
+\]
+Furthermore, since $1>\beta_n\ge\beta_n^{2^k}\ge \theta^2$,
+we have $1-\beta_n^{2^k}\ge 2^{k-1}(1-\beta_n)$, and hence
+\[
+\hat E_n(x_1,x_2,x_3)\ge  \tfrac1{10}\cdot4^{k}\cdot E_n(x_1,x_2,x_3),
+\]
+and \ref{eq:L<En-hats} follows.
+\qeds
+
+
+\section{TMP}
+
 
 [REDACTED]
 
-To do this, we fix $n$, and thus fix an inequality which corresponds to it, say $I_n = N_n - E_n \le 0$, where $N_n$ is an inequality of negative type and $E_n$ is the error term. We fix $k = k(n)$ such that $\gamma^2\le \beta_n^{2^k}<\gamma$, say for $\gamma=\tfrac{99}{100}$.
+To do this, we fix $n$, and thus fix an inequality which corresponds to it, say $I_n = N_n - E_n \le 0$, where $N_n$ is an inequality of negative type and $E_n$ is the error term.
+We fix $k = k(n)$ such that $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$.
 We construct a new inequality $I'_n$ from $I_n$
 via a telescoping summation of $2^k$ evaluations of $I_n$
 arranged as in \ref{clm:1=>2}.
@@ -627,7 +690,7 @@ The target inequality has an array
 \]
 and error
 \[2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
-Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\gamma^2\le \beta_n^{2^k}<\gamma$, say for $\gamma=\tfrac{99}{100}$ and
+Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$ and
 \[
 2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
 <
