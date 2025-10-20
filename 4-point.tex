@@ -395,7 +395,7 @@ If we sum up the first inequality for arrays $(x_1,x_2,x_{2+i},x_{3+i})$ with th
 Namely, $x_4$ divides $[x_3x_5]$ in the ratio $1:\beta$.
 Therefore,
 \[\beta^k\cdot|x_3-x_{3+k}|^2 =\tfrac{1-\beta^k}{1-\beta}\cdot(\beta^k\cdot |x_3-x_4|^2+\dots+\beta\cdot|x_{2+k}-x_{3+k}|^2).\]
-It follows that
+Hence we get the following telescopic sum
 \[
 \begin{aligned}
 L'(x_1,x_2,x_3,x_5)
@@ -474,7 +474,7 @@ We say that a metric space $X$ meets \emph{local $K$-comparison} if any point $x
 
 If local $K$-comparison implies $K$-comparison for any length space, then we say that \emph{globalization holds} for $K$.
 
-The following statement shows that if globalization holds for quadratic comparison, then it is either trivial or characterizes nonnegatively curved Alexandrov spaces;
+The following statement shows that if globalization holds for a nontrivial quadratic comparison, then it characterizes nonnegatively curved Alexandrov spaces;
 so, Toponogov's theorem is the only nontrivial globalization theorem for quadratic conditions on 4-point arrays.
 
 \begin{thm}{Theorem}\label{thm:globalization}
@@ -503,7 +503,7 @@ Let us denote by $K_0$ the cone in $W_4$ described by all inequalities of negati
 By \ref{cor:Four-point arrays}, $K_0$ describes all metrics on 4-point arrays in Alexandrov spaces with nonnegative curvature.
 By \ref{lem:globalization},  $K$~includes $K_0$.
 
-Given $\delta>0$, consider all metrics with diameter at most $\delta$ on a 4-point array $\{x_1,x_2,x_3,x_4\}$ in an Alexandrov space with curvature at least $-1$.
+Given small $\delta>0$, consider all metrics with diameter at most $\delta$ on a 4-point array $\{x_1,x_2,x_3,x_4\}$ in an Alexandrov space with curvature at least $-1$.
 Due to Wald's Theorem (see \cite[Exercise 10.7]{AKP-2024}) we can assume that the $4$-point array
 comes from a model $k$-plane (that is, a complete simply connected 2-dimensional Riemannian manifold of constant curvature $k$) with $k \ge -1$.
 This implies that the array either (a) is isometric to a $4$-point subset of some sphere or (b) is bi-Lipshitz equivalent with the constant $1 + C\cdot \delta^2$ to a $4$-point subset of a Euclidean plane, where $C > 0$ is some absolute constant.
@@ -593,7 +593,7 @@ We may assume that $\lambda_1=\lambda_2=0$, so $\bm{\lambda}_\infty=(0,0,1,-1)$ 
 \[\bm{\lambda}_n=(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1),\]
 where $0<\alpha_n<1$, $0<\beta_n<1$, and $\beta_n\to 1^-$ as $n\to\infty$.
 
-The following argument pushes $\bm{\lambda}_\infty$ out of the corner; that is, it produces a new sequence of inequalities~\ref{eq:L<En-hats} with new arrays $\hat{\bm{\lambda}}_n$ that fall under cases~\ref{in} or~\ref{side}.
+The following argument pushes $\bm{\lambda}_\infty$ out of the corner; that is, it produces a new sequence of inequalities~\ref{eq:L<En-hats} with new arrays ${\bm{\lambda}}'_n$ that fall under cases~\ref{in} or~\ref{side}.
 
 We start with a sequence of inequalities
 \[
@@ -607,20 +607,21 @@ E_n=10\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2
 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).
 \]
 
-Fix $\theta=\tfrac{99}{100}$ and choose the largest $k = k(n)$ such that $ \beta_n^{k}\ge \theta$.
+Choose the largest $k = k(n)$ such that $ \beta_n^{k}\ge \tfrac{99}{100}$.
 Note that $k(n)$ is defined for all sufficiently large~$n$;
-morevoer $\beta_n^k\to \theta$ as $n\to\infty$.
+morevoer $\beta_n^k\to \tfrac{99}{100}$ as $n\to\infty$.
 As in the proof of Claim~\ref{clm:1=>2}, let $L_n'$ be the left-hand side in~\ref{eq:lambda} for the array
-\[\hat{\bm{\lambda}}_n=(\alpha_n\cdot(1-\beta_n^{k}),(1-\alpha_n)\cdot(1-\beta_n^{k}),\beta_n^{k},-1),\]
+\[{\bm{\lambda}}'_n=(\alpha_n\cdot(1-\beta_n^{k}),(1-\alpha_n)\cdot(1-\beta_n^{k}),\beta_n^{k},-1),\]
 and define
 \[E_n'=10\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n^{k}\cdot(1-\beta_n^{k})^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 
-Note that a partial limit of $\hat{\bm{\lambda}}_n$ cannot get into the corner of the triangle.
-Therefore, it suffices to prove the following inequlaitly
+Let us prove the following inequality
 \[
 L_n'\le 1000\cdot \delta_n^2\cdot E_n'.
 \eqlbl{eq:L<En-hats}
 \]
+Note that the new array ${\bm{\lambda}}'_n$ is covered in cases cases~\ref{in} or~\ref{side}.
+Therefore, once \ref{eq:L<En-hats} is proved, case \ref{vertex} will be covered.
 
 Assume the contrary; choose an array $x_1,x_2,x_3,x_{3+k}$ for which \ref{eq:L<En-hats} does not hold.
 Then
@@ -629,12 +630,12 @@ Then
 \]
 since otherwise $L_n'(x_1,x_2,x_3,x_{3+k})\le 0$, which would imply~\ref{eq:L<En-hats}.
 
-Following calculations in Claim~\ref{clm:1=>2},
-we find that
-$L_n'(x_1,x_2,x_3,x_{3+k})$ can be written as a telescoping sum
-of $L_n(x_1,x_2,x_{2+i},x_{3+i})$ with appropriate positive coefficients;
+We can assume that $X$ is geodesic, otherwise pass to its ularacompletion.
+By \ref{eq:L'=L+L},
+$L_n'(x_1,x_2,x_3,x_{3+k})$ is a linear combination
+of $L_n(x_1,x_2,x_{2+i},x_{3+i})$ with positive coefficients;
 here $x_3,\dots,x_{3+k}$ are points on the geodesic $[x_3,x_{3+k}]$.
-Applying \ref{eq:L'=L+L}, we see that the coefficient in front of each $L_n(x_1,x_2,x_{2+i},x_{3+i})$ does not exceed $k$.
+Note that the coefficient in front of each $L_n(x_1,x_2,x_{2+i},x_{3+i})$ does not exceed $k$.
 Therefore,
 \[L_n'(x_1,x_2,x_3,x_4)\le k\cdot \delta_n^2\cdot \sum_{i=1}^{k}E_n(x_1,x_2,x_{2+i}).
 \]
@@ -652,7 +653,7 @@ E_n(x_1,x_2,x_{2+i})\le 100\cdot E_n(x_1,x_2,x_3)
 for all~$i$; hence
 \[L_n'(x_1,x_2,x_3,x_4)\le 100\cdot k^2\cdot \delta_n^2\cdot E_n(x_1,x_2,x_3).
 \]
-Furthermore, since $1>\beta_n\ge\beta_n^{k}\ge \theta$,
+Furthermore, since $1>\beta_n\ge\beta_n^{k}\ge \tfrac{99}{100}$,
 we have $1-\beta_n^{k}\ge \tfrac k2\cdot(1-\beta_n)$, and hence
 \[
 k^2\cdot E_n(x_1,x_2,x_3)\le 10\cdot E_n'(x_1,x_2,x_3)
@@ -660,62 +661,6 @@ k^2\cdot E_n(x_1,x_2,x_3)\le 10\cdot E_n'(x_1,x_2,x_3)
 for all large $n$.
 It follows that \ref{eq:L<En-hats} holds for $x_1,x_2,x_3,x_{3+k}$ --- a contradiction.
 \qeds
-
-
-\section{TMP}
-
-
-[REDACTED]
-
-To do this, we fix $n$, and thus fix an inequality which corresponds to it, say $I_n = N_n - E_n \le 0$, where $N_n$ is an inequality of negative type and $E_n$ is the error term.
-We fix $k = k(n)$ such that $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$.
-We construct a new inequality $I'_n$ from $I_n$
-via a telescoping summation of $2^k$ evaluations of $I_n$
-arranged as in \ref{clm:1=>2}.
-
-In the following by the target inequality we mean the inequality of the negative type corresponding to the following $\lambda$-array 
-\[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1).\] 
-Obviously, $|x_1-x_4|_X^2$ has a coefficient $-\alpha_n\cdot(1-\beta_n^{2^k})$ in it. On the other hand it should be more or less clear that the sum of evaluations of $N_n$ is a multiple of the target inequality. Also, it is easy to compute that $|x_1-x_4|_X^2$ has a coefficient $-\alpha_n\cdot(1-\beta_n)\beta_n^{-(2^k - 1)}$ in it. Thus, we can normalize $I'_n$ by multiplying it by $w(1-\beta_n)^{-1}$, where $w = (1-\beta_n^{2^k})\beta_n^{2^k - 1}$ i.e., after this the  the rescaled sum of evaluations of $N_n$ is exactly equal to the target inequality. We denote this normalized version of $I'_n$ by $I''_n$.
-
-
-For every of $2^k$ summands of $I'_n$ the error terms can be bounded from above by
-\[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
-That is, the error is most 100 times larger than in the original inequality; It follows that for $I''_n$ the whole error term is not greater that 
-\[w \cdot 2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n) \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2) := E''_n.\]
-
-From the way we selected $k$ it follows that 
- $2^{k}(1 - \beta_n) / (1 - \beta_n^{2^k})$ is very close to $1$. Thus, 
-\[ E''_n
-<
-C \cdot \delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k} \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2),
-\]
-for some absolute constant $C > 0$.
-It remains to observe that this new sequence of inequalities $\{{I''_n}\}_{n=1}^{\infty}$ is covered in cases \ref{in} or \ref{side}.
-\qeds
-
-[ORIGINAL]
-
-To do this, we follow the calculations in \ref{clm:1=>2};
-that is, we will use each inequality several times for a sequence of point arrays.
-We may assume that the error in the intermediate inequalities is at most
-\[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
-That is, the error is most 100 times larger than in the original inequality; if this is not the case, then by the triangle inequality, the target inequality (stated below) will hold trivially.
-
-The target inequality has an array
-\[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1)
-\]
-and error
-\[2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
-Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$ and
-\[
-2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
-<
-\delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k}
-\]
-It remains to observe that this new sequence of inequalities is covered in cases \ref{in} or \ref{side}.
-\qeds
-
-
 
 \section{Auxiliary statements}\label{Auxiliary statements}
 
@@ -898,3 +843,58 @@ Therefore, understanding globalization phenomena in such general settings is eve
 }
 
 \end{document}
+
+
+\section{TMP}
+
+
+[REDACTED]
+
+To do this, we fix $n$, and thus fix an inequality which corresponds to it, say $I_n = N_n - E_n \le 0$, where $N_n$ is an inequality of negative type and $E_n$ is the error term.
+We fix $k = k(n)$ such that $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$.
+We construct a new inequality $I'_n$ from $I_n$
+via a telescoping summation of $2^k$ evaluations of $I_n$
+arranged as in \ref{clm:1=>2}.
+
+In the following by the target inequality we mean the inequality of the negative type corresponding to the following $\lambda$-array
+\[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1).\]
+Obviously, $|x_1-x_4|_X^2$ has a coefficient $-\alpha_n\cdot(1-\beta_n^{2^k})$ in it. On the other hand it should be more or less clear that the sum of evaluations of $N_n$ is a multiple of the target inequality. Also, it is easy to compute that $|x_1-x_4|_X^2$ has a coefficient $-\alpha_n\cdot(1-\beta_n)\beta_n^{-(2^k - 1)}$ in it. Thus, we can normalize $I'_n$ by multiplying it by $w(1-\beta_n)^{-1}$, where $w = (1-\beta_n^{2^k})\beta_n^{2^k - 1}$ i.e., after this the  the rescaled sum of evaluations of $N_n$ is exactly equal to the target inequality. We denote this normalized version of $I'_n$ by $I''_n$.
+
+
+For every of $2^k$ summands of $I'_n$ the error terms can be bounded from above by
+\[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
+That is, the error is most 100 times larger than in the original inequality; It follows that for $I''_n$ the whole error term is not greater that
+\[w \cdot 2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n) \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2) := E''_n.\]
+
+From the way we selected $k$ it follows that
+ $2^{k}(1 - \beta_n) / (1 - \beta_n^{2^k})$ is very close to $1$. Thus,
+\[ E''_n
+<
+C \cdot \delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k} \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2),
+\]
+for some absolute constant $C > 0$.
+It remains to observe that this new sequence of inequalities $\{{I''_n}\}_{n=1}^{\infty}$ is covered in cases \ref{in} or \ref{side}.
+\qeds
+
+[ORIGINAL]
+
+To do this, we follow the calculations in \ref{clm:1=>2};
+that is, we will use each inequality several times for a sequence of point arrays.
+We may assume that the error in the intermediate inequalities is at most
+\[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
+That is, the error is most 100 times larger than in the original inequality; if this is not the case, then by the triangle inequality, the target inequality (stated below) will hold trivially.
+
+The target inequality has an array
+\[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1)
+\]
+and error
+\[2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
+Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$ and
+\[
+2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
+<
+\delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k}
+\]
+It remains to observe that this new sequence of inequalities is covered in cases \ref{in} or \ref{side}.
+\qeds
+
