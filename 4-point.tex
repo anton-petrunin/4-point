@@ -318,7 +318,7 @@ Suppose $K\subset W_4$ is defined by a single rank-one inequality on $4$-point a
 \begin{enumerate}[(i)]
 \item If the inequality is of negative type $(2,2)$, then $\mathcal{M}_K$ consists of all length spaces with nonpositive curvature in the sense of Alexandrov.
 \item \label{prop:Alexandrov's comparison:(3,1)} If the inequality is of negative type $(3,1)$, then $\mathcal{M}_K$ consists of all length spaces with nonnegative curvature in the sense of Alexandrov.
-\item In the remaining cases, $\mathcal{M}_K$ consists of all length spaces.
+\item\label{prop:Alexandrov's comparison:all} In the remaining cases, $\mathcal{M}_K$ consists of all length spaces.
 \end{enumerate}
 
 \end{thm}
@@ -333,7 +333,7 @@ Our inequality can be written as
 where $\lambda_1+\lambda_2+\lambda_3+\lambda_4=0$.
 If $\lambda_i=0$ for some $i$,
 then the inequality follows from the triangle inequality.
-In this case, $\mathcal{M}_K$ consists of all length spaces.
+In this case, $\mathcal{M}_K$ consists of all length spaces, which is case \ref{prop:Alexandrov's comparison:all}.
 
 It remains to consider the inequalities of negative type $(2,2)$ or $(3,1)$.
 In these cases, we can assume that our $\lambda$-array is
@@ -440,7 +440,7 @@ that is,
 %Then $\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$ looks like \[\begin{aligned}-\alpha\cdot (1-\alpha)\cdot(2-\gamma)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+\\+(1-\alpha)\cdot(1-\gamma)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+\\+\alpha\cdot(1-\gamma)\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.\end{aligned}\]
 %Then \ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$ looks like \[\begin{aligned}-\alpha\cdot (1-\alpha)\cdot(1-\gamma)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+\\+(1-\alpha)\cdot(1-\gamma)\cdot|x_2-x_3|^2&+\\+\alpha\cdot(1-\gamma)\cdot|x_1-x_3|^2&\le 0.\end{aligned}\]
 %Since $\gamma>0$ can be taken arbitrary small, we get \[\begin{aligned}-2\cdot \alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2 -  |x_3-x_4|^2 &+\\+(1-\alpha)\cdot|x_2-x_3|^2+\alpha\cdot|x_1-x_4|^2&+\\+\alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot |x_2-x_4|^2&\le 0.\end{aligned}\] Adding \ref{eq:trig-inq} to the last inequality, we get
-Passing to the limit as $\gamma\to 0$ in the inequality \ref{eq:trig-inq}$\,+\,\tfrac1\gamma\cdot($\ref{eq:lambda-inq}$\,-\,$\ref{eq:trig-inq}$)$, we get
+Passing to the limit as $\gamma\to 0$ in the inequality $\tfrac1\gamma\cdot$\ref{eq:lambda-inq}$\,-\,\,\tfrac{1-\gamma}\gamma\cdot$\ref{eq:trig-inq}, we get
 \[
 \begin{aligned}
 \alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot|x_2-x_3|^2-
@@ -557,8 +557,9 @@ Therefore, \ref{prop:Alexandrov's comparison}\ref{prop:Alexandrov's comparison:(
 
 \parit{Case \ref{side}.}
 We can assume that $\lambda_3=0$, so
-\[\bm{\lambda}_\infty=(\alpha,(1-\alpha),0,-1);\]
-it defines an inequality of negative type $(2,1)$.
+\[\bm{\lambda}_\infty=(\alpha,(1-\alpha),0,-1)\]
+for some $0<\alpha<1$.
+It defines an inequality of negative type $(2,1)$.
 Note that
 \[\bm{\lambda}_n=(\alpha_n\cdot(1-\beta_n),(1-\alpha_n)\cdot(1-\beta_n),\beta_n,-1),\]
 for some sequences $\alpha_n\to\alpha$ and $\beta_n\to 0^+$ as $n\to\infty$.
@@ -567,26 +568,42 @@ A bit below we will show that repeating the proof of \ref{prop:Alexandrov's comp
 \alpha\cdot|x_1-x_3|^2+(1-\alpha)\cdot|x_2-x_3|^2-\alpha\cdot (1-\alpha)\cdot|x_1-x_2|^2
 \le
 |x_3-x_4|^2
+\leqno{\text{\ref{eq:CBB-CBA}}'}
 \]
 if $x_4$ lies on $[x_1x_2]$ and divides it in the ratio $(1-\alpha):\alpha$.
 After that it remains to follow the end of proof of \ref{prop:Alexandrov's comparison}.
 
-Indeed, suppose $x_4$ lies on $[x_1x_2]$ and divides it in the ratio $(1-\alpha_n):\alpha_n$, then
+To prove \ref{eq:CBB-CBA}$'$, suppose $x_4$ lies on $[x_1x_2]$ and divides it in the ratio $(1-\alpha_n):\alpha_n$, then
 \[\alpha_n\cdot (1-\alpha_n)\cdot|x_1-x_2|^2-\alpha_n\cdot |x_1-x_4|^2-(1-\alpha_n)\cdot |x_2-x_4|^2=0;\leqno{\text{\ref{eq:trig-inq}}'}\]
 this will be used instead of \ref{eq:trig-inq} (page \pageref{eq:trig-inq}).
-If we assume $\alpha=\alpha_n$ and $\gamma=\beta_n$ in \ref{eq:lambda-inq}, then instead of zero in the right-hand side, we get the following error term:
-\[E_n=10\cdot\delta_n^2\cdot \alpha_n\cdot (1-\alpha_n)\cdot(1-\beta_n)^2\cdot \beta_n\cdot(|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
-let us label this inequality by  \ref{eq:lambda-inq}$'$.
-The inequality \ref{eq:trig-inq}$'\,+\,\tfrac1{\beta_n}\cdot($\ref{eq:lambda-inq}$'\,-\,$\ref{eq:trig-inq}$')$ implies the following:
+Set
+\begin{align*}
+S&=|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2,
+\\
+E_n&=10\cdot \alpha_n\cdot (1-\alpha_n)\cdot(1-\beta_n)^2\cdot \beta_n\cdot S.
+\end{align*}
+If we assume $\alpha=\alpha_n$ and $\gamma=\beta_n$ in \ref{eq:lambda-inq}, then instead of zero in the right-hand side, we get $\delta_n^2\cdot E_n$:
 \[
 \begin{aligned}
-\alpha_n\cdot|x_1-x_3|^2+(1-\alpha_n)\cdot|x_2-x_3|^2-
-\alpha_n&\cdot (1-\alpha_n)\cdot|x_1-x_2|^2 \le
+\alpha_n\cdot (1-\alpha_n)\cdot(1-\beta_n)^2\cdot|x_1-x_2|^2 - \beta_n\cdot |x_3-x_4|^2 &+
 \\
-&\le |x_3-x_4|^2 +  E_n/\beta_n+E_n.
++(1-\alpha_n)\cdot(1-\beta_n)\cdot\beta_n\cdot|x_2-x_3|^2-\alpha_n\cdot (1-\beta_n)\cdot |x_1-x_4|^2&+
+\\
++\alpha_n\cdot(1-\beta_n)\cdot\beta_n\cdot|x_1-x_3|^2-(1-\alpha_n)\cdot(1-\beta_n)\cdot |x_2-x_4|^2&\le \delta_n^2\cdot E_n
+\end{aligned}
+\leqno{\text{\ref{eq:lambda-inq}}'}
+\]
+
+The inequality $\tfrac1{\beta_n}\cdot$\ref{eq:lambda-inq}$'\,-\,\tfrac{1-\beta_n}{\beta_n}\cdot$\ref{eq:trig-inq}$'$ imply the following
+\[
+\begin{aligned}
+\alpha_n\cdot|x_1-x_3|^2+(1-\alpha_n)\cdot|x_2-x_3|^2&-
+\alpha_n\cdot (1-\alpha_n)\cdot|x_1-x_2|^2 \le
+\\
+&\le |x_3-x_4|^2 +  \tfrac{\delta_n^2}{\beta_n}\cdot E_n+\beta_n\cdot S.
 \end{aligned}
 \]
-It remains to observe that $E_n/\beta_n+E_n\to0$ as $n\to\infty$.
+It remains to observe that $\tfrac{\delta_n^2}{\beta_n}\cdot E_n+\beta_n\cdot S\to0$ as $n\to\infty$.
 
 \parit{Case \ref{vertex}.}
 We may assume that $\lambda_1=\lambda_2=0$, so $\bm{\lambda}_\infty=(0,0,1,-1)$ and
