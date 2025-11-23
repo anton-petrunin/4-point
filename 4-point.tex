@@ -21,8 +21,11 @@ pdfauthor={\theauthors}
 %\usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
 %\overfullrule=100mm
 %\usepackage[none]{hyphenat}
+
+%\makeatletter\let\orig@section\section\renewcommand{\section}[1]{\orig@section{#1.}}\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\pagestyle{empty}\makeatletter\let\ps@plain\ps@empty\makeatother\def\emph{\textit}\usepackage[none]{hyphenat}
+
 \begin{document}
-%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
 
 \title{\thetitle}
 \author{\theauthors}
@@ -47,7 +50,7 @@ The following statement says that the Toponogov theorem has no simple relatives.
 It will be proved in Section~\ref{par:globalization}.
 
 \begin{thm}{Main theorem}
-Suppose that a quadratic condition on 4 points satisfies the globalization property;
+Suppose that a quadratic condition for 4-point arrays satisfies the globalization property;
 that is, if this condition holds locally (in a neighborhood of any point) in a length space $X$, then it holds in $X$.
 Then either the condition is trivial, or it describes Alexandrov spaces with nonnegative curvature.
 \end{thm}
@@ -127,8 +130,7 @@ a\cdot X\in\mathcal{M}_K
 for any $a\ge 0$;
 here $X\times Y$ denotes the $\ell_2$-product of metric spaces, and
 $a\cdot X$ denotes the rescaled copy of $X$ with scaling factor $a$.
-Moreover, this can be used in the opposite direction as well.
-It follows that all forms $\rho_{\bm{x}}$ for point arrays $\bm{x}$ in $\mathcal{M}_K$-spaces form a convex cone.
+Moreover, all forms $\rho_{\bm{x}}$ for point arrays $\bm{x}$ in $\mathcal{M}_K$-spaces form a convex cone.
 Let us denote this new cone by $K'$.
 
 Evidently, $K'\subset K$, and this inclusion might be strict.
@@ -272,13 +274,13 @@ $\rho\ge 0$ and by \ref{obs:rank-one}, the space $X$ is isometric to a 4-point s
 
 Since all $(2,1)$-inequalities hold for $\tilde\rho$, the form $\tilde\rho$
 must be nonnegative on 4 equators $e_1,e_2,e_3,e_4$ in the directions of facets of $\triangle$.
-Since $\tilde\rho$ is minimal, $\bar N$ has to touch $e_i$ in at least 3 directions (up to sign).
-If not, then there is a linear function, say $\sigma$, that vanishes at all common points of $\bar N$ and $e_i$ for all $i$.
+Since $\tilde\rho$ is minimal, $\bar N$ has to touch the union of the equators in at least three directions (up to sign).
+If not, then there is a linear function, say $\sigma$, that vanishes at all common points of $\bar N$ and the union of the equators.
 In this case, consider the form $\tilde\rho-\eps\cdot \sigma^2$ for small $\eps>0$;
 note that all $(2,1)$-inequalities still hold for this form.
 Therefore, $\tilde\rho$ is not minimal --- a contradiction.
 
-It means that $\bar N$ lies in a quadrangle or a triangle, respectively, and touches its sides at three points or more.
+It means that $\bar N$ lies in a quadrangle or a triangle and touches its sides at three points or more.
 
 In the case of a triangle, $\bar N$ has to touch all of its sides.
 According to the diagram above, after relabeling, we can assume that
@@ -347,8 +349,8 @@ in the case of the $(2,2)$-inequality, we have $1<\alpha$.
 Consider the 4-point array $\bm{x}=(x_1,x_2,x_3,x_4)$  in the plane such that 
 \[x_4=\alpha\cdot (1-\beta)\cdot x_1+(1-\alpha)\cdot(1-\beta)\cdot x_2+\beta\cdot x_3.\]
 We can assume that the array matches one of the configurations in the pictures below,
-so for $(3,1)$-inequality, the point $x_4$ lies inside the triangle $x_1x_2x_3$,
-and for $(2,2)$-inequality, the segment $[x_1x_3]$ intersects $[x_2x_4]$.
+so for the $(3,1)$-inequality, the point $x_4$ lies inside the triangle $x_1x_2x_3$,
+and for the $(2,2)$-inequality, the segment $[x_1x_3]$ intersects $[x_2x_4]$.
 
 Note that for this array we get equality in \ref{eq:lambda}.
 Moreover, there is a bijection between plane $\bm{x}$-arrays up to affine transformation and $\lambda$-arrays without zeros up to multiplication by a nonzero coefficient;
@@ -459,8 +461,8 @@ Similarly, if $\alpha>1$, we get $|x_3-x_1|\le |\tilde x_3-\tilde x_1|$, where $
 
 So far, we have obtained it for only one value of $\alpha$;
 however, by applying iteration, we can derive inequalities for the remaining values $\alpha\in (0,1)$ (respectively, $\alpha\in (1,\infty)$).
-More precisely, assume this inequality holds for some $\alpha\in (0,1)$,
-then we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
+More precisely, assume this inequality holds for some $\alpha\in (0,1)$.
+Then we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
 In other words, if $\mathcal{A}\subset(0,1)$ is the set of all values $\alpha$ such that \ref{eq:CBB-CBA} holds, then together with any value $\xi$, it contains $1-\xi$ and $\xi^k$ for any integer $k\ge 1$.
 This implies that $\mathcal{A}$ is dense in $(0,1)$, and by continuity, we get $\mathcal{A}=(0,1)$.
 That is, inequality \ref{eq:CBB-CBA} holds for any $\alpha\in (0,1)$.
@@ -472,7 +474,7 @@ and this is equivalent to the point-on-side comparison for nonpositive curvature
 \section{Globalization}\label{par:globalization}
 
 Let $K\subset W_n$ be a closed convex cone.
-We say that a metric space $X$ meets \emph{local $K$-comparison} if any point $x\in X$ admits a neighborhood $U$ such that $K$-comparison holds for any $n$-point array in $U$.
+We say that a metric space $X$ satisfies \emph{local $K$-comparison} if any point $x\in X$ admits a neighborhood $U$ such that $K$-comparison holds for any $n$-point array in $U$.
 
 If local $K$-comparison implies $K$-comparison for any length space, then we say that \emph{globalization holds} for $K$.
 
@@ -480,7 +482,7 @@ The following statement shows that if globalization holds for a nontrivial quadr
 so, Toponogov's theorem is the only nontrivial globalization theorem for quadratic conditions on 4-point arrays.
 
 \begin{thm}{Theorem}\label{thm:globalization}
-Suppose that the globalization holds for a closed convex cone $K\z\subset W_4$.
+Suppose that globalization holds for a closed convex cone $K\z\subset W_4$.
 Assume that the $K$-comparison is not trivial;
 that is, on one side $\mathcal{M}_K$ does not include all length spaces and on the other side $\mathcal{M}_K$ contains a space with at least two distinct points.
 Then $\mathcal{M}_K$ consists of Alexandrov spaces with nonnegative curvature.
@@ -685,7 +687,7 @@ It follows that \ref{eq:L<En-hats} holds for $x_1,x_2,x_3,x_{3+k}$ --- a contrad
 
 \begin{thm}{Lemma}\label{lem:area-bound}
 Let $(\lambda_1,\lambda_2,\lambda_3,-1)$ be the $\lambda$-array of an inequality of type $(3,1)$ and
-let $(x_1$, $x_2$, $x_3$, $x_4)$ be a 4-point point array in the hyperbolic space.
+let $(x_1$, $x_2$, $x_3$, $x_4)$ be a 4-point array in the hyperbolic space.
 
 Then
 \[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
@@ -706,9 +708,9 @@ By Heron's formula,
 In particular, $\tilde a^2$ is a quadratic form on $W_4$.
 
 \parit{Proof.}
-By the Kirszbraun theorem (see \cite{lang-schroeder,AKP-2011} or \cite[Chapter 10]{AKP-2024}), we may assume that $x_1$, $x_2$, $x_3$ and $x_4$ lie in the hyperbolic plane; moreover, $x_4$ belongs to the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$.
+By Kirszbraun's theorem (see \cite{lang-schroeder,AKP-2011} or \cite[Chapter 10]{AKP-2024}), we may assume that $x_1$, $x_2$, $x_3$ and $x_4$ lie in the hyperbolic plane; moreover, $x_4$ belongs to the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$.
 Denote by $a$ the area of this triangle.
-Again, by the Kirszbraun theorem,
+Again, by Kirszbraun' theorem,
 \[a\le \tilde a.\]
 
 Since the hyperbolic plane has curvature $-1$, we have
@@ -755,14 +757,15 @@ Recall that $K_0$ denotes the cone in $W_4$ described by all inequalities of neg
 Let $K\subset W_4$ be a closed convex cone.
 Suppose that $K\supset K_0$, but $K$-comparison does not hold for a 4-point array of diameter at most $\delta$ in the hyperbolic space.
 If $\delta$ is sufficiently small,
-then there is an inequality of negative type $(3,1)$ with a $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$ such that the inequality
+then there is a $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$ of type $(3,1)$
+such that the inequality
 \[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
 \le
 10\cdot\delta^2\cdot \lambda_1\cdot\lambda_2\cdot\lambda_3\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2)\]
-holds for any quadruple in $K$.
+holds for any 4-point array whose associated form lies in $K$.
 \end{thm}
 
-This inequality should be interpreted as a $(3,1)$-inequality with a $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$ with error
+This inequality should be interpreted as a $(3,1)$-inequality with error
 \[10\cdot\delta^2\cdot \lambda_1\cdot\lambda_2\cdot\lambda_3\cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
 
 \parit{Proof.}
@@ -810,22 +813,26 @@ Since
 \]
 we have that $u$ points in a direction from $N$.
 Therefore, $\rho_{\bm{x}}(u)\ge0$ is an inequality of negative type $(3,1)$.
-
-Suppose that the array $\bm{x}=(x_1,x_2,x_3,x_4)$ is equipped with a metric such that its associated form is $\theta$.
 Let us rescale $u$, $v$, and $w$ so that the inequality $\theta(u)\ge 0$ (which as we know has negative type $(3,1)$)
 has $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$.
-Since $\delta$ is small, \ref{eq:uvw} and \ref{lem:area-bound} imply that
-\[\theta(v)+\theta(w)
-\le
-13\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
 
-For a general array $\bm{x}=(x_1,x_2,x_3,x_4)$, we have
+It remains to prove the inequality in the corollary for this $\lambda$-array.
+
+Since the inequalities $\rho_{\bm{x}}(v)\ge 0$ and $\rho_{\bm{x}}(w)\ge 0$ have type $(2,1)$, we can choose $\eps_v\ge 0$ and $\eps_w\ge 0$ such that
 \[\rho_{\bm{x}}(v)=\eps_v\cdot \tilde d_v^2
 \quad\text{and}\quad
  \rho_{\bm{x}}(w)=\eps_w\cdot \tilde d_w^2,
 \]
 where
-$\tilde d_v$ and $\tilde d_w$ are distances from a vertex of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ to a point on the opposite side that divides it in a certain ratio and $\eps_v,\eps_w\ge 0$.
+$\tilde d_v$ and $\tilde d_w$ are distances from a vertex of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ to a point on the opposite side that divides it in a certain ratio (that depends on $v$ and $w$, respectively).
+
+Now suppose that the array $\bm{x}=(x_1,x_2,x_3,x_4)$ is equipped with a metric such that its associated form is $\theta$.
+Since $\delta$ is small, \ref{eq:uvw} and \ref{lem:area-bound} imply that
+\[\theta(v)+\theta(w)
+\le
+13\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
+
+
 
 In particular, for our choice of $\bm{x}$ it implies $\theta(v)=\eps_v\cdot \tilde d_v^2$ and $\theta(w)=\eps_w\cdot \tilde d_w^2$
 Since the diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$, we have
@@ -834,12 +841,13 @@ $\tilde a\z\le \delta\cdot \tilde d_w/2$.
 Hence
 \[\eps_v+\eps_w\le \tfrac{13}4\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3.\]
 
-Note that for a general 4-point array, $\tilde d_v$ and $\tilde d_w$ do not exceed the largest side of the triangle $x_1x_2x_3$ --- hence the result.
+Note that for a general 4-point array, $\tilde d_v$ and $\tilde d_w$ do not exceed the largest side of the triangle $x_1x_2x_3$;
+this implies the required inequality.
 \qeds
 
 \section{Remarks}
 
-The requirement made in \ref{thm:globalization} that the cone $K$ is closed is necessary;
+The requirement in \ref{thm:globalization} that the cone $K$ be closed is necessary;
 without it, the globalization holds for the cone described by the inequality
 \[|x_1-x_2|^2+|x_1-x_3|^2+|x_2-x_3|^2<4\cdot(|x_1-x_4|^2+|x_2-x_4|^2+|x_3-x_4|^2),\]
 assuming that the right-hand side is positive.
