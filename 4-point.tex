@@ -813,10 +813,13 @@ Since
 \]
 we have that $u$ points in a direction from $N$.
 Therefore, $\rho_{\bm{x}}(u)\ge0$ is an inequality of negative type $(3,1)$.
-Let us rescale $u$, $v$, and $w$ so that the inequality $\theta(u)\ge 0$ (which as we know has negative type $(3,1)$)
-has $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$.
 
-It remains to prove the inequality in the corollary for this $\lambda$-array.
+Let us rescale $u$, $v$, and $w$ so that the inequality $\rho_{\bm{x}}(u)\ge 0$ (which as we know has negative type $(3,1)$)
+has $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$.
+After this resealing, the left-hand side in the required inequality can be written as $-\rho_{\bm{x}}(u)$.
+Since
+\[-\rho_{\bm{x}}(u)\le \rho_{\bm{x}}(v)+\rho_{\bm{x}}(w),\]
+it remains to estimate $\rho_{\bm{x}}(v)+\rho_{\bm{x}}(w)$.
 
 Since the inequalities $\rho_{\bm{x}}(v)\ge 0$ and $\rho_{\bm{x}}(w)\ge 0$ have type $(2,1)$, we can choose $\eps_v\ge 0$ and $\eps_w\ge 0$ such that
 \[\rho_{\bm{x}}(v)=\eps_v\cdot \tilde d_v^2
@@ -825,6 +828,8 @@ Since the inequalities $\rho_{\bm{x}}(v)\ge 0$ and $\rho_{\bm{x}}(w)\ge 0$ have 
 \]
 where
 $\tilde d_v$ and $\tilde d_w$ are distances from a vertex of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ to a point on the opposite side that divides it in a certain ratio (that depends on $v$ and $w$, respectively).
+Note that for a general 4-point array, $\tilde d_v$ and $\tilde d_w$ do not exceed the largest side $\tilde\triangle(x_1x_2x_3)_{\EE^2}$.
+Therefore, it is sufficient to find an appropriate upper bound on $\eps_v+\eps_w$.
 
 Now suppose that the array $\bm{x}=(x_1,x_2,x_3,x_4)$ is equipped with a metric such that its associated form is $\theta$.
 Since $\delta$ is small, \ref{eq:uvw} and \ref{lem:area-bound} imply that
@@ -839,10 +844,8 @@ Since the diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$, we have
 $\tilde a\z\le \delta\cdot \tilde d_v/2$ and
 $\tilde a\z\le \delta\cdot \tilde d_w/2$.
 Hence
-\[\eps_v+\eps_w\le \tfrac{13}4\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3.\]
-
-Note that for a general 4-point array, $\tilde d_v$ and $\tilde d_w$ do not exceed the largest side of the triangle $x_1x_2x_3$;
-this implies the required inequality.
+\[\eps_v+\eps_w\le \tfrac{13}4\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3,\]
+which implies the required inequality.
 \qeds
 
 \section{Remarks}
