@@ -816,10 +816,10 @@ Therefore, $\rho_{\bm{x}}(u)\ge0$ is an inequality of negative type $(3,1)$.
 
 Let us rescale $u$, $v$, and $w$ so that the inequality $\rho_{\bm{x}}(u)\ge 0$ (which as we know has negative type $(3,1)$)
 has $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,-1)$.
-After this resealing, the left-hand side in the required inequality can be written as $-\rho_{\bm{x}}(u)$.
-Since
-\[-\rho_{\bm{x}}(u)\le \rho_{\bm{x}}(v)+\rho_{\bm{x}}(w),\]
-it remains to estimate $\rho_{\bm{x}}(v)+\rho_{\bm{x}}(w)$.
+After this rescaling, the left-hand side in the required inequality can be written as $-\rho_{\bm{x}}(u)$.
+Now we have
+\[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2=-\rho_{\bm{x}}(u)\le \rho_{\bm{x}}(v)+\rho_{\bm{x}}(w),\]
+and it remains to estimate $\rho_{\bm{x}}(v)+\rho_{\bm{x}}(w)$.
 
 Since the inequalities $\rho_{\bm{x}}(v)\ge 0$ and $\rho_{\bm{x}}(w)\ge 0$ have type $(2,1)$, we can choose $\eps_v\ge 0$ and $\eps_w\ge 0$ such that
 \[\rho_{\bm{x}}(v)=\eps_v\cdot \tilde d_v^2
@@ -827,20 +827,23 @@ Since the inequalities $\rho_{\bm{x}}(v)\ge 0$ and $\rho_{\bm{x}}(w)\ge 0$ have 
  \rho_{\bm{x}}(w)=\eps_w\cdot \tilde d_w^2,
 \]
 where
-$\tilde d_v$ and $\tilde d_w$ are distances from a vertex of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ to a point on the opposite side that divides it in a certain ratio (that depends on $v$ and $w$, respectively).
-Note that for a general 4-point array, $\tilde d_v$ and $\tilde d_w$ do not exceed the largest side $\tilde\triangle(x_1x_2x_3)_{\EE^2}$.
+$\tilde d_v$ and $\tilde d_w$ are distances from a vertex of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$ to a point on the opposite side that divides it in a certain ratio (the choice of vertex and ratio depends on $v$ and $w$, respectively).
+Note that $\tilde d_v$ and $\tilde d_w$ do not exceed the largest side $\tilde\triangle(x_1x_2x_3)_{\EE^2}$; in particular
+\begin{align*}
+\tilde d_v^2&\le |x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2,
+\\
+\tilde d_w^2&\le |x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2.
+\end{align*}
 Therefore, it is sufficient to find an appropriate upper bound on $\eps_v+\eps_w$.
 
 Now suppose that the array $\bm{x}=(x_1,x_2,x_3,x_4)$ is equipped with a metric such that its associated form is $\theta$.
 Since $\delta$ is small, \ref{eq:uvw} and \ref{lem:area-bound} imply that
-\[\theta(v)+\theta(w)
+\[\eps_v\cdot \tilde d_v^2+\eps_w\cdot \tilde d_w^2=\theta(v)+\theta(w)
+<
+-\theta(u)
 \le
 13\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
-
-
-
-In particular, for our choice of $\bm{x}$ it implies $\theta(v)=\eps_v\cdot \tilde d_v^2$ and $\theta(w)=\eps_w\cdot \tilde d_w^2$
-Since the diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$, we have
+Since the diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$, we also have
 $\tilde a\z\le \delta\cdot \tilde d_v/2$ and
 $\tilde a\z\le \delta\cdot \tilde d_w/2$.
 Hence
