@@ -1,0 +1,10 @@
+4-point.tex
+4-point.bbl
+library.bib
+mppics/pic-10.mps
+mppics/pic-15.mps
+mppics/pic-20.mps
+mppics/pic-30.mps
+mppics/pic-40.mps
+paper-en.sty
+arXiv.txt

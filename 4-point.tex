@@ -22,7 +22,7 @@ pdfauthor={\theauthors}
 %\overfullrule=100mm
 %\usepackage[none]{hyphenat}
 
-%\makeatletter\let\orig@section\section\renewcommand{\section}[1]{\orig@section{#1.}}\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\pagestyle{empty}\makeatletter\let\ps@plain\ps@empty\makeatother\def\emph{\textit}\usepackage[none]{hyphenat}
+%\makeatletter\let\orig@section\section\renewcommand{\section}[1]{\orig@section{#1.}}\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\pagestyle{empty}\let\ps@plain\ps@empty\makeatother\def\emph{\textit}\usepackage[none]{hyphenat}
 
 \begin{document}
 
@@ -877,58 +877,3 @@ Therefore, understanding globalization phenomena in such general settings is eve
 }
 
 \end{document}
-
-
-\section{TMP}
-
-
-[REDACTED]
-
-To do this, we fix $n$, and thus fix an inequality which corresponds to it, say $I_n = N_n - E_n \le 0$, where $N_n$ is an inequality of negative type and $E_n$ is the error term.
-We fix $k = k(n)$ such that $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$.
-We construct a new inequality $I'_n$ from $I_n$
-via a telescoping summation of $2^k$ evaluations of $I_n$
-arranged as in \ref{clm:1=>2}.
-
-In the following by the target inequality we mean the inequality of the negative type corresponding to the following $\lambda$-array
-\[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1).\]
-Obviously, $|x_1-x_4|_X^2$ has a coefficient $-\alpha_n\cdot(1-\beta_n^{2^k})$ in it. On the other hand it should be more or less clear that the sum of evaluations of $N_n$ is a multiple of the target inequality. Also, it is easy to compute that $|x_1-x_4|_X^2$ has a coefficient $-\alpha_n\cdot(1-\beta_n)\beta_n^{-(2^k - 1)}$ in it. Thus, we can normalize $I'_n$ by multiplying it by $w(1-\beta_n)^{-1}$, where $w = (1-\beta_n^{2^k})\beta_n^{2^k - 1}$ i.e., after this the  the rescaled sum of evaluations of $N_n$ is exactly equal to the target inequality. We denote this normalized version of $I'_n$ by $I''_n$.
-
-
-For every of $2^k$ summands of $I'_n$ the error terms can be bounded from above by
-\[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
-That is, the error is most 100 times larger than in the original inequality; It follows that for $I''_n$ the whole error term is not greater that
-\[w \cdot 2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n) \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2) := E''_n.\]
-
-From the way we selected $k$ it follows that
- $2^{k}(1 - \beta_n) / (1 - \beta_n^{2^k})$ is very close to $1$. Thus,
-\[ E''_n
-<
-C \cdot \delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k} \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2),
-\]
-for some absolute constant $C > 0$.
-It remains to observe that this new sequence of inequalities $\{{I''_n}\}_{n=1}^{\infty}$ is covered in cases \ref{in} or \ref{side}.
-\qeds
-
-[ORIGINAL]
-
-To do this, we follow the calculations in \ref{clm:1=>2};
-that is, we will use each inequality several times for a sequence of point arrays.
-We may assume that the error in the intermediate inequalities is at most
-\[1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2);\]
-That is, the error is most 100 times larger than in the original inequality; if this is not the case, then by the triangle inequality, the target inequality (stated below) will hold trivially.
-
-The target inequality has an array
-\[(\alpha_n\cdot(1-\beta_n^{2^k}),(1-\alpha_n)\cdot(1-\beta_n^{2^k}),\beta_n^{2^k},-1)
-\]
-and error
-\[2^k\cdot1000\cdot\delta_n^2\cdot\alpha_n\cdot(1-\alpha_n)\cdot\beta_n\cdot(1-\beta_n)^2 \cdot (|x_1-x_2|_X^2+|x_2-x_3|_X^2+|x_3-x_1|_X^2).\]
-Since $\beta_n\to 1^-$, we can choose $k=k(n)$ such that $k\to \infty$ as $n\to \infty$ and $\theta^2\le \beta_n^{2^k}<\theta$, say for $\theta=\tfrac{99}{100}$ and
-\[
-2^k\cdot\delta_n^2\cdot \alpha_n\cdot(1-\beta_n)^2\cdot(1-\alpha_n)\cdot\beta_n
-<
-\delta_n^2\cdot \alpha_n\cdot(1-\beta_n^{2^k})^2\cdot(1-\alpha_n)\cdot\beta_n^{2^k}
-\]
-It remains to observe that this new sequence of inequalities is covered in cases \ref{in} or \ref{side}.
-\qeds
-
