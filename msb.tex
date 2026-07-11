@@ -30,7 +30,7 @@
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
-\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\sc \thesection.\arabic{thm}. #2.#1}
+\newcommand\claim[2][{}]{\par\medskip\indent\refstepcounter{thm}\hbox{\sc #2.#1 \thesection.\arabic{thm}.}
 \it\ %\ignorespaces
 }
 \def\endclaim{
@@ -70,7 +70,25 @@
 
 \renewcommand{\paragraph}[1]{\par\addvspace{0.5ex plus .5ex minus .2ex}\indent{\normalfont\normalsize\slshape #1}\hspace{1em}\ignorespaces}
 
+\renewcommand{\theenumi}{(\roman{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+
 \begin{document}
+\title{\thetitle}
+\author{Nina Lebedeva}
+\address{St. Petersburg State University, 7/9 Universitetskaya nab., St. Petersburg, 199034, Russia\\
+St. Petersburg Department of V. A. Steklov Institute of Mathematics of the Russian Academy of Sciences, 27 Fontanka nab., St. Petersburg, 191023, Russia}
+\email{lebed@pdmi.ras.ru}
+\author{Anton Petrunin}
+\address{Math. Dept. PSU, University Park, PA 16802, USA.}
+\email{petrunin@math.psu.edu}
+\author{Vladimir Zolotov}
+\address{St. Petersburg State University, 7/9 Universitetskaya nab., St. Petersburg, 199034, Russia}
+\email{paranuel@mail.ru}
+
+\date{}
+\maketitle
+
 \input{4-point}
 \input{references-journal}
 \end{document}

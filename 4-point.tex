@@ -1,8 +1,3 @@
-\title{\thetitle}
-\author{\theauthors}
-\date{}
-\maketitle
-
 \begin{abstract}
 We investigate how quadratic constraints on the six distances among the points of every quadruple affect the geometry of length spaces.
 \end{abstract}
@@ -30,13 +25,13 @@ Then either the condition is trivial, or it describes Alexandrov spaces with non
 Let us state two auxiliary results that are of independent interest.
 Their formulations use a special case of quadratic inequalities
 with $a_{i,j}=-\lambda_i\cdot\lambda_j$ for a real array $(\lambda_1,\ldots, \lambda_n)$ such that $\lambda_1+\ldots+\lambda_n=0$.
-Thise are so-called inequalities of negative type; they will be discussed in Section~\ref{par:rank-one}.
+These are so-called inequalities of negative type; they will be discussed in Section~\ref{par:rank-one}.
 
 In Section~\ref{Four-point arrays}, we prove the following version of a theorem by Abraham Wald \cite[§ 7]{wald} describing the metrics of all possible 4-point arrays in Alexandrov spaces with nonnegative and nonpositive curvature.
 
 \begin{thm}{Proposition}
 The following three conditions are equivalent:
-\begin{enumerate}[(i)]
+\begin{enumerate}
 \item A 4-point metric space $X$ is isometric to a subset of a length space with nonnegative (nonpositive) curvature in the sense of Alexandrov.
 \item $X$ is isometric to a subset of the product $\RR^3\times r\cdot \SSS^1$ for some $r>0$ (respectively, of $\RR^3\times Y$, where $Y$ denotes the tripod; that is, three half-lines with a common base point).
 \item All inequalities of negative type with $\lambda$-arrays such that $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4<0$ (respectively, with $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4>0$) hold in $X$.
@@ -47,7 +42,7 @@ The next proposition says that a single nondegenerate inequality of negative typ
 
 \begin{thm}{Proposition}
 Let us consider all length spaces that satisfy the quadratic condition given by an inequality of negative type with $\lambda$-array $(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$.
-\begin{enumerate}[(i)]
+\begin{enumerate}
 \item If $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4<0$, then it describes all Alexandrov spaces with nonnegative curvature.
 \item If $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4>0$, then it describes all Alexandrov spaces with nonpositive curvature.
 \item If $\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\lambda_4=0$, then it gives no restrictions; it describes all length spaces.
@@ -67,12 +62,12 @@ Section \ref{Auxiliary statements} provides a technical statement for the proof 
 \section{Associated form}\label{Associated form}
 
 Choose a point array $\bm{x}=(x_1,\ldots,x_n)$ in a metric space.
-Let $V_n\z=\RR^{n-1}$ be the Euclidean space with a choice of unit-edge regular simplex $\triangle$, whose vertices are $y_1,\ldots,y_n$.
+Let $V_n\z=\RR^{n-1}$ be the Euclidean space with a choice of regular simplex $\triangle$, whose vertices are $y_1,\ldots,y_n$.
 Consider the quadratic form $\rho_{\bm{x}}$ on $V_n$ defined by the equalities
 \[\rho_{\bm{x}}(y_i-y_j)=|x_i-x_j|^2_X\]
 for all indices $i$ and $j$.
 
-The quadratic form $\rho_{\bm{x}}$ will be called the \emph{associated form} of $\bm{x}=(x_1,\z\ldots,x_n)$;
+The quadratic form $\rho_{\bm{x}}$ will be called the \emph{associated form} of the array $\bm{x}$;
 it is uniquely defined and remembers all distances $|x_i-x_j|_X$
 (we assume that the simplex $\triangle$ in $V_n$ is known).
 We are allowed to not distinguish between $\rho_{\bm{x}}$ and the corresponding semimetric on $\bm{x}=(x_1,\ldots,x_n)$.
@@ -225,7 +220,7 @@ Since the tripod $Y$ has nonpositive curvature, and $\mathbb{S}^1$ has nonnegati
 A 4-point metric space $X$ is isometric to a subset of a length space with nonnegative (nonpositive) curvature in the sense of Alexandrov if and only if all inequalities of negative type $(3, 1)$ (respectively, type $(2, 2)$) hold in $X$.
 \end{thm}
 
-The corresponding five-point versions of this corollary have been proved by the first two authors \cite{lebedeva-petrunin-2024} and Tetsu Toyoda \cite{toyoda,lebedeva-petrunin2021}, respectively.
+The five-point versions of this corollary have been proved by two of the authors \cite{lebedeva-petrunin-2024} and Tetsu Toyoda \cite{toyoda,lebedeva-petrunin2021}, respectively.
 
 \parit{Proof of \ref{prop:Four-point arrays}.}
 Let us enumerate the points in $X$ and let $\rho$ be the associated form on~$V_4$.
@@ -238,7 +233,7 @@ denote the corresponding metric space by $\tilde X$.
 %If $X$ satisfies all inequalities of negative type $(3, 1)$ or $(2,2)$, then the same holds for $\tilde X$.
 
 By \ref{obs:rank-one}, $X$ isometrically embeds into $\tilde X\times \RR^3$.
-Hence, it is sufficient to show that $\tilde X$ embeds into $r\cdot \mathbb{S}^1$, or, respectively, into $Y$ for some $r>0$.
+Hence, it is sufficient to show that $\tilde X$ embeds into $r\cdot \mathbb{S}^1$ for some $r>0$, or, respectively, into $Y$.
 
 Let $N\subset \mathbb{S}^2$ be the set on which $\tilde\rho$ is negative and let $\bar N$ be its closure.
 Since $\tilde\rho\leqslant \rho$ and $\rho\ngeqslant0$, we have that $N\ne \emptyset$.
@@ -251,9 +246,9 @@ In this case, consider the form $\tilde\rho-\varepsilon\cdot \sigma^2$ for small
 note that all $(2,1)$-inequalities still hold for this form.
 Therefore, $\tilde\rho$ is not minimal --- a contradiction.
 
-It means that $\bar N$ lies in a quadrangle or a triangle and touches its sides at three points or more.
+It means that $\bar N$ lies in a quadrangle or a triangle (up to sign) and touches its sides at three points or more.
 
-In the case of a triangle, $\tilde \rho$ and $\rho$ satisfy all inequalities of negative type $(2,2)$, and $\bar N$ has to touch all of its sides.
+In the case of a triangle, $\tilde \rho$ and $\rho$ satisfy all inequalities of negative type $(2,2)$, and $\bar N$ has to touch all sides of the triangle.
 According to the diagram above, after relabeling, we can assume that
 \begin{align*}
 |x_1-x_2|&=|x_1-x_4|+|x_4-x_2|,
@@ -264,7 +259,7 @@ According to the diagram above, after relabeling, we can assume that
 \end{align*}
 In this case, the array can be embedded into the tripod $Y$.
 
-In the case of a quadrangle, $\tilde \rho$ and $\rho$ satisfy all inequalities of negative type $(3,1)$, and $\bar N$ touches at least three of its sides, but might touch all four.
+In the case of a quadrangle, $\tilde \rho$ and $\rho$ satisfy all inequalities of negative type $(3,1)$, and $\bar N$ touches at least three sides of the quadrangle, but might touch all four.
 Look at the diagram and convince yourself that after relabeling, we may assume that
 \begin{align*}
 |x_1-x_4|&=|x_1-x_2|+|x_2-x_4|=|x_1-x_3|+|x_3-x_4|,
@@ -290,7 +285,7 @@ if three points, say $x_1$, $x_2$, and $x_3$, appear in that order on a smooth l
 
 \begin{thm}{Proposition}\label{prop:Alexandrov's comparison}
 Suppose $K\subset W_4$ is defined by a single rank-one inequality on $4$-point arrays.
-\begin{enumerate}[(i)]
+\begin{enumerate}
 \item If the inequality is of negative type $(2,2)$, then $\mathcal{M}_K$ consists of all length spaces with nonpositive curvature in the sense of Alexandrov.
 \item \label{prop:Alexandrov's comparison:(3,1)} If the inequality is of negative type $(3,1)$, then $\mathcal{M}_K$ consists of all length spaces with nonnegative curvature in the sense of Alexandrov.
 \item\label{prop:Alexandrov's comparison:all} In the remaining cases, $\mathcal{M}_K$ consists of all length spaces.
@@ -367,7 +362,7 @@ that is
 \[|x_3-x_4|\,:\,|x_4-x_5|\,:\,\ldots\,:\,|x_{2+k}-x_{3+k}|=\beta:\beta^2:\ldots:\beta^k.\]
 If we sum up the first inequality for arrays $(x_1,x_2,x_{2+i},x_{3+i})$ with the appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_{3+k}$.
 
-Namely, $x_4$ divides $[x_3x_5]$ in the ratio $1:\beta$.
+Namely, $x_{3+i}$ divides $[x_{2+i}x_{4+i}]$ in the ratio $1:\beta$.
 Therefore,
 \[\beta^k\cdot|x_3-x_{3+k}|^2 =\tfrac{1-\beta^k}{1-\beta}\cdot(\beta^k\cdot |x_3-x_4|^2+\ldots+\beta\cdot|x_{2+k}-x_{3+k}|^2).\]
 Hence we get the following telescopic sum
@@ -430,7 +425,7 @@ Indeed, for Euclidean space, equality in \ref{eq:CBB-CBA} holds for any $\alpha$
 Therefore, if $\alpha<1$, we get $|x_3-x_4|\geqslant |\tilde x_3-\tilde x_4|$, where $\tilde x_4$ divides the side $[\tilde x_1\tilde x_2]$ of the model triangle $[\tilde x_1\tilde x_2\tilde x_3]=\tilde\triangle(x_1x_2x_3)$ in the same ratio $(1-\alpha):\alpha$.
 Similarly, if $\alpha>1$, we get $|x_3-x_1|\leqslant |\tilde x_3-\tilde x_1|$, where $\tilde x_1$ divides the side $[\tilde x_4\tilde x_2]$ of the model triangle $[\tilde x_4\tilde x_2\tilde x_3]=\tilde\triangle(x_4x_2x_3)$ in the same ratio $(\alpha-1):1$.
 
-So far, we have obtained it for only one value of $\alpha$;
+So far, we have obtained an inequality only for one value of $\alpha$;
 however, by applying iteration, we can derive inequalities for the remaining values $\alpha\in (0,1)$ (respectively, $\alpha\in (1,\infty)$).
 More precisely, assume this inequality holds for some $\alpha\in (0,1)$.
 Then we can change $\alpha$ to $(1-\alpha)$, $\alpha^2$,  $\alpha\cdot (1-\alpha)$, $(1-\alpha^2)$, and so on.
@@ -519,7 +514,7 @@ for any 4-point array $(x_1,x_2,x_3,x_4)$ with its form lying in $K$.
 Let $\bm{\lambda}_\infty=(\lambda_1,\lambda_2,\lambda_3,-1)$ be a partial limit of these $\lambda$-arrays;
 that is, for some sequence $\delta_n\to 0^+$, we can choose corresponding inequalities of the form \ref{eq:+squares} with $\lambda$-arrays $\bm{\lambda}_n$ such that $\bm{\lambda}_n\to \bm{\lambda}_\infty$ as $n\to \infty$.
 We have to deal with three cases:
-\begin{enumerate}[(i)]
+\begin{enumerate}
 \item\label{in} $\lambda_1>0$, $\lambda_2>0$, and $\lambda_3>0$;
 \item\label{side} $\lambda_i=0$ for one index $i$;
 \item\label{vertex} $\lambda_i=0$ for two indices $i$.
@@ -638,7 +633,7 @@ Since $|x_3-x_{3+k}|\leqslant \max\{\,|x_3-x_1|,|x_3-x_2|\,\}$, we have
 |x_1-x_{2+i}|&\leqslant 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},\\
 |x_2-x_{2+i}|&\leqslant 2\cdot \max\{\,|x_3-x_1|,|x_3-x_2|\,\},
 \end{align*}
-for each~$i\geqslant1$.
+for~$i\geqslant1$.
 It follows that
 \[
 E_n(x_1,x_2,x_{2+i})\leqslant 100\cdot E_n(x_1,x_2,x_3)
@@ -670,7 +665,7 @@ and
 $\tilde a$ is the area of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$.
 \end{thm}
 
-By Heron's formula,
+Note that Heron's formula implies
 \begin{align*}
 16\cdot \tilde a^2
 \quad=\quad &(|x_1-x_2|^2+|x_2-x_3|^2+|x_3-x_1|^2)^2-
@@ -840,11 +835,11 @@ For general (closed) conditions on semimetrics on $n$-point arrays,
 globalization of course holds for curvature bounded below by $\kappa\in \RR$ in the sense of Alexandrov,
 but it holds for other conditions as well;
 the set of semimetrics on $4$-point arrays that are embeddable in $r\cdot\SSS^1$ for some $r>0$ gives an example.
-Therefore, understanding globalization phenomena in such general settings is even more interesting.
+Understanding globalization phenomena in such general settings is even more interesting.
 
 \paragraph{Acknowledgments.}
-We were partially supported by the following grants:
-Nina Lebedeva by the Ministry of Science and Higher Education of the Russian Federation, agreement no. 075-15-2025-343 and Anton Petrunin by NSF grant DMS-2005279.
+Nina Lebedeva was supported by the Ministry of Science and Higher Education of the Russian Federation, agreement no. 075-15-2025-343;
+Anton Petrunin was supported by NSF grant DMS-2005279.
 
 
 

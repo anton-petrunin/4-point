@@ -32,7 +32,7 @@
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
-\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\sc \thesection.\arabic{thm}. #2.#1}
+\newcommand\claim[2][{}]{\par\medskip\indent\refstepcounter{thm}\hbox{\sc  #2#1 \thesection.\arabic{thm}.}
 \it\ %\ignorespaces
 }
 \def\endclaim{
@@ -64,16 +64,32 @@
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\oldcdot\hskip0.5pt}}
 
-\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
-            {\hbox{$\mathsurround=0pt #1$}}{}}
+\newcommand*{\z}[1]{%
+  #1\nobreak
+  \discretionary{\hbox{}}%
+    {\hbox{$\mathsurround=0pt #1$}}%
+    {}%
+}
 
 
 \def\thetitle{Квадратичные метрические сравнения}
-\def\theauthors{В. О. Золотов, Н. Д. Лебедева, А. М. Петрунин}
+\def\theauthors{Н. Д. Лебедева, А. М. Петрунин, В. О. Золотов, }
 
 \renewcommand{\paragraph}[1]{\par\addvspace{0.5ex plus .5ex minus .2ex}\indent{\normalfont\normalsize\slshape #1}\hspace{1em}\ignorespaces}
 
 \begin{document}
+\title{\thetitle}
+\author[Nina Lebedeva]{Н. Д. Лебедева}
+\address{Санкт-Петербургский государственный университет;\\
+С.-Петербургское отделение Математического института им. В. А. Стеклова РАН, Санкт-Петербург, Россия}
+\email{lebed@pdmi.ras.ru}
+\author[Anton Petrunin]{А. М. Петрунин}
+\address{Math. Dept. PSU, University Park, PA 16802, USA.}
+\email{petrunin@math.psu.edu}
+\author[Vladimir Zolotov]{В. О. Золотов}
+\address{Санкт-Петербургский государственный университет, Санкт-Петербург, Россия}
+\email{paranuel@mail.ru}
+\maketitle
 \input{4-point-ru}
 \input{references-journal}
 \end{document}
