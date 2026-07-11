@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\usepackage[T2C]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsfonts,amssymb,mathrsfs,amscd,comment}
+\usepackage[hyper]{msb-a}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage[all]{xy}
+\usepackage{hypbmsec}
+
+\JournalName{МАТЕМАТИЧЕСКИЙ СБОРНИК}
+
+\DeclareRobustCommand{\bm}[1]{\boldsymbol{#1}}
+
+\usepackage{pifont}
+\usepackage{enumerate}
+\usepackage{wrapfig}
+\usepackage{accsupp}
+\usepackage{soul}
+\sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
+
+\newcommand\ann[1]{%
+    \BeginAccSupp{method=escape,ActualText={\detokenize{#1}}}%
+      \an{#1}%
+    \EndAccSupp{}%
+}
+
+\def\emph{\ann}
+
+\newcounter{thm}[section]
+\renewcommand{\thethm}{\thesection.\arabic{thm}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\sc \thesection.\arabic{thm}. #2.#1}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+\newenvironment{thm}{\claim}{\endclaim}
+
+\newcommand*{\angk}[3]{\tilde\measuredangle(#1\,{}^{#2}_{#3}\hspace{-0.2ex})}
+\def\EE{\mathbb{E}}
+\def\RR{\mathbb{R}}
+\def\SSS{\mathbb{S}}
+\def\HH{\mathbb{H}}
+\newcommand{\parit}[1]{\par\medskip\noindent{\scshape #1}\enspace\ignorespaces}
+\newcommand{\qeds}{%
+  \unskip\nobreak\hfill\ensuremath{\square}%
+  \par\medskip
+}
+\def\phi{\varphi}
+\def\emptyset{\varnothing}
+
+\DeclareRobustCommand{\circnum}[1]{\ifcase#1\relax\or\ding{202}\or\ding{203}\or\ding{204}\or\ding{205}\or\ding{206}\or\ding{207}\or\ding{208}\or\ding{209}\or\ding{210}\or\ding{211}\else ?\fi}
+\newcounter{eqtn}
+\renewcommand{\theeqtn}{\circnum{\arabic{eqtn}}}
+
+\newcommand{\eqlbl}[1]{%
+  \refstepcounter{eqtn}%
+  \leqno\text{\theeqtn\label{#1}}%
+}
+
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\oldcdot\hskip0.5pt}}
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+
+
+\def\thetitle{Квадратичные метрические сравнения}
+\def\theauthors{В. О. Золотов, Н. Д. Лебедева, А. М. Петрунин}
+
+\renewcommand{\paragraph}[1]{\par\addvspace{0.5ex plus .5ex minus .2ex}\indent{\normalfont\normalsize\slshape #1}\hspace{1em}\ignorespaces}
+
+\begin{document}
+\input{4-point-ru}
+\input{references-journal}
+\end{document}
