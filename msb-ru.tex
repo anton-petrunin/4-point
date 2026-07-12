@@ -77,6 +77,9 @@
 
 \renewcommand{\paragraph}[1]{\par\addvspace{0.5ex plus .5ex minus .2ex}\indent{\normalfont\normalsize\slshape #1}\hspace{1em}\ignorespaces}
 
+\renewcommand{\theenumi}{(\roman{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+
 \begin{document}
 \title{\thetitle}
 \author[Nina Lebedeva]{Н. Д. Лебедева}
