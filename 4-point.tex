@@ -359,7 +359,7 @@ We know that $L\leqslant 0 $ holds for any 4-point array in $X$ and we need to s
 Passing to the ultracompletion, we may assume that $X$ is geodesic.
 Choose 4 points $x_1,x_2,x_3,x_{3+k}\in X$ and let $x_4,\ldots,x_{2+k}$ be the points on a geodesic $[x_3x_{3+k}]$ that divide in the same proportions as in our plane configuration;
 that is
-\[|x_3-x_4|\,:\,|x_4-x_5|\,:\,\ldots\,:\,|x_{2+k}-x_{3+k}|=\beta:\beta^2:\ldots:\beta^k.\]
+\[|x_3-x_4|\,:\,|x_4-x_5|\,:\,\ldots\,:\,|x_{2+k}-x_{3+k}|=\beta:\beta^2:\,\ldots\,:\beta^k.\]
 If we sum up the first inequality for arrays $(x_1,x_2,x_{2+i},x_{3+i})$ with the appropriate coefficients, then we get the second inequality for $x_1,x_2,x_3,x_{3+k}$.
 
 Namely, $x_{3+i}$ divides $[x_{2+i}x_{4+i}]$ in the ratio $1:\beta$.
@@ -659,7 +659,7 @@ let $(x_1$, $x_2$, $x_3$, $x_4)$ be a 4-point array in the hyperbolic space.
 Then
 \[\sum_{i,j=1}^4\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2
 \leqslant
-(12+3\cdot\delta^2)\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2,\]
+(24+6\cdot\delta^2)\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2,\]
 where $\delta=\max\{|x_1-x_2|,|x_1-x_3|,|x_2-x_3|\}$
 and
 $\tilde a$ is the area of the model triangle $\tilde\triangle(x_1x_2x_3)_{\EE^2}$.
@@ -713,7 +713,7 @@ s
 \end{align*}
 
 It follows that
-\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\leqslant \lambda_2\cdot\lambda_3\cdot(4+\delta^2)\cdot \tilde a^2.\]
+\[\sum_{i,j}\lambda_i\cdot\lambda_j\cdot|x_i-x_j|_X^2\leqslant 2\cdot\lambda_2\cdot\lambda_3\cdot(4+\delta^2)\cdot \tilde a^2.\]
 We may assume that $\lambda_1\geqslant \lambda_2\geqslant \lambda_3>0$.
 Since $\lambda_1+ \lambda_2+ \lambda_3=1$, we have $\lambda_1\geqslant \tfrac13$, and the statement follows.
 \qeds
@@ -809,12 +809,12 @@ Since $\delta$ is small, \ref{eq:uvw} and \ref{lem:area-bound} imply that
 <
 -\theta(u)
 \leqslant
-13\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
+25\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3\cdot\tilde a^2.\]
 Since the diameter of $\tilde\triangle(x_1x_2x_3)$ is at most $\delta$, we also have
 $\tilde a\z\leqslant \delta\cdot \tilde d_v/2$ and
 $\tilde a\z\leqslant \delta\cdot \tilde d_w/2$.
 Hence
-\[\varepsilon_v+\varepsilon_w\leqslant \tfrac{13}4\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3,\]
+\[\varepsilon_v+\varepsilon_w\leqslant \tfrac{25}4\cdot \delta^2\cdot\lambda_1\cdot\lambda_2\cdot\lambda_3,\]
 which implies the required inequality.
 \qeds
 
@@ -831,11 +831,10 @@ Some candidates can be found in our earlier paper \cite{lebedeva-petrunin-zoloto
 Also, it might be possible to prove a version of our globalization theorem
 for simply connected spaces, which includes the Cartan--Hadamard theorem.
 
-For general (closed) conditions on semimetrics on $n$-point arrays,
-globalization of course holds for curvature bounded below by $\kappa\in \RR$ in the sense of Alexandrov,
-but it holds for other conditions as well;
-the set of semimetrics on $4$-point arrays that are embeddable in $r\cdot\SSS^1$ for some $r>0$ gives an example.
-Understanding globalization phenomena in such general settings is even more interesting.
+One may consider arbitrary closed conditions on $n$-point arrays.
+It would be even more interesting to understand the globalization phenomenon in such a general setting.
+One family of examples is provided by the conditions of curvature bounded below by $\kappa\in\RR$ in the sense of Alexandrov; however, globalization also holds for other conditions.
+For example, it holds for the condition determined by the set of semimetrics on four-point arrays that admit an isometric embedding into $r\cdot\SSS^1$ for some $r>0$.
 
 \paragraph{Acknowledgments.}
 Nina Lebedeva was supported by the Ministry of Science and Higher Education of the Russian Federation, agreement no. 075-15-2025-343;
