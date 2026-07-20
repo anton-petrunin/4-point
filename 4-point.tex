@@ -1,5 +1,5 @@
 \begin{abstract}
-We investigate how quadratic constraints on the six distances among the points of every quadruple affect the geometry of length spaces.
+We investigate how quadratic constraints on the six pairwise distances in every four-point array affect the geometry of length spaces.
 \end{abstract}
 
 \section{Introduction}\label{par:quadratic-inq}
@@ -73,11 +73,11 @@ it is uniquely defined and remembers all distances $|x_i-x_j|_X$
 We are allowed to not distinguish between $\rho_{\bm{x}}$ and the corresponding semimetric on $\bm{x}=(x_1,\ldots,x_n)$.
 
 The Euclidean structure on $V_n$ identifies it with $V_n^*$.
-The space of quadratic forms over $V_n$ will be denoted by $W_n$;
+The space of quadratic forms on $V_n$ will be denoted by $W_n$;
 it is the symmetric square of $V_n=V_n^*$, and can be written as $W_n=S^2(V_n^*)=S^2(V_n)$.
 
 Any quadratic inequality described above defines a linear inequality on $W_n$, so it can be written as $\langle\omega,\rho_{\bm{x}}\rangle\geqslant 0$ for a fixed $\omega\in W_n$.
-Therefore, any quadratic  condition defines a closed convex cone in $W_n$, say $K$;
+Therefore, any quadratic condition defines a closed convex cone in $W_n$, say $K$;
 that is, $K$ is a nonempty closed set such that if $v,w\in K$, then $a\cdot v+b\cdot w\in K$ for any $a,b\geqslant0$.
 Denote by $\mathcal{M}_K$ the class of all length spaces $X$ such that
 $\rho_{\bm{x}}\in K$ for any $n$-point array $\bm{x}\z=(x_1,\ldots,x_n)$ in~$X$.
@@ -211,7 +211,7 @@ $X$ satisfies all inequalities of negative type $(2, 2)$ if and only if it admit
 that is, three half-lines with a common base point.
 \end{thm}
 
-Inequalities of negative type $(3, 1)$ hold in Alexandrov spaces with nonnegative curvature; it follows from the so-called Lang--Schroeder--Sturm inequality \cite{lang-schroeder, sturm}.
+Inequalities of negative type $(3, 1)$ hold in Alexandrov spaces with nonnegative curvature; this follows from the so-called Lang--Schroeder--Sturm inequality \cite{lang-schroeder, sturm}.
 Similarly, inequalities of negative type $(2, 2)$ hold in Alexandrov spaces with nonpositive curvature.
 This follows easily from the (2+2)-point comparison \cite[9.5]{AKP-2024}.
 Since the tripod $Y$ has nonpositive curvature, and $\mathbb{S}^1$ has nonnegative curvature in the sense of Alexandrov, we get the following corollary, which also follows from the result of Abraham Wald \cite[§ 7]{wald}.
@@ -347,13 +347,14 @@ in particular,
 
 \begin{thm}{Claim}\label{clm:1=>2}
 Suppose that inequality \ref{eq:lambda} for $\lambda$-array
-\[(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)\] holds for any point array in $X$.
+\[(\alpha\cdot (1-\beta),(1-\alpha)\cdot(1\z-\beta), \beta,-1)\] holds for any 4-point array in $X$.
 Then so does the inequality for the $\lambda$-array
 \[(\alpha\cdot (1-\beta^k), (1-\alpha)\cdot(1-\beta^k), \beta^k,-1)\] for any integer $k\geqslant 1$.
 \end{thm}
 
 These two inequalities correspond to the arrays $x_1$, $x_2$, $x_3$, $x_4$ and $x_1$, $x_2$, $x_3$, $x_{3+k}$;
-let us denote by $L(p, q, r, s)$ and $L'(p, q, r, s)$ the left-hand sides in \ref{eq:lambda} for these two inequalities for the array $p, q, r, s$.
+let us denote by $L(p, q, r, s)$ and $L'(p, q, r, s)$ the left-hand sides in \ref{eq:lambda} for these two inequalities evaluated
+at $p, q, r, s$.
 We know that $L\leqslant 0 $ holds for any 4-point array in $X$ and we need to show the same for $L'\leqslant 0$.
 
 Passing to the ultracompletion, we may assume that $X$ is geodesic.
@@ -451,7 +452,7 @@ so, Toponogov's theorem is the only nontrivial globalization theorem for quadrat
 Suppose that globalization holds for a closed convex cone $K\z\subset W_4$.
 Assume that the $K$-comparison is not trivial;
 that is, on the one hand $\mathcal{M}_K$ does not include all length spaces and on the other hand $\mathcal{M}_K$ contains a space with at least two distinct points.
-Then $\mathcal{M}_K$ consists of Alexandrov spaces with nonnegative curvature.
+Then $\mathcal{M}_K$ consists of all Alexandrov spaces with nonnegative curvature.
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:globalization}
@@ -476,12 +477,11 @@ By \ref{lem:globalization},  $K$~includes $K_0$.
 Given a small $\delta>0$, consider all metrics with diameter at most $\delta$ on a 4-point array $\{x_1,x_2,x_3,x_4\}$ in an Alexandrov space with curvature at least $-1$.
 Due to Wald's theorem (see \cite[Exercise 10.7]{AKP-2024}) we can assume that the $4$-point array
 comes from a model $k$-plane (that is, a complete simply connected 2-dimensional Riemannian manifold of constant curvature $k$) with $k \geqslant -1$.
-This implies that the array either (a) is isometric to a $4$-point subset of some sphere or (b) is bi-Lipschitz equivalent with the constant $1 + C\cdot \delta^2$ to a $4$-point subset of a Euclidean plane, where $C > 0$ is some absolute constant.
+This implies that the array either (a) is isometric to a $4$-point subset of some sphere or (b) is bi-Lipschitz equivalent with constant $1 + C\cdot \delta^2$ to a $4$-point subset of a Euclidean plane, where $C > 0$ is some absolute constant.
 Denote by $K_\delta\subset W_4$ the minimal closed convex cone that includes all associated forms of these metrics.
 Note that $K_0\z\subset K_\delta$.
-Furthermore, 
-%after rescaling the metric on $\{x_1,x_2,x_3,x_4\}$ with %a factor of $\tfrac1\delta$, the array gets diameter at %most $1$ and is embeddable in an Alexandrov space with curvature at least $-\delta^2$; 
-any element of $K_\delta$ is bi-Lipschitz equivalent with the constant $1 + C \cdot\delta^2$ to some element of $K_0$;
+Furthermore, %after rescaling the metric on $\{x_1,x_2,x_3,x_4\}$ with %a factor of $\tfrac1\delta$, the array gets diameter at %most $1$ and is embeddable in an Alexandrov space with curvature at least $-\delta^2$;
+any element of $K_\delta$ is bi-Lipschitz equivalent with constant $1 + C \cdot\delta^2$ to some element of $K_0$;
 therefore, $K_0=\bigcap_{\delta>0} K_\delta$.
 
 Every Riemannian manifold admits a local curvature bound at each point.
@@ -608,8 +608,8 @@ Let us prove the following inequality
 L_n'\leqslant 1000\cdot \delta_n^2\cdot E_n'.
 \eqlbl{eq:L<En-hats}
 \]
-Note that the new array ${\bm{\lambda}}'_n$ is covered in case~\ref{in} or~\ref{side}.
-Therefore, once \ref{eq:L<En-hats} is proved, case \ref{vertex} will be covered.
+Note that the new array ${\bm{\lambda}}'_n$ falls under case~\ref{in} or~\ref{side}.
+Therefore, once \ref{eq:L<En-hats} is proved, case \ref{vertex} will be settled.
 
 Assume the contrary; choose an array $x_1,x_2,x_3,x_{3+k}$ for which \ref{eq:L<En-hats} does not hold.
 Then
@@ -682,7 +682,7 @@ Again, by Kirszbraun's theorem,
 
 Since the hyperbolic plane has curvature $-1$, we have
 \[\pi-\angk{x_1}{x_2}{x_3}_{\HH^2}-\angk{x_2}{x_3}{x_1}_{\HH^2}-\angk{x_3}{x_1}{x_2}_{\HH^2}=a.\]
-These inequalities and the comparison imply that
+These relations and the comparison imply that
 \begin{align*}
 0&\leqslant \angk{x_1}{x_2}{x_3}_{\EE^2}-\angk{x_1}{x_2}{x_3}_{\HH^2}\leqslant \tilde a.
 \intertext{Since $x_4$ lies in the solid hyperbolic triangle with vertices $x_1$, $x_2$ and $x_3$, we also have $\angk{x_1}{x_2}{x_4}_{\HH^2}+\angk{x_1}{x_4}{x_3}_{\HH^2}=\angk{x_1}{x_2}{x_3}_{\HH^2}$.
@@ -694,9 +694,9 @@ Hence, the comparison also implies}
 Set $\phi=\angk{x_1}{x_2}{x_3}_{\EE^2}$ and $\psi=\angk{x_1}{x_2}{x_4}_{\EE^2}+\angk{x_1}{x_4}{x_3}_{\EE^2}$.
 From the above, we get $\phi\leqslant \psi+\tilde a$.
 By the law of cosines,
-\[|x_2-x_3|^2=|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\phi\]
+\[|x_2-x_3|^2=|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\phi.\]
 Redefining the distance $|x_2-x_3|$ via the law of cosines with angle $\psi$,
-\[|x_2-x_3|^2\mathrel{:=}|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\psi\]
+\[|x_2-x_3|^2\mathrel{:=}|x_1-x_2|^2+ |x_1-x_3|^2-2|x_1-x_2|\cdot|x_1-x_3|\cdot\cos\psi,\]
 yields a Euclidean quadruple.
 That is, decreasing $|x_2-x_3|^2$ by
 \[s=2\cdot |x_1-x_2|\cdot|x_1-x_3|\cdot(\cos\psi-\cos\phi)\]
@@ -757,7 +757,7 @@ Let $\sigma$ be a unit 1-form on $V_4$ that vanishes on $e_4$.
 By the spectral theorem, $\omega$ and $\sigma^2$ can be diagonalized in a common basis (which does not have to be orthogonal).
 Therefore,
 \[\langle \omega,\rho_{\bm{x}}\rangle=\rho_{\bm{x}}(u)+\rho_{\bm{x}}(v)+\rho_{\bm{x}}(w)\eqlbl{eq:v_123}\]
-for fixed vectors $u,v,w\in V_4$ such that $v$ and $w$ point in the direction of the equator $e_4$ or vanish;
+for fixed vectors $u,v,w\in V_4$ such that $v$ and $w$ in the plane spanned by $e_4$;
 the latter condition follows since $\sigma^2$ is also diagonalized.
 
 The inequalities $\rho_{\bm{x}}(v)\geqslant 0$ and
